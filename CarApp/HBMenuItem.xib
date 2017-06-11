@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HBMenuItem">
+            <rect key="frame" x="0.0" y="0.0" width="108" height="91"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="108" height="91"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Fc-QJ-yah">
+                        <rect key="frame" x="34" y="13" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="eJ1-34-DnK"/>
+                            <constraint firstAttribute="width" constant="40" id="w7S-wP-2eP"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xE7-Yo-X2n">
+                        <rect key="frame" x="8" y="62" width="92" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="eMT-Dm-5if"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="2Fc-QJ-yah" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="99M-CV-VDZ"/>
+                <constraint firstItem="2Fc-QJ-yah" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-12.5" id="Wqz-Zb-mku"/>
+                <constraint firstItem="xE7-Yo-X2n" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="sbG-pp-vsR"/>
+                <constraint firstItem="xE7-Yo-X2n" firstAttribute="top" secondItem="2Fc-QJ-yah" secondAttribute="bottom" constant="9" id="vAC-Aw-XfA"/>
+            </constraints>
+            <size key="customSize" width="108" height="91"/>
+            <connections>
+                <outlet property="img" destination="2Fc-QJ-yah" id="ssn-p1-NKh"/>
+                <outlet property="title" destination="xE7-Yo-X2n" id="qA1-dZ-dxC"/>
+            </connections>
+            <point key="canvasLocation" x="63" y="74.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
