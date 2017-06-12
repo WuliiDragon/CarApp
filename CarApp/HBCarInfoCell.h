@@ -10,12 +10,13 @@
 #import "HBCarStoreDetailModel.h"
 
 @interface HBCarInfoCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *gshowImage;
-@property (weak, nonatomic) IBOutlet UILabel *gname;
-@property (weak, nonatomic) IBOutlet UILabel *guidegprice;
-@property (weak, nonatomic) IBOutlet UILabel *title1;
-@property (weak, nonatomic) IBOutlet UIButton *installment;
+@property(weak, nonatomic) IBOutlet UIImageView *gshowImage;
+@property(weak, nonatomic) IBOutlet UILabel *gname;
+@property(weak, nonatomic) IBOutlet UILabel *guidegprice;
+@property(weak, nonatomic) IBOutlet UILabel *title1;
+@property(weak, nonatomic) IBOutlet UIButton *installment;
 
-@property(nonatomic,strong)HBCarStoreDetailModel *models;
+@property(nonatomic, strong) HBCarStoreDetailModel *models;
+
 - (void)setModels:(HBCarStoreDetailModel *)model;
 @end

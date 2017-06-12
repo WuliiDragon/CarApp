@@ -7,13 +7,12 @@
 //
 
 #import "HBColorSelectCell.h"
-#import "HBColorSelectModel.h"
 #import "HBAuxiliary.h"
 
 @interface HBColorSelectCell ()
-@property (strong, nonatomic) IBOutlet UILabel *colorname;
+@property(strong, nonatomic) IBOutlet UILabel *colorname;
 
-@property (strong, nonatomic) IBOutlet UIImageView *colorimage;
+@property(strong, nonatomic) IBOutlet UIImageView *colorimage;
 
 @end
 
@@ -23,7 +22,8 @@
     [super awakeFromNib];
     // Initialization code
 }
--(void)loadmodel:(HBColorSelectModel *)model{
+
+- (void)loadmodel:(HBColorSelectModel *)model {
     _colorname.text = model.colorName;
     [_colorimage setImage:[HBAuxiliary saImageWithSingleColor:[HBAuxiliary colorWithHexString:model.colorKey]]];
     _colorimage.layer.cornerRadius = 3;//圆角

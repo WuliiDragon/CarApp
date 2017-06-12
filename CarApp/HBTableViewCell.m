@@ -8,6 +8,7 @@
 
 #import "HBTableViewCell.h"
 #import "UIImageView+WebCache.h"
+
 @implementation HBTableViewCell
 
 - (void)awakeFromNib {
@@ -20,8 +21,9 @@
 
     // Configure the view for the selected state
 }
--(void)putdata:(HBSelectCarModel *)model{
-    _bane.text =model.name;
+
+- (void)putdata:(HBSelectCarModel *)model {
+    _bane.text = model.name;
     [_image sd_setImageWithURL:[NSURL URLWithString:model.logo] placeholderImage:[UIImage imageNamed:@"xx"] options:SDWebImageRefreshCached];
 }
 @end

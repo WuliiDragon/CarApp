@@ -21,33 +21,33 @@
 /**
  *  动画类型
  */
-typedef NS_ENUM(NSUInteger, XLAnimationType){
+typedef NS_ENUM(NSUInteger, XLAnimationType) {
     /**
      *  弹性动画放大
      */
-    XLAnimationTypeToBigger = 1,
+            XLAnimationTypeToBigger = 1,
     /**
      *  缩小的弹性动画
      */
-    XLAnimationTypeToSmaller = 2
+            XLAnimationTypeToSmaller = 2
 };
 
 @interface UIView (XLExtension)
 
-@property (nonatomic, assign) CGFloat height XLDeprecated("请使用xl_height");
-@property (nonatomic, assign) CGFloat width XLDeprecated("请使用xl_width");
-@property (nonatomic, assign) CGFloat x  XLDeprecated("请使用xl_x");
-@property (nonatomic, assign) CGFloat y XLDeprecated("请使用xl_y");
-@property (nonatomic, assign) CGFloat centerX XLDeprecated("请使用xl_centerX");
-@property (nonatomic, assign) CGFloat centerY XLDeprecated("请使用xl_centerY");
+@property(nonatomic, assign) CGFloat height XLDeprecated("请使用xl_height");
+@property(nonatomic, assign) CGFloat width XLDeprecated("请使用xl_width");
+@property(nonatomic, assign) CGFloat x  XLDeprecated("请使用xl_x");
+@property(nonatomic, assign) CGFloat y XLDeprecated("请使用xl_y");
+@property(nonatomic, assign) CGFloat centerX XLDeprecated("请使用xl_centerX");
+@property(nonatomic, assign) CGFloat centerY XLDeprecated("请使用xl_centerY");
 
-@property (nonatomic, assign) CGFloat xl_height;
-@property (nonatomic, assign) CGFloat xl_width;
-@property (nonatomic, assign) CGFloat xl_x;
-@property (nonatomic, assign) CGFloat xl_y;
-@property (nonatomic, assign) CGSize xl_size;
-@property (nonatomic, assign) CGFloat xl_centerX;
-@property (nonatomic, assign) CGFloat xl_centerY;
+@property(nonatomic, assign) CGFloat xl_height;
+@property(nonatomic, assign) CGFloat xl_width;
+@property(nonatomic, assign) CGFloat xl_x;
+@property(nonatomic, assign) CGFloat xl_y;
+@property(nonatomic, assign) CGSize xl_size;
+@property(nonatomic, assign) CGFloat xl_centerX;
+@property(nonatomic, assign) CGFloat xl_centerY;
 
 /**
  * 判断一个控件是否真正显示在主窗口
@@ -57,7 +57,7 @@ typedef NS_ENUM(NSUInteger, XLAnimationType){
 /**
  *  加载xibview
  */
-+ (instancetype)xl_viewFromXib ;
++ (instancetype)xl_viewFromXib;
 
 /**
  *  显示一个5*5点的红色提醒圆点
@@ -66,6 +66,7 @@ typedef NS_ENUM(NSUInteger, XLAnimationType){
  *  @param redY y坐标
  */
 - (void)xl_showRedTipViewInRedX:(CGFloat)redX redY:(CGFloat)redY XLDeprecated("请使用其他同类方法");
+
 /**
  *  在view上面绘制一个指定width宽度的红色提醒圆点
  *
@@ -73,7 +74,8 @@ typedef NS_ENUM(NSUInteger, XLAnimationType){
  *  @param redY  y坐标
  *  @param width 宽度
  */
-- (void)xl_showRedTipViewInRedX:(CGFloat)redX redY:(CGFloat)redY redTipViewWidth:(CGFloat)width ;
+- (void)xl_showRedTipViewInRedX:(CGFloat)redX redY:(CGFloat)redY redTipViewWidth:(CGFloat)width;
+
 /**
  *  在view上面绘制一个指定width宽度的 指定颜色的提醒圆点
  *
@@ -83,6 +85,7 @@ typedef NS_ENUM(NSUInteger, XLAnimationType){
  *  @param backgroundColor 圆点的颜色
  */
 - (void)xl_showRedTipViewInRedX:(CGFloat)redX redY:(CGFloat)redY redTipViewWidth:(CGFloat)width backgroundColor:(UIColor *)backgroundColor;
+
 /**
  *  显示一个5*5点的红色提醒圆点
  *
@@ -104,6 +107,7 @@ typedef NS_ENUM(NSUInteger, XLAnimationType){
  *  @param type  动画类型
  */
 + (void)xl_showOscillatoryAnimationWithLayer:(CALayer *)layer type:(XLAnimationType)type;
+
 /**
  *  给视图添加虚线边框
  *

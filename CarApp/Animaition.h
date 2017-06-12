@@ -12,7 +12,7 @@
 typedef void (^AnimationFinisnedBlock)(BOOL isFinished);
 
 @interface Animaition : NSObject
-+(instancetype)shareTool;
++ (instancetype)shareTool;
 
 
 - (void)startAnimationandView:(UIView *)animationView finishBlock:(AnimationFinisnedBlock)completion;

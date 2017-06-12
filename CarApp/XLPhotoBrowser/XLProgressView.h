@@ -11,7 +11,7 @@
 
 @interface XLProgressView : UIView
 
-@property (nonatomic, assign) CGFloat progress;
-@property (nonatomic, assign) XLProgressViewMode mode;
+@property(nonatomic, assign) CGFloat progress;
+@property(nonatomic, assign) XLProgressViewMode mode;
 
 @end

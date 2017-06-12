@@ -9,7 +9,8 @@
 #import "HBRootViewController.h"
 #import "HBSeriesOfcarModel.h"
 #import "HBCarStoreDetailModel.h"
+
 @interface HBOrderingCarViewController : HBRootViewController
-@property(nonatomic,strong) HBSeriesOfcarModel *seriesOfCarModel;
-@property (strong, nonatomic) HBCarStoreDetailModel *carStoreDetailModel;
+@property(nonatomic, strong) HBSeriesOfcarModel *seriesOfCarModel;
+@property(strong, nonatomic) HBCarStoreDetailModel *carStoreDetailModel;
 @end

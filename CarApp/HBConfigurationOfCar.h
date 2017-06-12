@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface HBConfigurationOfCar : UITableViewCell
-@property (strong, nonatomic) IBOutlet UILabel *item;
-@property (strong, nonatomic) IBOutlet UILabel *info;
--(void)item:(NSString *) item info:(NSString *)info;
+@property(strong, nonatomic) IBOutlet UILabel *item;
+@property(strong, nonatomic) IBOutlet UILabel *info;
+
+- (void)item:(NSString *)item info:(NSString *)info;
 @end

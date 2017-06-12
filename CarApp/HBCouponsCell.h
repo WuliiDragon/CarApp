@@ -8,13 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "HBCouponsModel.h"
+
 @interface HBCouponsCell : UITableViewCell
-@property(nonatomic,strong)void (^btnBlock)();
-@property (strong, nonatomic) IBOutlet UILabel *rname;
-@property (strong, nonatomic) IBOutlet UILabel *data;
-@property (strong, nonatomic) IBOutlet UILabel *price;
-@property (strong, nonatomic) IBOutlet UILabel *type;
--(void)loadWithModel:(HBCouponsModel*) model;
--(void)changeBG;
+@property(nonatomic, strong) void (^btnBlock)();
+@property(strong, nonatomic) IBOutlet UILabel *rname;
+@property(strong, nonatomic) IBOutlet UILabel *data;
+@property(strong, nonatomic) IBOutlet UILabel *price;
+@property(strong, nonatomic) IBOutlet UILabel *type;
+
+- (void)loadWithModel:(HBCouponsModel *)model;
+
+- (void)changeBG;
 
 @end

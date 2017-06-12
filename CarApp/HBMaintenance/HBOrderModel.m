@@ -11,10 +11,4 @@
 @implementation HBOrderModel
 
 
-
-
-
-
-
-
 @end

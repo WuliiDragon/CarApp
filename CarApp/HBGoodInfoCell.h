@@ -11,20 +11,20 @@
 
 @interface HBGoodInfoCell : UITableViewCell
 
-@property (strong, nonatomic) IBOutlet UILabel *Namelabel;
-@property (strong, nonatomic) IBOutlet UILabel *priceLabel;
-@property (strong, nonatomic) IBOutlet UILabel *numberLabel;
+@property(strong, nonatomic) IBOutlet UILabel *Namelabel;
+@property(strong, nonatomic) IBOutlet UILabel *priceLabel;
+@property(strong, nonatomic) IBOutlet UILabel *numberLabel;
 
-@property (strong, nonatomic) IBOutlet UIButton *minus;
-@property (strong, nonatomic) IBOutlet UIButton *plus;
-
-
-@property (nonatomic,copy) void (^operationBlock)(NSInteger number);
+@property(strong, nonatomic) IBOutlet UIButton *minus;
+@property(strong, nonatomic) IBOutlet UIButton *plus;
 
 
-@property (nonatomic,assign) NSInteger id;
+@property(nonatomic, copy) void (^operationBlock)(NSInteger number);
 
-@property (nonatomic,assign) NSInteger number;
 
--(void)ListModel:(HBCleanCellModel *)model;
+@property(nonatomic, assign) NSInteger id;
+
+@property(nonatomic, assign) NSInteger number;
+
+- (void)ListModel:(HBCleanCellModel *)model;
 @end

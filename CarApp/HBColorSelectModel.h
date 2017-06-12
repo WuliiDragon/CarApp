@@ -9,6 +9,6 @@
 #import "HBModel.h"
 
 @interface HBColorSelectModel : HBModel
-@property (nonatomic ,strong) NSString <Optional>*colorKey;
-@property (nonatomic ,strong) NSString <Optional>*colorName;
+@property(nonatomic, strong) NSString <Optional> *colorKey;
+@property(nonatomic, strong) NSString <Optional> *colorName;
 @end

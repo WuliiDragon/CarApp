@@ -10,9 +10,9 @@
 
 @interface City : NSObject
 
-@property (nonatomic ,strong) NSString * cityName;/**< 城市名*/
+@property(nonatomic, strong) NSString *cityName;/**< 城市名*/
 
-@property (nonatomic ,strong) NSArray  * areas;/**< 城市包含的所有地区*/
+@property(nonatomic, strong) NSArray *areas;/**< 城市包含的所有地区*/
 
 
 /**

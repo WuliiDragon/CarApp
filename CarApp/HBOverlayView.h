@@ -10,6 +10,6 @@
 #import "HBShoppingCartView.h"
 
 @interface HBOverlayView : UIView
-@property (nonatomic,strong) HBShoppingCartView *ShoppingCartView;
+@property(nonatomic, strong) HBShoppingCartView *ShoppingCartView;
 
 @end

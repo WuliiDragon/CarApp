@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HBGoodsListView : UIView <UITableViewDataSource,UITableViewDelegate>
+@interface HBGoodsListView : UIView <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic,strong) NSMutableArray *objects;
-@property (nonatomic,strong) UITableView *tableView;
+@property(nonatomic, strong) NSMutableArray *objects;
+@property(nonatomic, strong) UITableView *tableView;
 
 
--(instancetype)initWithFrame:(CGRect)frame withObjects:(NSMutableArray *)objects;
--(instancetype)initWithFrame:(CGRect)frame withObjects:(NSMutableArray *)objects canReorder:(BOOL)reOrder;
+- (instancetype)initWithFrame:(CGRect)frame withObjects:(NSMutableArray *)objects;
+
+- (instancetype)initWithFrame:(CGRect)frame withObjects:(NSMutableArray *)objects canReorder:(BOOL)reOrder;
 @end

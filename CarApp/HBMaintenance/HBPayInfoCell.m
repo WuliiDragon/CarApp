@@ -20,7 +20,7 @@
 }
 
 
--(void)ItemString :(NSString *)item InfoString:(NSString *)info {
+- (void)ItemString:(NSString *)item InfoString:(NSString *)info {
     _info.text = info;
     _item.text = item;
 }

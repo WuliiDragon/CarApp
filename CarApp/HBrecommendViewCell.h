@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "HBRecommendModel.h"
-@interface HBrecommendViewCell : UICollectionViewCell
-@property (strong, nonatomic) IBOutlet UIImageView *mshowImage;
-@property (strong, nonatomic) IBOutlet UILabel *mtitle;
-@property (strong, nonatomic) IBOutlet UILabel *mname;
 
-@property (strong, nonatomic) IBOutlet UILabel *guidegprice;
--(void)loadmodel:(HBRecommendModel *)model;
+@interface HBrecommendViewCell : UICollectionViewCell
+@property(strong, nonatomic) IBOutlet UIImageView *mshowImage;
+@property(strong, nonatomic) IBOutlet UILabel *mtitle;
+@property(strong, nonatomic) IBOutlet UILabel *mname;
+
+@property(strong, nonatomic) IBOutlet UILabel *guidegprice;
+
+- (void)loadmodel:(HBRecommendModel *)model;
 @end

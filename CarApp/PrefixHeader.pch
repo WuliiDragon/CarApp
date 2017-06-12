@@ -38,11 +38,10 @@
 #define PAYMENT                 @"https://www.singpa.com/carshop/ycorder/payment.action"
 
 
-
-
 #define DEFAULTS                  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
+
 #import "Masonry.h"
 #import "UIScrollView+EmptyDataSet.h"
 
@@ -50,7 +49,8 @@
 #import "MBProgressHUD.h"
 
 
-
 #define kDocumentPath     [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+
 #import "UIView+Extension.h"
+
 #endif /* PrefixHeader_pch */

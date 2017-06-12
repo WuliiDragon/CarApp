@@ -14,7 +14,8 @@
     [super awakeFromNib];
     // Initialization code
 }
--(void) title:(NSString *) title image :(NSString *)index{
+
+- (void)title:(NSString *)title image:(NSString *)index {
     _title.text = title;
     _img.image = [UIImage imageNamed:index];
 }

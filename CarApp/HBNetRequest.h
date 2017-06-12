@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
-typedef void (^ ComoleteCallBack)(id data);//请求完成时调用
-typedef void (^ FailureCallBack)(NSError *error);//
+
+typedef void (^ComoleteCallBack)(id data);//请求完成时调用
+typedef void (^FailureCallBack)(NSError *error);//
 @interface HBNetRequest : NSObject
 //功能：get方式请求数据
 //参数：urlString 网址
@@ -17,12 +18,13 @@ typedef void (^ FailureCallBack)(NSError *error);//
 //     complete 请求完成时的回调
 //     failure  请求出错的回调
 //返回值：无
-+(void) Get:(NSString *)urlString  para:(id)paras complete:(ComoleteCallBack)complete fail:(FailureCallBack)failure;
++ (void)Get:(NSString *)urlString para:(id)paras complete:(ComoleteCallBack)complete fail:(FailureCallBack)failure;
+
 //功能：post方式请求数据
 //参数：urlString 网址
 //     paras 一个字典，请求参数
 //     complete 请求完成时的回调
 //     failure  请求出错的回调
 //返回值：无
-+(void) Post:(NSString *)urlString para:(id)paras complete:(ComoleteCallBack)complete fail:(FailureCallBack)failure;
++ (void)Post:(NSString *)urlString para:(id)paras complete:(ComoleteCallBack)complete fail:(FailureCallBack)failure;
 @end

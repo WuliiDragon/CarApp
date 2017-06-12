@@ -11,6 +11,7 @@
 #import "FSActionSheetConfig.h"
 
 @class FSActionSheet;
+
 @protocol FSActionSheetDelegate <NSObject>
 
 @optional
@@ -20,9 +21,9 @@
 
 @interface FSActionSheet : UIView
 
-@property (nonatomic, weak) id<FSActionSheetDelegate> delegate; ///< 代理对象
-@property (nonatomic, assign) FSContentAlignment contentAlignment; ///< 默认是FSContentAlignmentCenter.
-@property (nonatomic, assign) BOOL hideOnTouchOutside; ///< 是否开启点击半透明层隐藏弹窗, 默认为YES.
+@property(nonatomic, weak) id <FSActionSheetDelegate> delegate; ///< 代理对象
+@property(nonatomic, assign) FSContentAlignment contentAlignment; ///< 默认是FSContentAlignmentCenter.
+@property(nonatomic, assign) BOOL hideOnTouchOutside; ///< 是否开启点击半透明层隐藏弹窗, 默认为YES.
 
 /*! @author Steven
  *  @brief 单文本选项快速初始化
@@ -32,7 +33,7 @@
  *  @param highlightedButtonTitle 高亮按钮标题
  *  @param otherButtonTitles      其他按钮标题集合
  */
-- (instancetype)initWithTitle:(NSString *)title delegate:(id<FSActionSheetDelegate>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle highlightedButtonTitle:(NSString *)highlightedButtonTitle otherButtonTitles:(NSArray<NSString *> *)otherButtonTitles;
+- (instancetype)initWithTitle:(NSString *)title delegate:(id <FSActionSheetDelegate>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle highlightedButtonTitle:(NSString *)highlightedButtonTitle otherButtonTitles:(NSArray<NSString *> *)otherButtonTitles;
 
 /*! @author Steven
  *  @brief 在外部组装选项按钮item

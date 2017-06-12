@@ -11,11 +11,8 @@
 @interface HBInfoSetTableViewController ()
 
 
-@property(nonatomic,strong)NSArray *titlelab;
-@property(nonatomic,strong)NSMutableArray *infolab;
-
-
-
+@property(nonatomic, strong) NSArray *titlelab;
+@property(nonatomic, strong) NSMutableArray *infolab;
 
 
 @end
@@ -24,10 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _titlelab=[[NSArray alloc] initWithObjects:@"头像",@"性别",@"来自",@"注册时间",@"买车养车需求",@"关注车型", nil];
+    _titlelab = [[NSArray alloc] initWithObjects:@"头像", @"性别", @"来自", @"注册时间", @"买车养车需求", @"关注车型", nil];
     DEFAULTS
     [_infolab addObject:[defaults objectForKey:@"sex"]];
-    self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,8 +38,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    
+
+
     return 6;
 }
 
@@ -52,8 +49,7 @@
     cell.textLabel.text = _titlelab[indexPath.row];
     cell.detailTextLabel.text = @"未设置";
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    
-    
+
 
     return cell;
 }

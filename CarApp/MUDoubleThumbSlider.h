@@ -15,10 +15,10 @@
 @interface MUDoubleThumbSlider : UISlider
 
 /** 滑块小值 */
-@property (nonatomic, assign) CGFloat maxValue;
+@property(nonatomic, assign) CGFloat maxValue;
 
 /** 滑块大值 */
-@property (nonatomic, assign) CGFloat minValue;
+@property(nonatomic, assign) CGFloat minValue;
 
 @end
 

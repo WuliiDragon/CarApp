@@ -10,20 +10,20 @@
 
 @implementation TabItem
 
--(instancetype)initWithFrame:(CGRect)frame {
-    
+- (instancetype)initWithFrame:(CGRect)frame {
+
     self = [super initWithFrame:frame];
-    
-    if(self){
-        
+
+    if (self) {
+
         CGFloat itemWidth = CGRectGetWidth(frame);
         CGFloat itemHeight = CGRectGetHeight(frame);
-        
-        _itemImageView = [[UIImageView alloc]initWithFrame:CGRectMake((itemWidth-22)/2, 10.f, 22.f, 20.f)];
+
+        _itemImageView = [[UIImageView alloc] initWithFrame:CGRectMake((itemWidth - 22) / 2, 10.f, 22.f, 20.f)];
         _itemImageView.contentMode = UIViewContentModeScaleAspectFit;
         [self addSubview:_itemImageView];
-        
-        _itemLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, itemHeight-20, itemWidth, 20)];
+
+        _itemLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, itemHeight - 20, itemWidth, 20)];
         _itemLabel.textAlignment = NSTextAlignmentCenter;
         _itemLabel.textColor = [UIColor blackColor];
         _itemLabel.backgroundColor = [UIColor clearColor];
@@ -33,9 +33,10 @@
     }
     return self;
 }
--(UIColor *) colorWithHexString: (NSString *)color{
+
+- (UIColor *)colorWithHexString:(NSString *)color {
     NSString *cString = [[color stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
-    
+
     // String should be 6 or 8 characters
     if ([cString length] < 6) {
         return [UIColor clearColor];
@@ -62,22 +63,23 @@
     [[NSScanner scannerWithString:rString] scanHexInt:&r];
     [[NSScanner scannerWithString:gString] scanHexInt:&g];
     [[NSScanner scannerWithString:bString] scanHexInt:&b];
-    
+
     return [UIColor colorWithRed:((float) r / 255.0f) green:((float) g / 255.0f) blue:((float) b / 255.0f) alpha:1.0f];
 }
-- (void)setItemImage:(UIImage *)image forState:(BOOL) state{
-    if(state == true){
+
+- (void)setItemImage:(UIImage *)image forState:(BOOL)state {
+    if (state == true) {
         _itemImageView.image = image;
-    }else if (state == false){
+    } else if (state == false) {
         _itemImageView.highlightedImage = image;
     }
 }
 
-- (void)setItemTitle:(NSString *)title{
+- (void)setItemTitle:(NSString *)title {
     _itemLabel.text = title;
 }
 
-- (void)setItemSelected:(BOOL)isSelected{
+- (void)setItemSelected:(BOOL)isSelected {
     _itemImageView.highlighted = isSelected;
     _itemLabel.highlighted = isSelected;
 }

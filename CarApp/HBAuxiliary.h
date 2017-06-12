@@ -8,12 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
 @interface HBAuxiliary : NSObject
 + (BOOL)DeviceIsIOS8orLater;
+
 + (BOOL)DeviceIsIpone6orLater;
-+ (UIImage*)saImageWithSingleColor:(UIColor *)color;
-+ (void)alertWithTitle:(NSString *)title message:(NSString *)message button:(NSUInteger)buttons done:(void(^)())act;
-+ (void)alertWithTitle:(NSString *)title message:(NSString *)message button:(NSArray *)buttons done:(void (^)())agree cancel:(void(^)())disagree;
+
++ (UIImage *)saImageWithSingleColor:(UIColor *)color;
+
++ (void)alertWithTitle:(NSString *)title message:(NSString *)message button:(NSUInteger)buttons done:(void (^)())act;
+
++ (void)alertWithTitle:(NSString *)title message:(NSString *)message button:(NSArray *)buttons done:(void (^)())agree cancel:(void (^)())disagree;
 
 + (CATransition *)transitWithProperties:(NSDictionary *)propertites;
 
@@ -26,39 +31,48 @@
 + (BOOL)validateMobile:(NSString *)mobile;
 
 + (BOOL)validateIdentityCard:(NSString *)identityCard;
-+ (BOOL) validatePassword:(NSString *)passWord  rule:(NSString*)rule;
-+ (BOOL) validatePassword:(NSString *)passWord;
 
++ (BOOL)validatePassword:(NSString *)passWord rule:(NSString *)rule;
 
++ (BOOL)validatePassword:(NSString *)passWord;
 
 
 + (BOOL)validateEmail:(NSString *)email;
+
 + (NSDate *)getNowDateFromatAnDate:(NSDate *)anyDate;
+
 + (BOOL)isMobileNumber:(NSString *)mobileNum;
-+(UIColor *) colorWithHexString: (NSString *)color;
-+ (id)LoadFromLocalpath :(NSString *)str ;
-+ (void)SaveToLocal :(id)data path :(NSString *)str ;
-+(NSString*) distance :(NSString *)distance;
-+(NSString *)makeprice:(NSString *)str;
-+(NSString *)removeSpace:(NSString *)str;
+
++ (UIColor *)colorWithHexString:(NSString *)color;
+
++ (id)LoadFromLocalpath:(NSString *)str;
+
++ (void)SaveToLocal:(id)data path:(NSString *)str;
+
++ (NSString *)distance:(NSString *)distance;
+
++ (NSString *)makeprice:(NSString *)str;
+
++ (NSString *)removeSpace:(NSString *)str;
 
 
 //cookie相关
-+(void)saveCookie;
-+(NSHTTPCookieStorage*)getCookies;
-+(void)loadCookies;
++ (void)saveCookie;
+
++ (NSHTTPCookieStorage *)getCookies;
+
++ (void)loadCookies;
 
 
-
-+(NSMutableArray *)loopaimage :(NSArray *) imgurlArr;
-
++ (NSMutableArray *)loopaimage:(NSArray *)imgurlArr;
 
 
-+(void)turnToMapWithLatitude :(NSString *)toLatitude ToLongitude :(NSString *)toLongitude addressName:(NSString *)address;
-+(UIWebView *)turnTOPhoneWithNumBer:(NSString *)telStr;
++ (void)turnToMapWithLatitude:(NSString *)toLatitude ToLongitude:(NSString *)toLongitude addressName:(NSString *)address;
+
++ (UIWebView *)turnTOPhoneWithNumBer:(NSString *)telStr;
 
 
++ (NSString *)dictionaryToJson:(NSDictionary *)dic;
 
-+ (NSString*)dictionaryToJson:(NSDictionary *)dic;
-+ (NSDictionary*)getObjectData:(id)obj ;
++ (NSDictionary *)getObjectData:(id)obj;
 @end

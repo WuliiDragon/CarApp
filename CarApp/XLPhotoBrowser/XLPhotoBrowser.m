@@ -14,57 +14,57 @@
 
 #import "XLPhotoBrowserConfig.h"
 
-@interface XLPhotoBrowser () <XLZoomingScrollViewDelegate , UIScrollViewDelegate>
+@interface XLPhotoBrowser () <XLZoomingScrollViewDelegate, UIScrollViewDelegate>
 
 /**
  *  存放所有图片的容器
  */
-@property (nonatomic , strong) UIScrollView  *scrollView;
+@property(nonatomic, strong) UIScrollView *scrollView;
 /**
  *   保存图片的过程指示菊花
  */
-@property (nonatomic , strong) UIActivityIndicatorView  *indicatorView;
+@property(nonatomic, strong) UIActivityIndicatorView *indicatorView;
 /**
  *   保存图片的结果指示label
  */
-@property (nonatomic , strong) UILabel *savaImageTipLabel;
+@property(nonatomic, strong) UILabel *savaImageTipLabel;
 /**
  *  正在使用的XLZoomingScrollView对象集
  */
-@property (nonatomic , strong) NSMutableSet  *visibleZoomingScrollViews;
+@property(nonatomic, strong) NSMutableSet *visibleZoomingScrollViews;
 /**
  *  循环利用池中的XLZoomingScrollView对象集,用于循环利用
  */
-@property (nonatomic , strong) NSMutableSet  *reusableZoomingScrollViews;
+@property(nonatomic, strong) NSMutableSet *reusableZoomingScrollViews;
 /**
  *  pageControl
  */
-@property (nonatomic , strong) UIControl  *pageControl;
+@property(nonatomic, strong) UIControl *pageControl;
 /**
  *  index label
  */
-@property (nonatomic , strong) UILabel  *indexLabel;
+@property(nonatomic, strong) UILabel *indexLabel;
 /**
  *  保存按钮
  */
-@property (nonatomic , strong) UIButton *saveButton;
+@property(nonatomic, strong) UIButton *saveButton;
 /**
  *  ActionSheet的otherbuttontitles
  */
-@property (nonatomic , strong) NSArray  *actionOtherButtonTitles;
+@property(nonatomic, strong) NSArray *actionOtherButtonTitles;
 /**
  *  ActionSheet的title
  */
-@property (nonatomic , strong) NSString  *actionSheetTitle;
+@property(nonatomic, strong) NSString *actionSheetTitle;
 /**
  *  actionSheet的取消按钮title
  */
-@property (nonatomic , strong) NSString  *actionSheetCancelTitle;
+@property(nonatomic, strong) NSString *actionSheetCancelTitle;
 /**
  *  actionSheet的高亮按钮title
  */
-@property (nonatomic , strong) NSString  *actionSheetDeleteButtonTitle;
-@property (nonatomic, assign) CGSize pageControlDotSize;
+@property(nonatomic, strong) NSString *actionSheetDeleteButtonTitle;
+@property(nonatomic, assign) CGSize pageControlDotSize;
 @property(nonatomic, strong) NSArray *images;
 
 @end
@@ -73,8 +73,7 @@
 
 #pragma mark    -   set / get
 
-- (UILabel *)savaImageTipLabel
-{
+- (UILabel *)savaImageTipLabel {
     if (_savaImageTipLabel == nil) {
         _savaImageTipLabel = [[UILabel alloc] init];
         _savaImageTipLabel.textColor = [UIColor whiteColor];
@@ -85,8 +84,7 @@
     return _savaImageTipLabel;
 }
 
-- (UIActivityIndicatorView *)indicatorView
-{
+- (UIActivityIndicatorView *)indicatorView {
     if (!_indicatorView) {
         _indicatorView = [[UIActivityIndicatorView alloc] init];
         _indicatorView.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
@@ -94,63 +92,56 @@
     return _indicatorView;
 }
 
-- (void)setBrowserStyle:(XLPhotoBrowserStyle)browserStyle
-{
+- (void)setBrowserStyle:(XLPhotoBrowserStyle)browserStyle {
     _browserStyle = browserStyle;
     [self setUpBrowserStyle];
 }
 
-- (void)setShowPageControl:(BOOL)showPageControl
-{
+- (void)setShowPageControl:(BOOL)showPageControl {
     _showPageControl = showPageControl;
     _pageControl.hidden = !showPageControl;
 }
 
-- (void)setCurrentPageDotColor:(UIColor *)currentPageDotColor
-{
+- (void)setCurrentPageDotColor:(UIColor *)currentPageDotColor {
     _currentPageDotColor = currentPageDotColor;
     if ([self.pageControl isKindOfClass:[TAPageControl class]]) {
-        TAPageControl *pageControl = (TAPageControl *)_pageControl;
+        TAPageControl *pageControl = (TAPageControl *) _pageControl;
         pageControl.dotColor = currentPageDotColor;
     } else {
-        UIPageControl *pageControl = (UIPageControl *)_pageControl;
+        UIPageControl *pageControl = (UIPageControl *) _pageControl;
         pageControl.currentPageIndicatorTintColor = currentPageDotColor;
     }
 }
 
-- (void)setPageDotColor:(UIColor *)pageDotColor
-{
+- (void)setPageDotColor:(UIColor *)pageDotColor {
     _pageDotColor = pageDotColor;
     if ([self.pageDotColor isKindOfClass:[UIPageControl class]]) {
-        UIPageControl *pageControl = (UIPageControl *)_pageControl;
+        UIPageControl *pageControl = (UIPageControl *) _pageControl;
         pageControl.pageIndicatorTintColor = pageDotColor;
     }
 }
 
-- (void)setCurrentPageDotImage:(UIImage *)currentPageDotImage
-{
+- (void)setCurrentPageDotImage:(UIImage *)currentPageDotImage {
     _currentPageDotImage = currentPageDotImage;
     [self setCustomPageControlDotImage:currentPageDotImage isCurrentPageDot:YES];
 }
 
-- (void)setPageDotImage:(UIImage *)pageDotImage
-{
+- (void)setPageDotImage:(UIImage *)pageDotImage {
     _pageDotImage = pageDotImage;
     [self setCustomPageControlDotImage:pageDotImage isCurrentPageDot:NO];
 }
 
-- (void)setCustomPageControlDotImage:(UIImage *)image isCurrentPageDot:(BOOL)isCurrentPageDot
-{
+- (void)setCustomPageControlDotImage:(UIImage *)image isCurrentPageDot:(BOOL)isCurrentPageDot {
     if (!image || !self.pageControl) return;
     if ([self.pageControl isKindOfClass:[TAPageControl class]]) {
-        TAPageControl *pageControl = (TAPageControl *)_pageControl;
+        TAPageControl *pageControl = (TAPageControl *) _pageControl;
         if (isCurrentPageDot) {
             pageControl.currentDotImage = image;
         } else {
             pageControl.dotImage = image;
         }
     } else {
-        UIPageControl *pageControl = (UIPageControl *)_pageControl;
+        UIPageControl *pageControl = (UIPageControl *) _pageControl;
         if (isCurrentPageDot) {
             [pageControl setValue:image forKey:@"_currentPageImage"];
         } else {
@@ -159,14 +150,12 @@
     }
 }
 
-- (void)setPageControlStyle:(XLPhotoBrowserPageControlStyle)pageControlStyle
-{
+- (void)setPageControlStyle:(XLPhotoBrowserPageControlStyle)pageControlStyle {
     _pageControlStyle = pageControlStyle;
     [self setUpPageControl];
 }
 
-- (UIImage *)placeholderImage
-{
+- (UIImage *)placeholderImage {
     if (!_placeholderImage) {
         _placeholderImage = [UIImage xl_imageWithColor:[UIColor grayColor] size:CGSizeMake(100, 100)];
     }
@@ -175,27 +164,24 @@
 
 #pragma mark    -   initial
 
-- (void)awakeFromNib
-{
+- (void)awakeFromNib {
     [super awakeFromNib];
     [self initial];
 }
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self initial];
     }
     return self;
 }
 
-- (void)initial
-{
+- (void)initial {
     self.backgroundColor = XLPhotoBrowserBackgrounColor;
     self.visibleZoomingScrollViews = [[NSMutableSet alloc] init];
     self.reusableZoomingScrollViews = [[NSMutableSet alloc] init];
     [self placeholderImage];
-    
+
     _pageControlAliment = XLPhotoBrowserPageControlAlimentCenter;
     _showPageControl = YES;
     _pageControlDotSize = CGSizeMake(10, 10);
@@ -204,13 +190,12 @@
     _currentPageDotColor = [UIColor whiteColor];
     _pageDotColor = [UIColor lightGrayColor];
     _browserStyle = XLPhotoBrowserStylePageControl;
-    
+
     self.currentImageIndex = 0;
     self.imageCount = 0;
 }
 
-- (void)iniaialUI
-{
+- (void)iniaialUI {
     [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     [self setUpScrollView];
     [self setUpPageControl];
@@ -220,8 +205,7 @@
     [self updatePageControlIndex];
 }
 
-- (void)setUpScrollView
-{
+- (void)setUpScrollView {
     CGRect rect = self.bounds;
     rect.size.width += XLPhotoBrowserImageViewMargin;
     self.scrollView = [[UIScrollView alloc] init];
@@ -243,17 +227,15 @@
 /**
  *  设置pageControl
  */
-- (void)setUpPageControl
-{
+- (void)setUpPageControl {
     if (_pageControl) [_pageControl removeFromSuperview]; // 重新加载数据时调整
-    
+
     if ((self.imageCount <= 1) && self.hidesForSinglePage) {
         return;
     }
-    
+
     switch (self.pageControlStyle) {
-        case XLPhotoBrowserPageControlStyleAnimated:
-        {
+        case XLPhotoBrowserPageControlStyleAnimated: {
             TAPageControl *pageControl = [[TAPageControl alloc] init];
             pageControl.numberOfPages = self.imageCount;
             pageControl.dotColor = self.currentPageDotColor;
@@ -263,8 +245,7 @@
             _pageControl = pageControl;
         }
             break;
-        case XLPhotoBrowserPageControlStyleClassic:
-        {
+        case XLPhotoBrowserPageControlStyleClassic: {
             UIPageControl *pageControl = [[UIPageControl alloc] init];
             _pageControl = pageControl;
             pageControl.numberOfPages = self.imageCount;
@@ -278,14 +259,14 @@
         default:
             break;
     }
-    
+
     // 重设pagecontroldot图片
     self.currentPageDotImage = self.currentPageDotImage;
     self.pageDotImage = self.pageDotImage;
 
     CGSize size = CGSizeZero;
     if ([self.pageControl isKindOfClass:[TAPageControl class]]) {
-        TAPageControl *pageControl = (TAPageControl *)_pageControl;
+        TAPageControl *pageControl = (TAPageControl *) _pageControl;
         size = [pageControl sizeForNumberOfPages:self.imageCount];
     } else {
         size = CGSizeMake(self.imageCount * self.pageControlDotSize.width * 1.2, self.pageControlDotSize.height);
@@ -296,15 +277,14 @@
     }
     CGFloat y = self.xl_height - size.height - 10;
     if ([self.pageControl isKindOfClass:[TAPageControl class]]) {
-        TAPageControl *pageControl = (TAPageControl *)_pageControl;
+        TAPageControl *pageControl = (TAPageControl *) _pageControl;
         [pageControl sizeToFit];
     }
     self.pageControl.frame = CGRectMake(x, y, size.width, size.height);
     self.pageControl.hidden = !self.showPageControl;
 }
 
-- (void)setUpToolBars
-{
+- (void)setUpToolBars {
     UILabel *indexLabel = [[UILabel alloc] init];
     indexLabel.bounds = CGRectMake(0, 0, 80, 30);
     indexLabel.xl_centerX = self.xl_width * 0.5;
@@ -317,7 +297,7 @@
     indexLabel.clipsToBounds = YES;
     self.indexLabel = indexLabel;
     [self addSubview:indexLabel];
-    
+
     UIButton *saveButton = [[UIButton alloc] init];
     [saveButton setTitle:@"保存" forState:UIControlStateNormal];
     [saveButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -330,25 +310,21 @@
     [self addSubview:saveButton];
 }
 
-- (void)setUpBrowserStyle
-{
+- (void)setUpBrowserStyle {
     switch (self.browserStyle) {
-        case XLPhotoBrowserStylePageControl:
-        {
+        case XLPhotoBrowserStylePageControl: {
             self.pageControl.hidden = NO;
             self.indexLabel.hidden = YES;
             self.saveButton.hidden = YES;
         }
             break;
-        case XLPhotoBrowserStyleIndexLabel:
-        {
+        case XLPhotoBrowserStyleIndexLabel: {
             self.indexLabel.hidden = NO;
             self.pageControl.hidden = YES;
             self.saveButton.hidden = YES;
         }
             break;
-        case XLPhotoBrowserStyleSimple:
-        {
+        case XLPhotoBrowserStyleSimple: {
             self.indexLabel.hidden = NO;
             self.saveButton.hidden = NO;
             self.pageControl.hidden = YES;
@@ -359,16 +335,14 @@
     }
 }
 
-- (void)dealloc
-{
+- (void)dealloc {
     [self.reusableZoomingScrollViews removeAllObjects];
     [self.visibleZoomingScrollViews removeAllObjects];
 }
 
-- (void)layoutSubviews
-{
+- (void)layoutSubviews {
     [super layoutSubviews];
-    
+
     _savaImageTipLabel.layer.cornerRadius = 5;
     _savaImageTipLabel.clipsToBounds = YES;
     [_savaImageTipLabel sizeToFit];
@@ -381,15 +355,14 @@
 
 #pragma mark    -   private method
 
-- (UIWindow *)findTheMainWindow
-{
+- (UIWindow *)findTheMainWindow {
     NSEnumerator *frontToBackWindows = [UIApplication.sharedApplication.windows reverseObjectEnumerator];
     for (UIWindow *window in frontToBackWindows) {
         BOOL windowOnMainScreen = window.screen == UIScreen.mainScreen;
         BOOL windowIsVisible = !window.hidden && window.alpha > 0;
         BOOL windowLevelSupported = (window.windowLevel >= UIWindowLevelNormal);
-        
-        if(windowOnMainScreen && windowIsVisible && windowLevelSupported) {
+
+        if (windowOnMainScreen && windowIsVisible && windowLevelSupported) {
             return window;
         }
     }
@@ -398,13 +371,12 @@
 
 #pragma mark    -   private -- 长按图片相关
 
-- (void)longPress:(UILongPressGestureRecognizer *)longPress
-{
+- (void)longPress:(UILongPressGestureRecognizer *)longPress {
     XLZoomingScrollView *currentZoomingScrollView = [self zoomingScrollViewAtIndex:self.currentImageIndex];
     if (longPress.state == UIGestureRecognizerStateBegan) {
-        XLFormatLog(@"UIGestureRecognizerStateBegan , currentZoomingScrollView.progress %f",currentZoomingScrollView.progress);
+        XLFormatLog(@"UIGestureRecognizerStateBegan , currentZoomingScrollView.progress %f", currentZoomingScrollView.progress);
         if (currentZoomingScrollView.progress < 1.0) {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t) (0.10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [self longPress:longPress];
             });
             return;
@@ -458,8 +430,7 @@
 
 #pragma mark    -   private -- save image
 
-- (void)saveImage
-{
+- (void)saveImage {
     XLZoomingScrollView *zoomingScrollView = [self zoomingScrollViewAtIndex:self.currentImageIndex];
     if (zoomingScrollView.progress < 1.0) {
         self.savaImageTipLabel.text = XLPhotoBrowserLoadingImageText;
@@ -472,8 +443,7 @@
     [self.indicatorView startAnimating];
 }
 
-- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo;
-{
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo; {
     [self.indicatorView removeFromSuperview];
     [self addSubview:self.savaImageTipLabel];
     if (error) {
@@ -486,31 +456,30 @@
 
 #pragma mark    -   private ---loadimage
 
-- (void)showPhotos
-{
+- (void)showPhotos {
     // 只有一张图片
     if (self.imageCount == 1) {
         [self setUpImageForZoomingScrollViewAtIndex:0];
         return;
     }
-    
+
     CGRect visibleBounds = self.scrollView.bounds;
     NSInteger firstIndex = floor((CGRectGetMinX(visibleBounds)) / CGRectGetWidth(visibleBounds));
-    NSInteger lastIndex  = floor((CGRectGetMaxX(visibleBounds)-1) / CGRectGetWidth(visibleBounds));
-    
+    NSInteger lastIndex = floor((CGRectGetMaxX(visibleBounds) - 1) / CGRectGetWidth(visibleBounds));
+
     if (firstIndex < 0) {
         firstIndex = 0;
     }
     if (firstIndex >= self.imageCount) {
         firstIndex = self.imageCount - 1;
     }
-    if (lastIndex < 0){
+    if (lastIndex < 0) {
         lastIndex = 0;
     }
     if (lastIndex >= self.imageCount) {
         lastIndex = self.imageCount - 1;
     }
-    
+
     // 回收不再显示的zoomingScrollView
     NSInteger zoomingScrollViewIndex = 0;
     for (XLZoomingScrollView *zoomingScrollView in self.visibleZoomingScrollViews) {
@@ -521,13 +490,13 @@
             [zoomingScrollView removeFromSuperview];
         }
     }
-    
+
     // _visiblePhotoViews 减去 _reusablePhotoViews中的元素
     [self.visibleZoomingScrollViews minusSet:self.reusableZoomingScrollViews];
     while (self.reusableZoomingScrollViews.count > 2) { // 循环利用池中最多保存两个可以用对象
         [self.reusableZoomingScrollViews removeObject:[self.reusableZoomingScrollViews anyObject]];
     }
-    
+
     // 展示图片
     for (NSInteger index = firstIndex; index <= lastIndex; index++) {
         if (![self isShowingZoomingScrollViewAtIndex:index]) {
@@ -539,9 +508,8 @@
 /**
  *  判断指定的某个位置图片是否在显示
  */
-- (BOOL)isShowingZoomingScrollViewAtIndex:(NSInteger)index
-{
-    for (XLZoomingScrollView* view in self.visibleZoomingScrollViews) {
+- (BOOL)isShowingZoomingScrollViewAtIndex:(NSInteger)index {
+    for (XLZoomingScrollView *view in self.visibleZoomingScrollViews) {
         if ((view.tag - 100) == index) {
             return YES;
         }
@@ -554,14 +522,13 @@
  *
  *  @param index 指定位置索引
  */
-- (XLZoomingScrollView *)zoomingScrollViewAtIndex:(NSInteger)index
-{
-    for (XLZoomingScrollView* zoomingScrollView in self.visibleZoomingScrollViews) {
+- (XLZoomingScrollView *)zoomingScrollViewAtIndex:(NSInteger)index {
+    for (XLZoomingScrollView *zoomingScrollView in self.visibleZoomingScrollViews) {
         if ((zoomingScrollView.tag - 100) == index) {
             return zoomingScrollView;
         }
     }
-    XLZoomingScrollView* zoomingScrollView = [self dequeueReusableZoomingScrollView];
+    XLZoomingScrollView *zoomingScrollView = [self dequeueReusableZoomingScrollView];
     [self setUpImageForZoomingScrollViewAtIndex:index];
     return zoomingScrollView;
 }
@@ -569,8 +536,7 @@
 /**
  *   加载指定位置的图片
  */
-- (void)setUpImageForZoomingScrollViewAtIndex:(NSInteger)index
-{
+- (void)setUpImageForZoomingScrollViewAtIndex:(NSInteger)index {
     XLZoomingScrollView *zoomingScrollView = [self dequeueReusableZoomingScrollView];
     zoomingScrollView.zoomingScrollViewdelegate = self;
     [zoomingScrollView addGestureRecognizer:[[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)]];
@@ -590,7 +556,7 @@
         }
         zoomingScrollView.hasLoadedImage = YES;
     }
-    
+
     [self.visibleZoomingScrollViews addObject:zoomingScrollView];
     [self.scrollView addSubview:zoomingScrollView];
 }
@@ -598,8 +564,7 @@
 /**
  *  从缓存池中获取一个XLZoomingScrollView对象
  */
-- (XLZoomingScrollView *)dequeueReusableZoomingScrollView
-{
+- (XLZoomingScrollView *)dequeueReusableZoomingScrollView {
     XLZoomingScrollView *photoView = [self.reusableZoomingScrollViews anyObject];
     if (photoView) {
         [self.reusableZoomingScrollViews removeObject:photoView];
@@ -612,11 +577,10 @@
 /**
  *  获取指定位置的占位图片,和外界的数据源交互
  */
-- (UIImage *)placeholderImageForIndex:(NSInteger)index
-{
+- (UIImage *)placeholderImageForIndex:(NSInteger)index {
     if (self.datasource && [self.datasource respondsToSelector:@selector(photoBrowser:placeholderImageForIndex:)]) {
         return [self.datasource photoBrowser:self placeholderImageForIndex:index];
-    } else if(self.images.count>index) {
+    } else if (self.images.count > index) {
         if ([self.images[index] isKindOfClass:[UIImage class]]) {
             return self.images[index];
         } else {
@@ -629,23 +593,22 @@
 /**
  *  获取指定位置的高清大图URL,和外界的数据源交互
  */
-- (NSURL *)highQualityImageURLForIndex:(NSInteger)index
-{
+- (NSURL *)highQualityImageURLForIndex:(NSInteger)index {
     if (self.datasource && [self.datasource respondsToSelector:@selector(photoBrowser:highQualityImageURLForIndex:)]) {
         NSURL *url = [self.datasource photoBrowser:self highQualityImageURLForIndex:index];
         if (!url) {
-            XLPBLog(@"高清大图URL数据 为空,请检查代码 , 图片索引:%zd",index);
+            XLPBLog(@"高清大图URL数据 为空,请检查代码 , 图片索引:%zd", index);
             return nil;
         }
         if ([url isKindOfClass:[NSString class]]) {
-            url = [NSURL URLWithString:(NSString *)url];
+            url = [NSURL URLWithString:(NSString *) url];
         }
         if (![url isKindOfClass:[NSURL class]]) {
-            XLPBLog(@"高清大图URL数据有问题,不是NSString也不是NSURL , 错误数据:%@ , 图片索引:%zd",url,index);
+            XLPBLog(@"高清大图URL数据有问题,不是NSString也不是NSURL , 错误数据:%@ , 图片索引:%zd", url, index);
         }
 //        NSAssert([url isKindOfClass:[NSURL class]], @"高清大图URL数据有问题,不是NSString也不是NSURL");
         return url;
-    } else if(self.images.count>index) {
+    } else if (self.images.count > index) {
         if ([self.images[index] isKindOfClass:[NSURL class]]) {
             return self.images[index];
         } else if ([self.images[index] isKindOfClass:[NSString class]]) {
@@ -661,8 +624,7 @@
 /**
  *  获取指定位置的 ALAsset,获取图片
  */
-- (ALAsset *)assetForIndex:(NSInteger)index
-{
+- (ALAsset *)assetForIndex:(NSInteger)index {
     if (self.datasource && [self.datasource respondsToSelector:@selector(photoBrowser:assetForIndex:)]) {
         return [self.datasource photoBrowser:self assetForIndex:index];
     } else if (self.images.count > index) {
@@ -678,8 +640,7 @@
 /**
  *  获取多图浏览,指定位置图片的UIImageView视图,用于做弹出放大动画和回缩动画
  */
-- (UIView *)sourceImageViewForIndex:(NSInteger)index
-{
+- (UIView *)sourceImageViewForIndex:(NSInteger)index {
     if (self.datasource && [self.datasource respondsToSelector:@selector(photoBrowser:sourceImageViewForIndex:)]) {
         return [self.datasource photoBrowser:self sourceImageViewForIndex:index];
     }
@@ -689,13 +650,12 @@
 /**
  *  第一个展示的图片 , 点击图片,放大的动画就是从这里来的
  */
-- (void)showFirstImage
-{
+- (void)showFirstImage {
     // 获取到用户点击的那个UIImageView对象,进行坐标转化
     CGRect startRect;
     if (self.sourceImageView) {
-        
-    } else if(self.datasource && [self.datasource respondsToSelector:@selector(photoBrowser:sourceImageViewForIndex:)]) {
+
+    } else if (self.datasource && [self.datasource respondsToSelector:@selector(photoBrowser:sourceImageViewForIndex:)]) {
         self.sourceImageView = [self.datasource photoBrowser:self sourceImageViewForIndex:self.currentImageIndex];
     } else {
         [UIView animateWithDuration:0.25 animations:^{
@@ -705,12 +665,12 @@
         return;
     }
     startRect = [self.sourceImageView.superview convertRect:self.sourceImageView.frame toView:self];
-    
+
     UIImageView *tempView = [[UIImageView alloc] init];
     tempView.image = [self placeholderImageForIndex:self.currentImageIndex];
     tempView.frame = startRect;
     [self addSubview:tempView];
-    
+
     CGRect targetRect; // 目标frame
     UIImage *image = self.sourceImageView.image;
     CGFloat imageWidthHeightRatio = image.size.width / image.size.height;
@@ -721,7 +681,7 @@
     if (height > XLScreenH) {
         y = 0;
     } else {
-        y = (XLScreenH - height ) * 0.5;
+        y = (XLScreenH - height) * 0.5;
     }
     targetRect = CGRectMake(x, y, width, height);
     self.scrollView.hidden = YES;
@@ -730,7 +690,7 @@
     // 动画修改图片视图的frame , 居中同时放大
     [UIView animateWithDuration:XLPhotoBrowserShowImageAnimationDuration animations:^{
         tempView.frame = targetRect;
-    } completion:^(BOOL finished) {
+    }                completion:^(BOOL finished) {
         [tempView removeFromSuperview];
         self.scrollView.hidden = NO;
     }];
@@ -741,12 +701,11 @@
 /**
  *  单击图片,退出浏览
  */
-- (void)zoomingScrollView:(XLZoomingScrollView *)zoomingScrollView singleTapDetected:(UITapGestureRecognizer *)singleTap
-{
+- (void)zoomingScrollView:(XLZoomingScrollView *)zoomingScrollView singleTapDetected:(UITapGestureRecognizer *)singleTap {
     [UIView animateWithDuration:0.15 animations:^{
         self.savaImageTipLabel.alpha = 0.0;
         self.indicatorView.alpha = 0.0;
-    } completion:^(BOOL finished) {
+    }                completion:^(BOOL finished) {
         [self.savaImageTipLabel removeFromSuperview];
         [self.indicatorView removeFromSuperview];
     }];
@@ -762,35 +721,33 @@
     self.saveButton.hidden = YES;
 
     CGRect targetTemp = [sourceView.superview convertRect:sourceView.frame toView:self];
-    
+
     UIImageView *tempView = [[UIImageView alloc] init];
     tempView.contentMode = sourceView.contentMode;
     tempView.clipsToBounds = YES;
     tempView.image = zoomingScrollView.currentImage;
-    tempView.frame = CGRectMake( - zoomingScrollView.contentOffset.x + zoomingScrollView.imageView.xl_x,  - zoomingScrollView.contentOffset.y + zoomingScrollView.imageView.xl_y, zoomingScrollView.imageView.xl_width, zoomingScrollView.imageView.xl_height);
+    tempView.frame = CGRectMake(-zoomingScrollView.contentOffset.x + zoomingScrollView.imageView.xl_x, -zoomingScrollView.contentOffset.y + zoomingScrollView.imageView.xl_y, zoomingScrollView.imageView.xl_width, zoomingScrollView.imageView.xl_height);
     [self addSubview:tempView];
-    
+
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
     [UIView animateWithDuration:XLPhotoBrowserHideImageAnimationDuration animations:^{
         tempView.frame = targetTemp;
         self.backgroundColor = [UIColor clearColor];
-    } completion:^(BOOL finished) {
+    }                completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];
 }
 
 #pragma mark - UIScrollViewDelegate
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     [self showPhotos];
     NSInteger pageNum = floor((scrollView.contentOffset.x + scrollView.bounds.size.width * 0.5) / scrollView.bounds.size.width);
     self.currentImageIndex = pageNum == self.imageCount ? pageNum - 1 : pageNum;
     [self updatePageControlIndex];
 }
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-{
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     NSInteger pageNum = floor((scrollView.contentOffset.x + scrollView.bounds.size.width * 0.5) / scrollView.bounds.size.width);
     self.currentImageIndex = pageNum == self.imageCount ? pageNum - 1 : pageNum;
     [self updatePageControlIndex];
@@ -799,18 +756,17 @@
 /**
  *  修改图片指示索引label
  */
-- (void)updatePageControlIndex
-{
+- (void)updatePageControlIndex {
     if (self.imageCount == 1 && self.hidesForSinglePage == YES) {
         self.indexLabel.hidden = YES;
         self.pageControl.hidden = YES;
         return;
     }
-    UIPageControl *pageControl = (UIPageControl *)self.pageControl;
+    UIPageControl *pageControl = (UIPageControl *) self.pageControl;
     pageControl.currentPage = self.currentImageIndex;
-    NSString *title = [NSString stringWithFormat:@"%zd / %zd",self.currentImageIndex+1,self.imageCount];
+    NSString *title = [NSString stringWithFormat:@"%zd / %zd", self.currentImageIndex + 1, self.imageCount];
     self.indexLabel.text = title;
-    
+
     [self setUpBrowserStyle];
 }
 
@@ -824,8 +780,7 @@
  *  @param datasource        数据源
  *
  */
-+ (instancetype)showPhotoBrowserWithCurrentImageIndex:(NSInteger)currentImageIndex imageCount:(NSUInteger)imageCount datasource:(id<XLPhotoBrowserDatasource>)datasource
-{
++ (instancetype)showPhotoBrowserWithCurrentImageIndex:(NSInteger)currentImageIndex imageCount:(NSUInteger)imageCount datasource:(id <XLPhotoBrowserDatasource>)datasource {
     XLPhotoBrowser *browser = [[XLPhotoBrowser alloc] init];
     browser.imageCount = imageCount;
     browser.currentImageIndex = currentImageIndex;
@@ -848,8 +803,7 @@
 //    [self show];
 //}
 
-- (void)show
-{
+- (void)show {
     if (self.imageCount <= 0) {
         return;
     }
@@ -860,7 +814,7 @@
         self.currentImageIndex = 0;
     }
     UIWindow *window = [self findTheMainWindow];
-    
+
     self.frame = window.bounds;
     self.alpha = 0.0;
     [window addSubview:self];
@@ -871,12 +825,11 @@
 /**
  *  退出
  */
-- (void)dismiss
-{
+- (void)dismiss {
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
     [UIView animateWithDuration:XLPhotoBrowserHideImageAnimationDuration animations:^{
         self.alpha = 0.0;
-    } completion:^(BOOL finished) {
+    }                completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];
 }
@@ -890,8 +843,7 @@
  *  @param deleteButtonTitle      删除按钮文字
  *  @param otherButtonTitles      其他按钮数组
  */
-- (void)setActionSheetWithTitle:(nullable NSString *)title delegate:(nullable id<XLPhotoBrowserDelegate>)delegate cancelButtonTitle:(nullable NSString *)cancelButtonTitle deleteButtonTitle:(nullable NSString *)deleteButtonTitle otherButtonTitles:(nullable NSString *)otherButtonTitle, ...
-{
+- (void)setActionSheetWithTitle:(nullable NSString *)title delegate:(nullable id <XLPhotoBrowserDelegate>)delegate cancelButtonTitle:(nullable NSString *)cancelButtonTitle deleteButtonTitle:(nullable NSString *)deleteButtonTitle otherButtonTitles:(nullable NSString *)otherButtonTitle, ... {
     NSMutableArray *otherButtonTitlesArray = [NSMutableArray array];
     NSString *buttonTitle;
     va_list argumentList;
@@ -915,8 +867,7 @@
 /**
  *  保存当前展示的图片
  */
-- (void)saveCurrentShowImage
-{
+- (void)saveCurrentShowImage {
     [self saveImage];
 }
 
@@ -930,13 +881,12 @@
  
  @return XLPhotoBrowser实例对象
  */
-+ (instancetype)showPhotoBrowserWithImages:(NSArray *)images currentImageIndex:(NSInteger)currentImageIndex
-{
-    if (images.count <=0 || images ==nil) {
++ (instancetype)showPhotoBrowserWithImages:(NSArray *)images currentImageIndex:(NSInteger)currentImageIndex {
+    if (images.count <= 0 || images == nil) {
         XLPBLog(@"一行代码展示图片浏览的方法,传入的数据源为空,不进入图片浏览,请检查传入数据源");
         return nil;
     }
-    
+
     Class imageClass = [images.firstObject class];
     for (id image in images) {
         if (![image isKindOfClass:imageClass]) {
@@ -944,7 +894,7 @@
             return nil;
         }
     }
-    
+
     XLPhotoBrowser *browser = [[XLPhotoBrowser alloc] init];
     browser.imageCount = images.count;
     browser.currentImageIndex = currentImageIndex;

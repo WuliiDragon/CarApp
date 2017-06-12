@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ShopCarBar : UIView
-@property (strong, nonatomic)  UIView *bgView;
+@property(strong, nonatomic) UIView *bgView;
 
-- (instancetype)initWithFrame:(CGRect)frame ;
+- (instancetype)initWithFrame:(CGRect)frame;
 @end

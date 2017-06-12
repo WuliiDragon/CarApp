@@ -20,9 +20,9 @@
 
 }
 
--(void)imgName:(NSString *)imgName payWay:(NSString *)payWay {
+- (void)imgName:(NSString *)imgName payWay:(NSString *)payWay {
     _payImg.image = [UIImage imageNamed:imgName];
-    _payWay.text  =payWay;
+    _payWay.text = payWay;
 }
 
 

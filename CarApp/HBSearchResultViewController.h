@@ -9,6 +9,6 @@
 
 
 @interface HBSearchResultViewController : UIViewController
-@property(nonatomic ,strong)NSMutableDictionary *itemDic;
-@property(nonatomic ,strong)NSString *seleteItem;
+@property(nonatomic, strong) NSMutableDictionary *itemDic;
+@property(nonatomic, strong) NSString *seleteItem;
 @end

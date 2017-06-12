@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface HBResetPassword : UIViewController
-@property(nonatomic,strong)NSString *respondCode;
+@property(nonatomic, strong) NSString *respondCode;
 @end

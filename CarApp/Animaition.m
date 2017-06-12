@@ -8,9 +8,9 @@
 
 #import "Animaition.h"
 
-@interface Animaition()<CAAnimationDelegate> {
+@interface Animaition () <CAAnimationDelegate> {
     CALayer *Layer;
-    
+
     AnimationFinisnedBlock _animationFinishedHolder;
 }
 
@@ -19,8 +19,7 @@
 @implementation Animaition
 
 
-+(instancetype)shareTool
-{
++ (instancetype)shareTool {
     return [[Animaition alloc] init];
 }
 
@@ -29,9 +28,9 @@
     _animationFinishedHolder = completion;
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;//获得keyWindow
 
-    
-    CGPoint fromCenter =  [animationView convertPoint:CGPointMake(animationView.frame.size.width * 0.5f, animationView.frame.size.height * 0.5f) toView:keyWindow];
-    CGPoint endCenter = CGPointMake(fromCenter.x-30, fromCenter.y);
+
+    CGPoint fromCenter = [animationView convertPoint:CGPointMake(animationView.frame.size.width * 0.5f, animationView.frame.size.height * 0.5f) toView:keyWindow];
+    CGPoint endCenter = CGPointMake(fromCenter.x - 30, fromCenter.y);
 //    NSString *str = ((UIButton *)animationView).titleLabel.text;
 //    _animationLayer = [CATextLayer layer];
 //    _animationLayer.bounds = animationView.bounds;
@@ -43,40 +42,33 @@
 //    _animationLayer.backgroundColor = [UIColor whiteColor].CGColor;
 //    [keyWindow.layer addSublayer:_animationLayer];
 
-    
-    
-    
-    
-    Layer=[CALayer layer];
-    Layer.frame =  animationView.frame;
-    
+
+
+
+
+    Layer = [CALayer layer];
+    Layer.frame = animationView.frame;
+
     //设置layer的属性
     //Layer.bounds=CGRectMake(0, 0, 50, 80);
-    Layer.backgroundColor= [UIColor yellowColor].CGColor;
+    Layer.backgroundColor = [UIColor yellowColor].CGColor;
     //Layer.position=CGPointMake(50, 50);
     //Layer.anchorPoint=CGPointMake(0,0);
-    Layer.cornerRadius=20;
+    Layer.cornerRadius = 20;
     [keyWindow.layer addSublayer:Layer];
 
-    
-    
-    
-    
 
-    
-    
-
-    CABasicAnimation *anima=[CABasicAnimation animation];
-    anima.keyPath=@"position";
-    anima.fromValue=[NSValue valueWithCGPoint:fromCenter];
-    anima.toValue=[NSValue valueWithCGPoint:endCenter];
+    CABasicAnimation *anima = [CABasicAnimation animation];
+    anima.keyPath = @"position";
+    anima.fromValue = [NSValue valueWithCGPoint:fromCenter];
+    anima.toValue = [NSValue valueWithCGPoint:endCenter];
 
     //旋转
     CABasicAnimation *rotateAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
     rotateAnimation.removedOnCompletion = YES;
     rotateAnimation.fromValue = [NSNumber numberWithFloat:0];
     rotateAnimation.toValue = [NSNumber numberWithFloat:5 * M_PI];//转5圈
-    rotateAnimation.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    rotateAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
 //    //缩放
 //    CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
 //    scaleAnimation.removedOnCompletion = NO;
@@ -87,25 +79,26 @@
 //    alphaAnimation.removedOnCompletion = NO;
 //    alphaAnimation.fromValue = [NSNumber numberWithFloat:1.0];
 //    alphaAnimation.toValue = [NSNumber numberWithFloat:1.0];
-    
-    
-    
-    
+
+
+
+
     //动画组
     CAAnimationGroup *groups = [CAAnimationGroup animation];
-    groups.animations = @[anima,rotateAnimation];
+    groups.animations = @[anima, rotateAnimation];
     groups.duration = 1.0;
-    groups.removedOnCompletion=NO;
-    groups.fillMode=kCAFillModeForwards;
+    groups.removedOnCompletion = NO;
+    groups.fillMode = kCAFillModeForwards;
     groups.delegate = self;
     [Layer addAnimation:groups forKey:@"group"];
 }
 
 
 - (void)animationDidStart:(CAAnimation *)anim {
-    
-    
+
+
 }
+
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
     if (flag) {//结束动画，移除layer
         [Layer removeFromSuperlayer];

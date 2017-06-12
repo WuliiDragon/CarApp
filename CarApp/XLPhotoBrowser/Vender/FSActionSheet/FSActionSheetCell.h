@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "FSActionSheetConfig.h"
+
 @class FSActionSheetItem;
 
 @interface FSActionSheetCell : UITableViewCell
 
-@property (nonatomic, assign) FSContentAlignment contentAlignment;
-@property (nonatomic, strong) FSActionSheetItem *item;
-@property (nonatomic, assign) BOOL hideTopLine; ///< 是否隐藏顶部线条
+@property(nonatomic, assign) FSContentAlignment contentAlignment;
+@property(nonatomic, strong) FSActionSheetItem *item;
+@property(nonatomic, assign) BOOL hideTopLine; ///< 是否隐藏顶部线条
 
 @end

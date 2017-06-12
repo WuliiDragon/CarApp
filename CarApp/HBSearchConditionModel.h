@@ -9,6 +9,6 @@
 #import "HBModel.h"
 
 @interface HBSearchConditionModel : HBModel
-@property(nonatomic,strong)NSArray *cris;
-@property(nonatomic,copy)NSString *name;
+@property(nonatomic, strong) NSArray *cris;
+@property(nonatomic, copy) NSString *name;
 @end

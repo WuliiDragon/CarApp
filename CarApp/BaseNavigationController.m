@@ -8,6 +8,7 @@
 
 #import "BaseNavigationController.h"
 #import "HBAuxiliary.h"
+
 @interface BaseNavigationController ()
 
 @end
@@ -17,19 +18,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationBar setBackgroundImage:[HBAuxiliary saImageWithSingleColor:mainColor] forBarMetrics:UIBarMetricsDefault];
-    
+
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleDefault;
     [self.navigationBar setTintColor:[UIColor whiteColor]];
 }
 
 
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
-    if(self.viewControllers.count>0){
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if (self.viewControllers.count > 0) {
         viewController.hidesBottomBarWhenPushed = YES;
     }
     [super pushViewController:viewController animated:animated];
 }
--(UIStatusBarStyle) preferredStatusBarStyle{
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
     UIViewController *vc = self.topViewController;
     UIStatusBarStyle style = [vc preferredStatusBarStyle];
     return style;

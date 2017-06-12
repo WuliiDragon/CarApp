@@ -33,57 +33,49 @@
 #import "SDCollectionViewCell.h"
 #import "UIView+SDExtension.h"
 
-@implementation SDCollectionViewCell
-{
+@implementation SDCollectionViewCell {
     __weak UILabel *_titleLabel;
 }
 
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self setupImageView];
         [self setupTitleLabel];
     }
-    
+
     return self;
 }
 
-- (void)setTitleLabelBackgroundColor:(UIColor *)titleLabelBackgroundColor
-{
+- (void)setTitleLabelBackgroundColor:(UIColor *)titleLabelBackgroundColor {
     _titleLabelBackgroundColor = titleLabelBackgroundColor;
     _titleLabel.backgroundColor = titleLabelBackgroundColor;
 }
 
-- (void)setTitleLabelTextColor:(UIColor *)titleLabelTextColor
-{
+- (void)setTitleLabelTextColor:(UIColor *)titleLabelTextColor {
     _titleLabelTextColor = titleLabelTextColor;
     _titleLabel.textColor = titleLabelTextColor;
 }
 
-- (void)setTitleLabelTextFont:(UIFont *)titleLabelTextFont
-{
+- (void)setTitleLabelTextFont:(UIFont *)titleLabelTextFont {
     _titleLabelTextFont = titleLabelTextFont;
     _titleLabel.font = titleLabelTextFont;
 }
 
-- (void)setupImageView
-{
+- (void)setupImageView {
     UIImageView *imageView = [[UIImageView alloc] init];
     _imageView = imageView;
     [self.contentView addSubview:imageView];
 }
 
-- (void)setupTitleLabel
-{
+- (void)setupTitleLabel {
     UILabel *titleLabel = [[UILabel alloc] init];
     _titleLabel = titleLabel;
     _titleLabel.hidden = YES;
     [self.contentView addSubview:titleLabel];
 }
 
-- (void)setTitle:(NSString *)title
-{
+- (void)setTitle:(NSString *)title {
     _title = [title copy];
     _titleLabel.text = [NSString stringWithFormat:@"   %@", title];
     if (_titleLabel.hidden) {
@@ -92,10 +84,9 @@
 }
 
 
-- (void)layoutSubviews
-{
+- (void)layoutSubviews {
     [super layoutSubviews];
-    
+
     if (self.onlyDisplayText) {
         _titleLabel.frame = self.bounds;
     } else {

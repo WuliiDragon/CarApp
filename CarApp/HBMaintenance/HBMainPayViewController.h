@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "HBCleanCellModel.h"
 #import "HBMiantenanceCarHomeModel.h"
-@interface HBMainPayViewController : UIViewController
--(instancetype)initWithModel:(HBCleanCellModel * )model maintanaceInfo:(HBMiantenanceCarHomeModel *) maintanaceModel storeInfo:(NSString *)info project:(NSString *)project;
 
--(instancetype)initWithOrderArr:(NSArray *)orderList totalPrice:(float)totalPrice payName:(NSString *)payName maintanaceInfo:(HBMiantenanceCarHomeModel *) maintanaceModel ;
+@interface HBMainPayViewController : UIViewController
+
+- (instancetype)initWithOrderArr:(NSArray *)orderList totalPrice:(float)totalPrice payName:(NSString *)payName maintanaceInfo:(HBMiantenanceCarHomeModel *)maintanaceModel;
+
+
 @end

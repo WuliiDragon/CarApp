@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "HBColorSelectModel.h"
+
 @interface HBColorSelectCell : UICollectionViewCell
--(void)loadmodel:(HBColorSelectModel *)model;
+- (void)loadmodel:(HBColorSelectModel *)model;
 @end

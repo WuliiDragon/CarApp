@@ -13,15 +13,15 @@
 /**
  *  进度视图类型类型
  */
-typedef NS_ENUM(NSUInteger, XLProgressViewMode){
+typedef NS_ENUM(NSUInteger, XLProgressViewMode) {
     /**
      *  圆环形
      */
-    XLProgressViewModeLoopDiagram = 1,
+            XLProgressViewModeLoopDiagram = 1,
     /**
      *  圆饼型
      */
-    XLProgressViewModePieDiagram = 2
+            XLProgressViewModePieDiagram = 2
 };
 
 // 图片保存成功提示文字
@@ -51,9 +51,6 @@ typedef NS_ENUM(NSUInteger, XLProgressViewMode){
 #define XLProgressViewItemMargin 10
 // 圆环形图片下载进度指示器 环线宽度
 #define XLProgressViewLoopDiagramLineWidth 8
-
-
-
 
 
 #define XLPBLog(...) XLFormatLog(__VA_ARGS__)

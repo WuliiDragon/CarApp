@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface HBPayInfoCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UILabel *item;
-@property (strong, nonatomic) IBOutlet UILabel *info;
--(void)ItemString :(NSString *)item InfoString:(NSString *)info ;
+@property(strong, nonatomic) IBOutlet UILabel *item;
+@property(strong, nonatomic) IBOutlet UILabel *info;
+
+- (void)ItemString:(NSString *)item InfoString:(NSString *)info;
 @end

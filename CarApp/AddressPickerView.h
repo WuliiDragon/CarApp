@@ -29,6 +29,6 @@
 @interface AddressPickerView : UIView
 
 /** 实现点击按钮代理*/
-@property (nonatomic ,weak) id<AddressPickerViewDelegate> delegate;
+@property(nonatomic, weak) id <AddressPickerViewDelegate> delegate;
 
 @end

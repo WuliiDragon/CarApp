@@ -10,19 +10,16 @@
 #import "HBStoreCarModel.h"
 
 @interface HBCarStoreCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *bimage;
-@property (weak, nonatomic) IBOutlet UILabel *bname;
-@property (weak, nonatomic) IBOutlet UILabel *baddress;
-@property (weak, nonatomic) IBOutlet UILabel *distance;
-@property (strong, nonatomic) IBOutlet UIImageView *hang;
+@property(weak, nonatomic) IBOutlet UIImageView *bimage;
+@property(weak, nonatomic) IBOutlet UILabel *bname;
+@property(weak, nonatomic) IBOutlet UILabel *baddress;
+@property(weak, nonatomic) IBOutlet UILabel *distance;
+@property(strong, nonatomic) IBOutlet UIImageView *hang;
 
-@property (weak, nonatomic) IBOutlet UILabel *majorbusiness;
-@property (weak, nonatomic) IBOutlet UILabel *title1;
-@property (weak, nonatomic) IBOutlet UILabel *title2;
-@property(nonatomic,strong)HBStoreCarModel *models;
-
-
-
+@property(weak, nonatomic) IBOutlet UILabel *majorbusiness;
+@property(weak, nonatomic) IBOutlet UILabel *title1;
+@property(weak, nonatomic) IBOutlet UILabel *title2;
+@property(nonatomic, strong) HBStoreCarModel *models;
 
 
 - (void)setModels:(HBStoreCarModel *)model;

@@ -11,7 +11,7 @@
 @implementation City
 
 - (instancetype)initWithName:(NSString *)name
-                       areas:(NSArray *)areas{
+                       areas:(NSArray *)areas {
     if (self = [super init]) {
         _cityName = name;
         _areas = areas;
@@ -20,8 +20,8 @@
 }
 
 + (instancetype)cityWithName:(NSString *)cityName
-                       areas:(NSArray *)areas{
-    City * city = [[City alloc]initWithName:cityName
+                       areas:(NSArray *)areas {
+    City *city = [[City alloc] initWithName:cityName
                                       areas:areas];
     return city;
 }

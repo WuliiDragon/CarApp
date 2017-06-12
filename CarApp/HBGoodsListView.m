@@ -12,14 +12,15 @@
 
 @implementation HBGoodsListView
 
--(instancetype)initWithFrame:(CGRect)frame withObjects:(NSMutableArray *)objects{
-    
+- (instancetype)initWithFrame:(CGRect)frame withObjects:(NSMutableArray *)objects {
+
     return [self initWithFrame:frame withObjects:objects canReorder:NO];
 }
--(instancetype)initWithFrame:(CGRect)frame withObjects:(NSMutableArray *)objects canReorder:(BOOL)reOrder{
-    
+
+- (instancetype)initWithFrame:(CGRect)frame withObjects:(NSMutableArray *)objects canReorder:(BOOL)reOrder {
+
     self = [super initWithFrame:frame];
-    
+
     if (self) {
         self.objects = [NSMutableArray arrayWithArray:objects];
         [self layoutUI];
@@ -27,10 +28,10 @@
     return self;
 }
 
--(void)layoutUI{
+- (void)layoutUI {
     self.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
-    
-    
+
+
     self.tableView = [[UITableView alloc] initWithFrame:self.bounds];
     self.tableView.bounces = NO;
     self.tableView.showsHorizontalScrollIndicator = NO;
@@ -41,24 +42,24 @@
     self.tableView.dataSource = self;
     [self.tableView registerNib:[UINib nibWithNibName:@"HBGoodInfoCell" bundle:nil] forCellReuseIdentifier:@"GoodslistCell"];
 }
+
 #pragma mark - TableViewDelegate
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.objects count];
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+
     return 50;
 }
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
     HBGoodInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"GoodslistCell" forIndexPath:indexPath];
 //    
 //    
@@ -78,6 +79,6 @@
 //        [[NSNotificationCenter defaultCenter] postNotificationName:@"updateUI" object:self userInfo:notification];
 //    };
     return cell;
-    
+
 }
 @end

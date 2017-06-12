@@ -11,9 +11,9 @@
 
 
 @interface Province : NSObject
-@property (nonatomic, strong) NSString       * name;/**< 省名字*/
-@property (nonatomic, strong) NSArray        * cities;/**< 该省包含的所有城市名称*/
-@property (nonatomic, strong) NSMutableArray * cityModels;/**< 该省包含的所有城市模型*/
+@property(nonatomic, strong) NSString *name;/**< 省名字*/
+@property(nonatomic, strong) NSArray *cities;/**< 该省包含的所有城市名称*/
+@property(nonatomic, strong) NSMutableArray *cityModels;/**< 该省包含的所有城市模型*/
 
 
 /**
@@ -37,7 +37,6 @@
  */
 + (instancetype)provinceWithName:(NSString *)name
                           cities:(NSArray *)cities;
-
 
 
 @end

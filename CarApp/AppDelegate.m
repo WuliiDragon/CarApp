@@ -8,8 +8,6 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
-#import <AFNetworking/AFNetworking.h>
-#import "HBNetRequest.h"
 #import "HBAuxiliary.h"
 #import "EzfMpAssist.h"
 
@@ -19,15 +17,15 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //打印沙河路径
-    NSLog(@"%@", [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) objectAtIndex:0]);
-    
+    NSLog(@"%@", [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]);
+
     [HBAuxiliary loadCookies];
-    
+
     [[EzfMpAssist defaultAssist] regWechatApp:@"wx9b4839c6e3ffbe1e"];
-    
-    self.window  = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, mainScreenWidth, mainScreenHeight)];
+
+    self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, mainScreenWidth, mainScreenHeight)];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     self.window.rootViewController = [[MainViewController alloc] init];
@@ -35,11 +33,9 @@
 }
 
 
-
-
 - (void)applicationWillResignActive:(UIApplication *)application {
     //说明：当应用程序即将失去焦点时，被调用。比如电话呼叫，都将导致应用失去焦点 ，或者当用户退出应用程序。
-    }
+}
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -63,36 +59,40 @@
     //说明：当程序将要退出是被调用，通常是用来保存数据和一些退出前的清理工作。这个需要要设置UIApplicationExitsOnSuspend的键值（自动设置）。不支持多任务的时候调用
 }
 
-- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application{
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
 //说明：iPhone设备只有有限的内存，如果为应用程序分配了太多内存操作系统会终止应用程序的运行，在终止前会执行这个方法，通常可以在这里进行内存清理工作防止程序被终止
 }
-- (void)applicationSignificantTimeChange:(UIApplication*)application
-{
+
+- (void)applicationSignificantTimeChange:(UIApplication *)application {
 //说明：当系统时间发生改变时执行
 }
-- (void)applicationDidFinishLaunching:(UIApplication*)application{
+
+- (void)applicationDidFinishLaunching:(UIApplication *)application {
 //说明：当应用加载完成后被调用
 }
 
-- (void)application:(UIApplication*)application willChangeStatusBarFrame:(CGRect)newStatusBarFrame{
+- (void)application:(UIApplication *)application willChangeStatusBarFrame:(CGRect)newStatusBarFrame {
 //说明：当StatusBar将要变化时执行
 }
-- (BOOL)application:(UIApplication*)application handleOpenURL:(NSURL*)url{
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
     //说明：打开url时
     return nil;
 }
 
-- (void)application:(UIApplication*)application didChangeStatusBarOrientation:(UIInterfaceOrientation)oldStatusBarOrientation{
+- (void)application:(UIApplication *)application didChangeStatusBarOrientation:(UIInterfaceOrientation)oldStatusBarOrientation {
     //说明：当StatusBar框方向变化完成后执行
 }
-- (void)application:(UIApplication*)application didChangeSetStatusBarFrame:(CGRect)oldStatusBarFrame{
+
+- (void)application:(UIApplication *)application didChangeSetStatusBarFrame:(CGRect)oldStatusBarFrame {
     //说明：当StatusBar框变化完成后执行
 }
-- (BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     //处理返回支付结果
     [[EzfMpAssist defaultAssist] handlePaymentResult:url];
     return YES;
-    
+
 }
 
 @end

@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "HBSelectCarModel.h"
+
 @interface HBTableViewCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UIImageView *image;
-@property (strong, nonatomic) IBOutlet UILabel *bane;
--(void)putdata:(HBSelectCarModel *)model;
+@property(strong, nonatomic) IBOutlet UIImageView *image;
+@property(strong, nonatomic) IBOutlet UILabel *bane;
+
+- (void)putdata:(HBSelectCarModel *)model;
 
 @end

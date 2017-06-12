@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HBSearchConditioncell : UICollectionViewCell
-@property (strong, nonatomic) IBOutlet UILabel *item;
-@property (strong, nonatomic) IBOutlet UIImageView *select;
+@property(strong, nonatomic) IBOutlet UILabel *item;
+@property(strong, nonatomic) IBOutlet UIImageView *select;
 
 @end

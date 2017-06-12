@@ -11,8 +11,8 @@
 #import "HBCleanCellModel.h"
 
 @interface HBCouponsViewController : UIViewController
--(instancetype)initWithCouponsArr:(HBCleanCellModel  *)model;
+- (instancetype)initTypes:(NSString *)types modelArr:(NSMutableArray*)modelArr totalPrice:(float)totalPrice;
 
-typedef void (^ablock)( HBCouponsModel *model);
-@property (nonatomic, copy) ablock block;
+typedef void (^ablock)(HBCouponsModel *model ,NSMutableArray *modelArr);
+@property(nonatomic, copy) ablock block;
 @end

@@ -11,19 +11,17 @@
 @implementation TADotView
 
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         [self initialization];
     }
-    
+
     return self;
 }
 
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         [self initialization];
@@ -32,27 +30,24 @@
 }
 
 
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
+- (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
         [self initialization];
     }
-    
+
     return self;
 }
 
-- (void)initialization
-{
-    self.backgroundColor    = [UIColor clearColor];
+- (void)initialization {
+    self.backgroundColor = [UIColor clearColor];
     self.layer.cornerRadius = CGRectGetWidth(self.frame) / 2;
-    self.layer.borderColor  = [UIColor whiteColor].CGColor;
-    self.layer.borderWidth  = 2;
+    self.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.layer.borderWidth = 2;
 }
 
 
-- (void)changeActivityState:(BOOL)active
-{
+- (void)changeActivityState:(BOOL)active {
     if (active) {
         self.backgroundColor = [UIColor whiteColor];
     } else {

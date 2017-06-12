@@ -9,12 +9,13 @@
 #import "HBModel.h"
 
 @interface HBCouponsModel : HBModel
-@property (nonatomic ,strong) NSString <Optional> *createdate;
-@property (nonatomic ,strong) NSString <Optional> *pastdate;
-@property (nonatomic ,strong) NSString <Optional> *price;
-@property (nonatomic ,strong) NSString <Optional> *rid;
-@property (nonatomic ,strong) NSString <Optional> *rname;
-@property (nonatomic ,strong) NSString <Optional> *status;
-@property (nonatomic ,strong) NSString <Optional> *type;
-@property (nonatomic ,strong) NSString <Optional> *condition;
+
+@property(nonatomic, strong) NSString <Optional> *createdate;
+@property(nonatomic, strong) NSString <Optional> *pastdate;
+@property(nonatomic, strong) NSString <Optional> *price;
+@property(nonatomic, strong) NSString <Optional> *rid;
+@property(nonatomic, strong) NSString <Optional> *rname;
+@property(nonatomic, strong) NSString <Optional> *status;
+@property(nonatomic, strong) NSString <Optional> *type;
+@property(nonatomic, strong) NSString <Optional> *condition;
 @end

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @interface HBSeriesOfcarViewController : UIViewController
-@property(nonatomic,strong)NSString *distance;
-@property(nonatomic,strong)NSString *gid;
+@property(nonatomic, strong) NSString *distance;
+@property(nonatomic, strong) NSString *gid;
 
 @end

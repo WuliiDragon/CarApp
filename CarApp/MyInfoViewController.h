@@ -8,6 +8,7 @@
 
 #import "HBRootViewController.h"
 #include <objc/runtime.h>
+
 @interface MyInfoViewController : HBRootViewController
 
 @end

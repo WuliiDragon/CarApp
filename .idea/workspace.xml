@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f44b8aca-7a80-41b4-a78b-e61059f95060" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CarApp/HBPayresult.xib" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp.xcworkspace/xcuserdata/WLW.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/CarApp.xcworkspace/xcuserdata/WLW.xcuserdatad/UserInterfaceState.xcuserstate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/CarApp.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp.xcodeproj/xcuserdata/WLW.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/CarApp.xcodeproj/xcuserdata/WLW.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp.xcworkspace/xcuserdata/WLW.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/CarApp.xcworkspace/xcuserdata/WLW.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/AddressPickerView.h" afterPath="$PROJECT_DIR$/CarApp/AddressPickerView.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/AddressPickerView.m" afterPath="$PROJECT_DIR$/CarApp/AddressPickerView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Animaition.h" afterPath="$PROJECT_DIR$/CarApp/Animaition.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Animaition.m" afterPath="$PROJECT_DIR$/CarApp/Animaition.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/AppDelegate.h" afterPath="$PROJECT_DIR$/CarApp/AppDelegate.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/AppDelegate.m" afterPath="$PROJECT_DIR$/CarApp/AppDelegate.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/99yuan.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/99yuan.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/99yuanorder.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/99yuanorder.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/AppIcon.appiconset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/AppIcon.appiconset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/Line.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/Line.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/add.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/add.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/asklowprice.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/asklowprice.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/asklowprice1.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/asklowprice1.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/asklowpriceimg.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/asklowpriceimg.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/asklowtitle.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/asklowtitle.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/autoSupplies.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/autoSupplies.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/back.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/back.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/btuline.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/btuline.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/car.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/car.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/carBussnis.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/carBussnis.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/commit.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/commit.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/commitCar.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/commitCar.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/dian.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/dian.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/distance.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/distance.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/hang.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/hang.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/hangbatop.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/hangbatop.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/installment.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/installment.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/instructions.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/instructions.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/kuang1.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/kuang1.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/kuang2.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/kuang2.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/loginTitle.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/loginTitle.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/maintenance.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/maintenance.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/more.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/more.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/moreact.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/moreact.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/myinfoitem/1.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/myinfoitem/1.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/myinfoitem/2.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/myinfoitem/2.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/myinfoitem/3.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/myinfoitem/3.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/myinfoitem/4.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/myinfoitem/4.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/myinfoitem/5.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/myinfoitem/5.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/myinfoitem/6.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/myinfoitem/6.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/myinfoitem/7.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/myinfoitem/7.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/myinfoitem/8.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/myinfoitem/8.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/myinfoitem/9.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/myinfoitem/9.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/myinfoitem/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/myinfoitem/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/noNetwork.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/noNetwork.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/onlineorderingcar.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/onlineorderingcar.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/ordingCar.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/ordingCar.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/page_icon_empty.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/page_icon_empty.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/page_icon_network.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/page_icon_network.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/pay/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/pay/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/pay/alipay.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/pay/alipay.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/pay/payselect.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/pay/payselect.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/pay/paytitle.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/pay/paytitle.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/pay/payuselect.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/pay/payuselect.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/pay/unionpay.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/pay/unionpay.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/pay/wechat.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/pay/wechat.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/payfail.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/payfail.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/paysucc.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/paysucc.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/phone.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/phone.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/reduce.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/reduce.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/selectCar.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/selectCar.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/selectCar1.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/selectCar1.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/shopCar.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/shopCar.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/star.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/star.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/tabbar/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/tabbar/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/tabbar/itemBuyCar.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/tabbar/itemBuyCar.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/tabbar/itemFound.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/tabbar/itemFound.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/tabbar/itemMaintenanceCar.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/tabbar/itemMaintenanceCar.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/tabbar/itemMyInfo.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/tabbar/itemMyInfo.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/tabbar/sitemBuyCar.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/tabbar/sitemBuyCar.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/tabbar/sitemFound.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/tabbar/sitemFound.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/tabbar/sitemMaintenanceCar.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/tabbar/sitemMaintenanceCar.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/tabbar/sitemMyInfo.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/tabbar/sitemMyInfo.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/titlestore.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/titlestore.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/userimg.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/userimg.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/wulin.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/wulin.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Assets.xcassets/xx.imageset/Contents.json" afterPath="$PROJECT_DIR$/CarApp/Assets.xcassets/xx.imageset/Contents.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Base/DataSetObject.h" afterPath="$PROJECT_DIR$/CarApp/Base/DataSetObject.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Base/DataSetObject.m" afterPath="$PROJECT_DIR$/CarApp/Base/DataSetObject.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/BaseNavigationController.m" afterPath="$PROJECT_DIR$/CarApp/BaseNavigationController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/City.h" afterPath="$PROJECT_DIR$/CarApp/City.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/City.m" afterPath="$PROJECT_DIR$/CarApp/City.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBAskLowPriceViewController.h" afterPath="$PROJECT_DIR$/CarApp/HBAskLowPriceViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBAskLowPriceViewController.m" afterPath="$PROJECT_DIR$/CarApp/HBAskLowPriceViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBAuxiliary.h" afterPath="$PROJECT_DIR$/CarApp/HBAuxiliary.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBAuxiliary.m" afterPath="$PROJECT_DIR$/CarApp/HBAuxiliary.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBBadgeView.h" afterPath="$PROJECT_DIR$/CarApp/HBBadgeView.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBBadgeView.m" afterPath="$PROJECT_DIR$/CarApp/HBBadgeView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBBuyCarViewController.m" afterPath="$PROJECT_DIR$/CarApp/HBBuyCarViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBCarDetailViewController.h" afterPath="$PROJECT_DIR$/CarApp/HBCarDetailViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBCarDetailViewController.m" afterPath="$PROJECT_DIR$/CarApp/HBCarDetailViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBCarInfoCell.h" afterPath="$PROJECT_DIR$/CarApp/HBCarInfoCell.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBCarInfoCell.m" afterPath="$PROJECT_DIR$/CarApp/HBCarInfoCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBCarStoreCell.h" afterPath="$PROJECT_DIR$/CarApp/HBCarStoreCell.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBCarStoreCell.m" afterPath="$PROJECT_DIR$/CarApp/HBCarStoreCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBCarStoreDetailModel.h" afterPath="$PROJECT_DIR$/CarApp/HBCarStoreDetailModel.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBCarStoreDetailViewController.h" afterPath="$PROJECT_DIR$/CarApp/HBCarStoreDetailViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBCarStoreDetailViewController.m" afterPath="$PROJECT_DIR$/CarApp/HBCarStoreDetailViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBCleanCellModel.h" afterPath="$PROJECT_DIR$/CarApp/HBCleanCellModel.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBCleanCellModel.m" afterPath="$PROJECT_DIR$/CarApp/HBCleanCellModel.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBColorSelectCell.h" afterPath="$PROJECT_DIR$/CarApp/HBColorSelectCell.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBColorSelectCell.m" afterPath="$PROJECT_DIR$/CarApp/HBColorSelectCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBColorSelectModel.h" afterPath="$PROJECT_DIR$/CarApp/HBColorSelectModel.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBConfigurationOfCar.h" afterPath="$PROJECT_DIR$/CarApp/HBConfigurationOfCar.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBConfigurationOfCar.m" afterPath="$PROJECT_DIR$/CarApp/HBConfigurationOfCar.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBCouponsCell.h" afterPath="$PROJECT_DIR$/CarApp/HBCouponsCell.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBCouponsCell.m" afterPath="$PROJECT_DIR$/CarApp/HBCouponsCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBCouponsModel.h" afterPath="$PROJECT_DIR$/CarApp/HBCouponsModel.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBCouponsViewController.h" afterPath="$PROJECT_DIR$/CarApp/HBCouponsViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBCouponsViewController.m" afterPath="$PROJECT_DIR$/CarApp/HBCouponsViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBFoundPassword.m" afterPath="$PROJECT_DIR$/CarApp/HBFoundPassword.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBGoodInfoCell.h" afterPath="$PROJECT_DIR$/CarApp/HBGoodInfoCell.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBGoodInfoCell.m" afterPath="$PROJECT_DIR$/CarApp/HBGoodInfoCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBGoodsListView.h" afterPath="$PROJECT_DIR$/CarApp/HBGoodsListView.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBGoodsListView.m" afterPath="$PROJECT_DIR$/CarApp/HBGoodsListView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBInfoSetTableViewController.m" afterPath="$PROJECT_DIR$/CarApp/HBInfoSetTableViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBInstallmentViewController.h" afterPath="$PROJECT_DIR$/CarApp/HBInstallmentViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBInstallmentViewController.m" afterPath="$PROJECT_DIR$/CarApp/HBInstallmentViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBLogin/HBLoginViewController.m" afterPath="$PROJECT_DIR$/CarApp/HBLogin/HBLoginViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBLogin/HBRegisteredViewController.m" afterPath="$PROJECT_DIR$/CarApp/HBLogin/HBRegisteredViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBLogin/HBResetPassword.h" afterPath="$PROJECT_DIR$/CarApp/HBLogin/HBResetPassword.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBLogin/HBResetPassword.m" afterPath="$PROJECT_DIR$/CarApp/HBLogin/HBResetPassword.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMaintenance/HBCleanCell.h" afterPath="$PROJECT_DIR$/CarApp/HBMaintenance/HBCleanCell.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMaintenance/HBCleanCell.m" afterPath="$PROJECT_DIR$/CarApp/HBMaintenance/HBCleanCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMaintenance/HBMainPayViewController.h" afterPath="$PROJECT_DIR$/CarApp/HBMaintenance/HBMainPayViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMaintenance/HBMainPayViewController.m" afterPath="$PROJECT_DIR$/CarApp/HBMaintenance/HBMainPayViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMaintenance/HBMaintenanceCarCell.h" afterPath="$PROJECT_DIR$/CarApp/HBMaintenance/HBMaintenanceCarCell.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMaintenance/HBMaintenanceCarCell.m" afterPath="$PROJECT_DIR$/CarApp/HBMaintenance/HBMaintenanceCarCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMaintenance/HBMaintenanceStoreViewController.h" afterPath="$PROJECT_DIR$/CarApp/HBMaintenance/HBMaintenanceStoreViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMaintenance/HBMaintenanceStoreViewController.m" afterPath="$PROJECT_DIR$/CarApp/HBMaintenance/HBMaintenanceStoreViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMaintenance/HBMiantenanceCarHomeModel.h" afterPath="$PROJECT_DIR$/CarApp/HBMaintenance/HBMiantenanceCarHomeModel.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMaintenance/HBOrderModel.h" afterPath="$PROJECT_DIR$/CarApp/HBMaintenance/HBOrderModel.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMaintenance/HBOrderModel.m" afterPath="$PROJECT_DIR$/CarApp/HBMaintenance/HBOrderModel.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMaintenance/HBPayInfoCell.h" afterPath="$PROJECT_DIR$/CarApp/HBMaintenance/HBPayInfoCell.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMaintenance/HBPayInfoCell.m" afterPath="$PROJECT_DIR$/CarApp/HBMaintenance/HBPayInfoCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMaintenance/HBPayWayCell.h" afterPath="$PROJECT_DIR$/CarApp/HBMaintenance/HBPayWayCell.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMaintenance/HBPayWayCell.m" afterPath="$PROJECT_DIR$/CarApp/HBMaintenance/HBPayWayCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMaintenance/HBPushShopCarView.h" afterPath="$PROJECT_DIR$/CarApp/HBMaintenance/HBPushShopCarView.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMaintenance/HBPushShopCarView.m" afterPath="$PROJECT_DIR$/CarApp/HBMaintenance/HBPushShopCarView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMaintenance/ShopCarBar.h" afterPath="$PROJECT_DIR$/CarApp/HBMaintenance/ShopCarBar.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMaintenanceCarViewController.h" afterPath="$PROJECT_DIR$/CarApp/HBMaintenanceCarViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMaintenanceCarViewController.m" afterPath="$PROJECT_DIR$/CarApp/HBMaintenanceCarViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMenuItem.h" afterPath="$PROJECT_DIR$/CarApp/HBMenuItem.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBMenuItem.m" afterPath="$PROJECT_DIR$/CarApp/HBMenuItem.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBNetRequest.h" afterPath="$PROJECT_DIR$/CarApp/HBNetRequest.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBNetRequest.m" afterPath="$PROJECT_DIR$/CarApp/HBNetRequest.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBOrderingCarViewController.h" afterPath="$PROJECT_DIR$/CarApp/HBOrderingCarViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBOrderingCarViewController.m" afterPath="$PROJECT_DIR$/CarApp/HBOrderingCarViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBOverlayView.h" afterPath="$PROJECT_DIR$/CarApp/HBOverlayView.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBOverlayView.m" afterPath="$PROJECT_DIR$/CarApp/HBOverlayView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBPayresult.h" afterPath="$PROJECT_DIR$/CarApp/HBPayresult.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBPayresult.m" afterPath="$PROJECT_DIR$/CarApp/HBPayresult.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBRecommendModel.h" afterPath="$PROJECT_DIR$/CarApp/HBRecommendModel.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBRootViewController.h" afterPath="$PROJECT_DIR$/CarApp/HBRootViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBRootViewController.m" afterPath="$PROJECT_DIR$/CarApp/HBRootViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBSearchConditionCarViewController.m" afterPath="$PROJECT_DIR$/CarApp/HBSearchConditionCarViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBSearchConditionModel.h" afterPath="$PROJECT_DIR$/CarApp/HBSearchConditionModel.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBSearchConditioncell.h" afterPath="$PROJECT_DIR$/CarApp/HBSearchConditioncell.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBSearchConditioncell.m" afterPath="$PROJECT_DIR$/CarApp/HBSearchConditioncell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBSearchResultViewController.h" afterPath="$PROJECT_DIR$/CarApp/HBSearchResultViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBSearchResultViewController.m" afterPath="$PROJECT_DIR$/CarApp/HBSearchResultViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBSelectCarControllerViewController.m" afterPath="$PROJECT_DIR$/CarApp/HBSelectCarControllerViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBSelectCarModel.h" afterPath="$PROJECT_DIR$/CarApp/HBSelectCarModel.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBSeriesOfCarCell.h" afterPath="$PROJECT_DIR$/CarApp/HBSeriesOfCarCell.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBSeriesOfCarCell.m" afterPath="$PROJECT_DIR$/CarApp/HBSeriesOfCarCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBSeriesOfcarModel.h" afterPath="$PROJECT_DIR$/CarApp/HBSeriesOfcarModel.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBSeriesOfcarViewController.h" afterPath="$PROJECT_DIR$/CarApp/HBSeriesOfcarViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBSeriesOfcarViewController.m" afterPath="$PROJECT_DIR$/CarApp/HBSeriesOfcarViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBShoppingCartView.h" afterPath="$PROJECT_DIR$/CarApp/HBShoppingCartView.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBStoreCarModel.h" afterPath="$PROJECT_DIR$/CarApp/HBStoreCarModel.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBTableViewCell.h" afterPath="$PROJECT_DIR$/CarApp/HBTableViewCell.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBTableViewCell.m" afterPath="$PROJECT_DIR$/CarApp/HBTableViewCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBUser/HBUserItem.h" afterPath="$PROJECT_DIR$/CarApp/HBUser/HBUserItem.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBUser/HBUserItem.m" afterPath="$PROJECT_DIR$/CarApp/HBUser/HBUserItem.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBrecommendViewCell.h" afterPath="$PROJECT_DIR$/CarApp/HBrecommendViewCell.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/HBrecommendViewCell.m" afterPath="$PROJECT_DIR$/CarApp/HBrecommendViewCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Info.plist" afterPath="$PROJECT_DIR$/CarApp/Info.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/MUDoubleThumbSlider.h" afterPath="$PROJECT_DIR$/CarApp/MUDoubleThumbSlider.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/MUDoubleThumbSlider.m" afterPath="$PROJECT_DIR$/CarApp/MUDoubleThumbSlider.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/MainViewController.m" afterPath="$PROJECT_DIR$/CarApp/MainViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/MyInfoViewController.h" afterPath="$PROJECT_DIR$/CarApp/MyInfoViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/MyInfoViewController.m" afterPath="$PROJECT_DIR$/CarApp/MyInfoViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/PrefixHeader.pch" afterPath="$PROJECT_DIR$/CarApp/PrefixHeader.pch" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Province.h" afterPath="$PROJECT_DIR$/CarApp/Province.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/Province.m" afterPath="$PROJECT_DIR$/CarApp/Province.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/SDCycleScrollView/PageControl/TAAbstractDotView.m" afterPath="$PROJECT_DIR$/CarApp/SDCycleScrollView/PageControl/TAAbstractDotView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/SDCycleScrollView/PageControl/TAAnimatedDotView.h" afterPath="$PROJECT_DIR$/CarApp/SDCycleScrollView/PageControl/TAAnimatedDotView.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/SDCycleScrollView/PageControl/TAAnimatedDotView.m" afterPath="$PROJECT_DIR$/CarApp/SDCycleScrollView/PageControl/TAAnimatedDotView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/SDCycleScrollView/PageControl/TADotView.m" afterPath="$PROJECT_DIR$/CarApp/SDCycleScrollView/PageControl/TADotView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/SDCycleScrollView/PageControl/TAPageControl.h" afterPath="$PROJECT_DIR$/CarApp/SDCycleScrollView/PageControl/TAPageControl.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/SDCycleScrollView/PageControl/TAPageControl.m" afterPath="$PROJECT_DIR$/CarApp/SDCycleScrollView/PageControl/TAPageControl.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/SDCycleScrollView/SDCollectionViewCell.h" afterPath="$PROJECT_DIR$/CarApp/SDCycleScrollView/SDCollectionViewCell.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/SDCycleScrollView/SDCollectionViewCell.m" afterPath="$PROJECT_DIR$/CarApp/SDCycleScrollView/SDCollectionViewCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/SDCycleScrollView/SDCycleScrollView.h" afterPath="$PROJECT_DIR$/CarApp/SDCycleScrollView/SDCycleScrollView.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/SDCycleScrollView/SDCycleScrollView.m" afterPath="$PROJECT_DIR$/CarApp/SDCycleScrollView/SDCycleScrollView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/SDCycleScrollView/UIView+SDExtension.h" afterPath="$PROJECT_DIR$/CarApp/SDCycleScrollView/UIView+SDExtension.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/SDCycleScrollView/UIView+SDExtension.m" afterPath="$PROJECT_DIR$/CarApp/SDCycleScrollView/UIView+SDExtension.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/TabItem.h" afterPath="$PROJECT_DIR$/CarApp/TabItem.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/TabItem.m" afterPath="$PROJECT_DIR$/CarApp/TabItem.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/UIImage+XLExtension.m" afterPath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/UIImage+XLExtension.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/UIView+XLExtension.h" afterPath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/UIView+XLExtension.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/UIView+XLExtension.m" afterPath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/UIView+XLExtension.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/Vender/FSActionSheet/FSActionSheet.h" afterPath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/Vender/FSActionSheet/FSActionSheet.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/Vender/FSActionSheet/FSActionSheet.m" afterPath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/Vender/FSActionSheet/FSActionSheet.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/Vender/FSActionSheet/FSActionSheetCell.h" afterPath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/Vender/FSActionSheet/FSActionSheetCell.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/Vender/FSActionSheet/FSActionSheetCell.m" afterPath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/Vender/FSActionSheet/FSActionSheetCell.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/Vender/FSActionSheet/FSActionSheetConfig.h" afterPath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/Vender/FSActionSheet/FSActionSheetConfig.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/Vender/FSActionSheet/FSActionSheetConfig.m" afterPath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/Vender/FSActionSheet/FSActionSheetConfig.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/Vender/FSActionSheet/FSActionSheetItem.h" afterPath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/Vender/FSActionSheet/FSActionSheetItem.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/Vender/FSActionSheet/FSActionSheetItem.m" afterPath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/Vender/FSActionSheet/FSActionSheetItem.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/XLPhotoBrowser.h" afterPath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/XLPhotoBrowser.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/XLPhotoBrowser.m" afterPath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/XLPhotoBrowser.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/XLPhotoBrowserConfig.h" afterPath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/XLPhotoBrowserConfig.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/XLProgressView.h" afterPath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/XLProgressView.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/XLProgressView.m" afterPath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/XLProgressView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/XLZoomingScrollView.h" afterPath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/XLZoomingScrollView.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/XLZoomingScrollView.m" afterPath="$PROJECT_DIR$/CarApp/XLPhotoBrowser/XLZoomingScrollView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/carInfo.h" afterPath="$PROJECT_DIR$/CarApp/carInfo.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/carStore.h" afterPath="$PROJECT_DIR$/CarApp/carStore.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/carStore.m" afterPath="$PROJECT_DIR$/CarApp/carStore.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/homeActive.h" afterPath="$PROJECT_DIR$/CarApp/homeActive.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/homeImage.h" afterPath="$PROJECT_DIR$/CarApp/homeImage.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/libs/AlipaySDK.framework/Headers/APayAuthInfo.h" afterPath="$PROJECT_DIR$/CarApp/libs/AlipaySDK.framework/Headers/APayAuthInfo.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/libs/AlipaySDK.framework/Headers/AlipaySDK.h" afterPath="$PROJECT_DIR$/CarApp/libs/AlipaySDK.framework/Headers/AlipaySDK.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CarApp/main.m" afterPath="$PROJECT_DIR$/CarApp/main.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/WLW.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/WLW.xcuserdatad/xcschemes/xcschememanagement.plist" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_0c0f73766d5aef7101c93dad257fa0c7eb32abff" />
+  <component name="FavoritesManager">
+    <favorites_list name="CarApp" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="HBCouponsViewController.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CarApp/HBCouponsViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="37" column="21" lean-forward="false" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HBMainPayViewController.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CarApp/HBMaintenance/HBMainPayViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <folding>
+                <element signature="e#134#169#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NSObjCRuntime.h" pinned="false" current-in-tab="false">
+        <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/objc/NSObjCRuntime.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HBMaintenanceCarCell.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CarApp/HBMaintenance/HBMaintenanceCarCell.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HBMaintenanceCarViewController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CarApp/HBMaintenanceCarViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HBMaintenanceCarViewController.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CarApp/HBMaintenanceCarViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HBMaintenanceStoreViewController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CarApp/HBMaintenance/HBMaintenanceStoreViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HBPayresult.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CarApp/HBPayresult.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HBMaintenanceStoreViewController.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CarApp/HBMaintenance/HBMaintenanceStoreViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="350" column="0" lean-forward="false" selection-start-line="350" selection-start-column="0" selection-end-line="350" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HBCouponsViewController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CarApp/HBCouponsViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>orderArr</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/CarApp/HBCouponsViewController.m" />
+        <option value="$PROJECT_DIR$/CarApp/HBMaintenance/HBMaintenanceStoreViewController.m" />
+        <option value="$PROJECT_DIR$/CarApp/HBMaintenance/HBMainPayViewController.m" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1080" />
+    <option name="y" value="-189" />
+    <option name="width" value="1080" />
+    <option name="height" value="1897" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarApp" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarApp" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarApp" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarApp" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarApp" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Main" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarApp" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarApp" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HBMaintenanceCar" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarApp" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CarApp" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HBMaintenanceCar" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Cidr.FilesView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+  </component>
+  <component name="RunManager" selected="Application.CarApp">
+    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CarApp" TARGET_NAME="CarApp" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CarApp" RUN_TARGET_NAME="CarApp" MAKE_ACTIVE="TRUE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="OCGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CarApp" TARGET_NAME="CarApp" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PASS_PARENT_ENVS_2="true" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="CarApp" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CarApp" TARGET_NAME="CarApp" CONFIG_NAME="Debug" SCHEME_NAME="CarApp" RUN_TARGET_PROJECT_NAME="CarApp" RUN_TARGET_NAME="CarApp" MAKE_ACTIVE="TRUE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.CarApp" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f44b8aca-7a80-41b4-a78b-e61059f95060" name="Default" comment="" />
+      <created>1497234873971</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1497234873971</updated>
+      <workItem from="1497234891682" duration="163000" />
+      <workItem from="1497235064894" duration="1335000" />
+      <workItem from="1497237183743" duration="4240000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="5738000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1080" y="-189" width="1080" height="1897" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37393767" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16177285" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CarApp/HBCarInfoCell.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBCouponsViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1036">
+          <caret line="37" column="21" lean-forward="false" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBMaintenance/HBMainPayViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#134#169#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBMaintenance/HBMaintenanceCarCell.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBMaintenanceCarViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBMaintenanceCarViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBMaintenance/HBMaintenanceStoreViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBPayresult.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBMaintenance/HBMaintenanceStoreViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9800">
+          <caret line="350" column="0" lean-forward="false" selection-start-line="350" selection-start-column="0" selection-end-line="350" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBCouponsViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBCarInfoCell.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBCouponsViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBCouponsViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBCarInfoCell.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBCouponsViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBMaintenance/HBMaintenanceCarCell.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBMaintenanceCarViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBMaintenanceCarViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBMaintenance/HBMaintenanceStoreViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBPayresult.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBMaintenance/HBMaintenanceStoreViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="350" column="0" lean-forward="false" selection-start-line="350" selection-start-column="0" selection-end-line="350" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBCouponsViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="37" column="21" lean-forward="false" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include/objc/NSObjCRuntime.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CarApp/HBMaintenance/HBMainPayViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <element signature="e#134#169#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

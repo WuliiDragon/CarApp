@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface homeImage : NSObject
-@property (nonatomic ,strong) NSString *imgurl;
-@property (nonatomic ,strong) NSString *url;
+@property(nonatomic, strong) NSString *imgurl;
+@property(nonatomic, strong) NSString *url;
 @end

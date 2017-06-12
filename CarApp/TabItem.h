@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TabItem : UIControl
-{
+@interface TabItem : UIControl {
     UIImageView *_itemImageView;
     UILabel *_itemLabel;
 }

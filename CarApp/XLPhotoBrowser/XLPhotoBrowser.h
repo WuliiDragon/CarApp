@@ -12,52 +12,52 @@
 /**
  *  图片浏览器的样式
  */
-typedef NS_ENUM(NSUInteger, XLPhotoBrowserStyle){
+typedef NS_ENUM(NSUInteger, XLPhotoBrowserStyle) {
     /**
      *  长按图片弹出功能组件,底部一个PageControl
      */
-    XLPhotoBrowserStylePageControl = 1,
+            XLPhotoBrowserStylePageControl = 1,
     /**
      * 长按图片弹出功能组件,顶部一个索引UILabel
      */
-    XLPhotoBrowserStyleIndexLabel = 2,
+            XLPhotoBrowserStyleIndexLabel = 2,
     /**
      * 没有功能组件,顶部一个索引UILabel,底部一个保存图片按钮
      */
-    XLPhotoBrowserStyleSimple = 3
+            XLPhotoBrowserStyleSimple = 3
 };
 
 /**
  *  pageControl的位置
  */
-typedef NS_ENUM(NSUInteger, XLPhotoBrowserPageControlAliment){
+typedef NS_ENUM(NSUInteger, XLPhotoBrowserPageControlAliment) {
     /**
      * pageControl在右边
      */
-    XLPhotoBrowserPageControlAlimentRight = 1,
+            XLPhotoBrowserPageControlAlimentRight = 1,
     /**
      *  pageControl 中间
      */
-    XLPhotoBrowserPageControlAlimentCenter = 2
+            XLPhotoBrowserPageControlAlimentCenter = 2
 };
 
 /**
  *  pageControl的样式
  */
-typedef NS_ENUM(NSUInteger, XLPhotoBrowserPageControlStyle){
+typedef NS_ENUM(NSUInteger, XLPhotoBrowserPageControlStyle) {
     /**
      * 系统自带经典样式
      */
-    XLPhotoBrowserPageControlStyleClassic = 1,
+            XLPhotoBrowserPageControlStyleClassic = 1,
     /**
      *  动画效果pagecontrol
      */
-    XLPhotoBrowserPageControlStyleAnimated = 2,
+            XLPhotoBrowserPageControlStyleAnimated = 2,
     /**
      *  不显示pagecontrol
      */
-    XLPhotoBrowserPageControlStyleNone = 3
-    
+            XLPhotoBrowserPageControlStyleNone = 3
+
 };
 
 @class XLPhotoBrowser;
@@ -99,6 +99,7 @@ typedef NS_ENUM(NSUInteger, XLPhotoBrowserPageControlStyle){
  *  @return 返回高清大图索引
  */
 - (NSURL *)photoBrowser:(XLPhotoBrowser *)browser highQualityImageURLForIndex:(NSInteger)index;
+
 /**
  *  返回指定位置的ALAsset对象,从其中获取图片
  *
@@ -108,6 +109,7 @@ typedef NS_ENUM(NSUInteger, XLPhotoBrowserPageControlStyle){
  *  @return 返回高清大图索引
  */
 - (ALAsset *)photoBrowser:(XLPhotoBrowser *)browser assetForIndex:(NSInteger)index;
+
 /**
  *  返回指定位置图片的UIImageView,用于做图片浏览器弹出放大和消失回缩动画等
  *  如果没有实现这个方法,没有回缩动画,如果传过来的view不正确,可能会影响回缩动画
@@ -121,32 +123,32 @@ typedef NS_ENUM(NSUInteger, XLPhotoBrowserPageControlStyle){
 
 @end
 
-@interface XLPhotoBrowser : UIView 
+@interface XLPhotoBrowser : UIView
 
 /**
  *  用户点击的图片视图,用于做图片浏览器弹出的放大动画,不给次属性赋值会通过代理方法photoBrowser: sourceImageViewForIndex:尝试获取,如果还是获取不到则没有弹出放大动画
  */
-@property (nonatomic, weak) UIImageView *sourceImageView;
+@property(nonatomic, weak) UIImageView *sourceImageView;
 /**
  *  当前显示的图片位置索引 , 默认是0
  */
-@property (nonatomic, assign ) NSInteger currentImageIndex;
+@property(nonatomic, assign) NSInteger currentImageIndex;
 /**
  *  浏览的图片数量,大于0
  */
-@property (nonatomic, assign ) NSInteger imageCount;
+@property(nonatomic, assign) NSInteger imageCount;
 /**
  *  datasource
  */
-@property (nonatomic, weak) id<XLPhotoBrowserDatasource> datasource;
+@property(nonatomic, weak) id <XLPhotoBrowserDatasource> datasource;
 /**
  *  delegate
  */
-@property (nonatomic , weak) id<XLPhotoBrowserDelegate> delegate;
+@property(nonatomic, weak) id <XLPhotoBrowserDelegate> delegate;
 /**
  *  browser style
  */
-@property (nonatomic , assign) XLPhotoBrowserStyle browserStyle;
+@property(nonatomic, assign) XLPhotoBrowserStyle browserStyle;
 /**
  *  占位图片,可选(默认是一张灰色的100*100像素图片) 
  *  当没有实现数据源中placeholderImageForIndex方法时,默认会使用这个占位图片
@@ -160,7 +162,7 @@ typedef NS_ENUM(NSUInteger, XLPhotoBrowserPageControlStyle){
 /**
  *  是否显示分页控件 , 默认YES
  */
-@property (nonatomic, assign) BOOL showPageControl;
+@property(nonatomic, assign) BOOL showPageControl;
 /**
  *  是否在只有一张图时隐藏pagecontrol，默认为YES
  */
@@ -168,27 +170,27 @@ typedef NS_ENUM(NSUInteger, XLPhotoBrowserPageControlStyle){
 /**
  *  pagecontrol 样式，默认为XLPhotoBrowserPageControlStyleAnimated样式
  */
-@property (nonatomic, assign) XLPhotoBrowserPageControlStyle pageControlStyle;
+@property(nonatomic, assign) XLPhotoBrowserPageControlStyle pageControlStyle;
 /**
  *  分页控件位置 , 默认为XLPhotoBrowserPageControlAlimentCenter
  */
-@property (nonatomic, assign) XLPhotoBrowserPageControlAliment pageControlAliment;
+@property(nonatomic, assign) XLPhotoBrowserPageControlAliment pageControlAliment;
 /**
  *  当前分页控件小圆标颜色
  */
-@property (nonatomic, strong) UIColor *currentPageDotColor;
+@property(nonatomic, strong) UIColor *currentPageDotColor;
 /**
  *  其他分页控件小圆标颜色
  */
-@property (nonatomic, strong) UIColor *pageDotColor;
+@property(nonatomic, strong) UIColor *pageDotColor;
 /**
  *  当前分页控件小圆标图片
  */
-@property (nonatomic, strong) UIImage *currentPageDotImage;
+@property(nonatomic, strong) UIImage *currentPageDotImage;
 /**
  *  其他分页控件小圆标图片
  */
-@property (nonatomic, strong) UIImage *pageDotImage;
+@property(nonatomic, strong) UIImage *pageDotImage;
 
 
 #pragma mark    ----------------------
@@ -202,7 +204,7 @@ typedef NS_ENUM(NSUInteger, XLPhotoBrowserPageControlStyle){
  *  @param datasource        数据源
  *
  */
-+ (instancetype)showPhotoBrowserWithCurrentImageIndex:(NSInteger)currentImageIndex imageCount:(NSUInteger)imageCount datasource:(id<XLPhotoBrowserDatasource>)datasource;
++ (instancetype)showPhotoBrowserWithCurrentImageIndex:(NSInteger)currentImageIndex imageCount:(NSUInteger)imageCount datasource:(id <XLPhotoBrowserDatasource>)datasource;
 
 /**
  一行代码展示 (在某些使用场景,不需要做很复杂的操作,例如不需要长按弹出actionSheet,从而不需要实现数据源方法和代理方法,那么可以选择这个方法,直接传数据源数组进来,框架内部做处理)
@@ -223,15 +225,18 @@ typedef NS_ENUM(NSUInteger, XLPhotoBrowserPageControlStyle){
  *  @param deleteButtonTitle      删除按钮文字,如果为nil,不显示删除按钮
  *  @param otherButtonTitles      其他按钮数组
  */
-- (void)setActionSheetWithTitle:(NSString *)title delegate:(id<XLPhotoBrowserDelegate>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle deleteButtonTitle:( NSString *)deleteButtonTitle otherButtonTitles:( NSString *)otherButtonTitle, ... NS_REQUIRES_NIL_TERMINATION;
+- (void)setActionSheetWithTitle:(NSString *)title delegate:(id <XLPhotoBrowserDelegate>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle deleteButtonTitle:(NSString *)deleteButtonTitle otherButtonTitles:(NSString *)otherButtonTitle, ... NS_REQUIRES_NIL_TERMINATION;
+
 /**
  *  保存当前展示的图片
  */
 - (void)saveCurrentShowImage;
+
 /**
  *  进入图片浏览器
  */
 - (void)show;
+
 /**
  *  退出
  */

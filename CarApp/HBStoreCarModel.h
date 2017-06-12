@@ -10,18 +10,18 @@
 
 @interface HBStoreCarModel : HBModel
 
-@property (nonatomic ,strong) NSString <Optional> *baddress;
-@property (nonatomic ,strong) NSString <Optional> *bid;
-@property (nonatomic ,strong) NSString <Optional> *bname;
-@property (nonatomic ,strong) NSString <Optional> *bshowImage;
-@property (nonatomic ,strong) NSString <Optional> *bphone;
-@property (nonatomic ,strong) NSString <Optional> *distance;
-@property (nonatomic ,strong) NSString <Optional> *majorbusiness;
-@property (nonatomic ,strong) NSString <Optional> *title1;
-@property (nonatomic ,strong) NSString <Optional> *title2;
-@property (nonatomic ,strong) NSString <Optional> *isActivity;
-@property (nonatomic ,strong) NSString <Optional> *longitude;
-@property (nonatomic ,strong) NSString <Optional> *latitude;
+@property(nonatomic, strong) NSString <Optional> *baddress;
+@property(nonatomic, strong) NSString <Optional> *bid;
+@property(nonatomic, strong) NSString <Optional> *bname;
+@property(nonatomic, strong) NSString <Optional> *bshowImage;
+@property(nonatomic, strong) NSString <Optional> *bphone;
+@property(nonatomic, strong) NSString <Optional> *distance;
+@property(nonatomic, strong) NSString <Optional> *majorbusiness;
+@property(nonatomic, strong) NSString <Optional> *title1;
+@property(nonatomic, strong) NSString <Optional> *title2;
+@property(nonatomic, strong) NSString <Optional> *isActivity;
+@property(nonatomic, strong) NSString <Optional> *longitude;
+@property(nonatomic, strong) NSString <Optional> *latitude;
 
 
 @end

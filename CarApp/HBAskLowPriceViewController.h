@@ -11,13 +11,14 @@
 #import "HBCarStoreDetailModel.h"
 #import "HBStoreCarModel.h"
 #import "HBSeriesOfcarModel.h"
-@interface HBAskLowPriceViewController : HBRootViewController
-@property(nonatomic,strong) HBStoreCarModel *storeCarModel;
-@property(nonatomic,strong) HBSeriesOfcarModel *seriesOfCarModel;
-@property (strong, nonatomic) HBCarStoreDetailModel *carStoreDetailModel;
 
-@property (strong, nonatomic) NSString *bid;
-@property (strong, nonatomic) NSString *mid;
-@property (strong, nonatomic) NSString *carinfo;
-@property (strong, nonatomic) NSString *distanceStr;
+@interface HBAskLowPriceViewController : HBRootViewController
+@property(nonatomic, strong) HBStoreCarModel *storeCarModel;
+@property(nonatomic, strong) HBSeriesOfcarModel *seriesOfCarModel;
+@property(strong, nonatomic) HBCarStoreDetailModel *carStoreDetailModel;
+
+@property(strong, nonatomic) NSString *bid;
+@property(strong, nonatomic) NSString *mid;
+@property(strong, nonatomic) NSString *carinfo;
+@property(strong, nonatomic) NSString *distanceStr;
 @end

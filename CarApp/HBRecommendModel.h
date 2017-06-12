@@ -9,12 +9,12 @@
 #import "HBModel.h"
 
 @interface HBRecommendModel : HBModel
-@property (nonatomic ,copy)NSString<Optional> *gid;
-@property (nonatomic ,copy)NSString<Optional> *gname;
-@property (nonatomic ,copy)NSString<Optional> *guidegprice;
-@property (nonatomic ,copy)NSString<Optional> *mid;
-@property (nonatomic ,copy)NSString<Optional> *mname;
-@property (nonatomic ,copy)NSString<Optional> *mshowImage;
-@property (nonatomic ,copy)NSString<Optional> *mtitle;
+@property(nonatomic, copy) NSString <Optional> *gid;
+@property(nonatomic, copy) NSString <Optional> *gname;
+@property(nonatomic, copy) NSString <Optional> *guidegprice;
+@property(nonatomic, copy) NSString <Optional> *mid;
+@property(nonatomic, copy) NSString <Optional> *mname;
+@property(nonatomic, copy) NSString <Optional> *mshowImage;
+@property(nonatomic, copy) NSString <Optional> *mtitle;
 
 @end

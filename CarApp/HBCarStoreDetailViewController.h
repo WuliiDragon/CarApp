@@ -11,6 +11,6 @@
 
 
 @interface HBCarStoreDetailViewController : UIViewController
-@property (nonatomic,strong)NSString *bid;
-@property (nonatomic,strong)NSString *distance;
+@property(nonatomic, strong) NSString *bid;
+@property(nonatomic, strong) NSString *distance;
 @end

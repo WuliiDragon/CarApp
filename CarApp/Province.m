@@ -13,24 +13,22 @@
 
 // 成员方法创建
 - (instancetype)initWithName:(NSString *)name
-                      cities:(NSArray *)cities
-{
+                      cities:(NSArray *)cities {
     if (self = [super init]) {
         _name = name;
         _cities = cities;
     }
-    
+
     return self;
 }
 
 // 类方法创建
 + (instancetype)provinceWithName:(NSString *)name
-                          cities:(NSArray *)cities{
+                          cities:(NSArray *)cities {
     Province *p = [[Province alloc] initWithName:name
                                           cities:cities];
     return p;
 }
-
 
 
 @end

@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "HBMiantenanceCarHomeModel.h"
+
 @interface HBMaintenanceStoreViewController : UIViewController
 
--(instancetype)initWithStoreInfo:(HBMiantenanceCarHomeModel *)model;
+- (instancetype)initWithStoreInfo:(HBMiantenanceCarHomeModel *)model;
 @end

@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface HBPayWayCell : UITableViewCell
-@property(nonatomic,strong)void (^btnBlock)();
-@property (strong, nonatomic) IBOutlet UIImageView *payImg;
-@property (strong, nonatomic) IBOutlet UILabel *payWay;
--(void)imgName:(NSString *)imgName payWay:(NSString *)payWay ;
-@property (strong, nonatomic) IBOutlet UIImageView *select;
+@property(nonatomic, strong) void (^btnBlock)();
+@property(strong, nonatomic) IBOutlet UIImageView *payImg;
+@property(strong, nonatomic) IBOutlet UILabel *payWay;
+
+- (void)imgName:(NSString *)imgName payWay:(NSString *)payWay;
+
+@property(strong, nonatomic) IBOutlet UIImageView *select;
 @end

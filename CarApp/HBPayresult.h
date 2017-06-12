@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HBPayresult : UIViewController
-@property(nonatomic,strong)NSString *result;
 
+- (instancetype)initWithResInfo:(id)data qid:(NSString *)qid resultCode:(NSString *)resultCode;
 
 @end

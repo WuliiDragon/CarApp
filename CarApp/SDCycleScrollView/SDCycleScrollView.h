@@ -64,7 +64,7 @@ typedef enum {
 
 
 /** 初始轮播图（推荐使用） */
-+ (instancetype)cycleScrollViewWithFrame:(CGRect)frame delegate:(id<SDCycleScrollViewDelegate>)delegate placeholderImage:(UIImage *)placeholderImage;
++ (instancetype)cycleScrollViewWithFrame:(CGRect)frame delegate:(id <SDCycleScrollViewDelegate>)delegate placeholderImage:(UIImage *)placeholderImage;
 
 + (instancetype)cycleScrollViewWithFrame:(CGRect)frame imageURLStringsGroup:(NSArray *)imageURLStringsGroup;
 
@@ -79,13 +79,13 @@ typedef enum {
 //////////////////////  数据源接口  //////////////////////
 
 /** 网络图片 url string 数组 */
-@property (nonatomic, strong) NSArray *imageURLStringsGroup;
+@property(nonatomic, strong) NSArray *imageURLStringsGroup;
 
 /** 每张图片对应要显示的文字数组 */
-@property (nonatomic, strong) NSArray *titlesGroup;
+@property(nonatomic, strong) NSArray *titlesGroup;
 
 /** 本地图片数组 */
-@property (nonatomic, strong) NSArray *localizationImageNamesGroup;
+@property(nonatomic, strong) NSArray *localizationImageNamesGroup;
 
 
 
@@ -94,24 +94,24 @@ typedef enum {
 //////////////////////  滚动控制接口 //////////////////////
 
 /** 自动滚动间隔时间,默认2s */
-@property (nonatomic, assign) CGFloat autoScrollTimeInterval;
+@property(nonatomic, assign) CGFloat autoScrollTimeInterval;
 
 /** 是否无限循环,默认Yes */
-@property (nonatomic,assign) BOOL infiniteLoop;
+@property(nonatomic, assign) BOOL infiniteLoop;
 
 /** 是否自动滚动,默认Yes */
-@property (nonatomic,assign) BOOL autoScroll;
+@property(nonatomic, assign) BOOL autoScroll;
 
 /** 图片滚动方向，默认为水平滚动 */
-@property (nonatomic, assign) UICollectionViewScrollDirection scrollDirection;
+@property(nonatomic, assign) UICollectionViewScrollDirection scrollDirection;
 
-@property (nonatomic, weak) id<SDCycleScrollViewDelegate> delegate;
+@property(nonatomic, weak) id <SDCycleScrollViewDelegate> delegate;
 
 /** block方式监听点击 */
-@property (nonatomic, copy) void (^clickItemOperationBlock)(NSInteger currentIndex);
+@property(nonatomic, copy) void (^clickItemOperationBlock)(NSInteger currentIndex);
 
 /** block方式监听滚动 */
-@property (nonatomic, copy) void (^itemDidScrollOperationBlock)(NSInteger currentIndex);
+@property(nonatomic, copy) void (^itemDidScrollOperationBlock)(NSInteger currentIndex);
 
 /** 解决viewWillAppear时出现时轮播图卡在一半的问题，在控制器viewWillAppear时调用此方法 */
 - (void)adjustWhenControllerViewWillAppera;
@@ -120,58 +120,58 @@ typedef enum {
 
 
 /** 轮播图片的ContentMode，默认为 UIViewContentModeScaleToFill */
-@property (nonatomic, assign) UIViewContentMode bannerImageViewContentMode;
+@property(nonatomic, assign) UIViewContentMode bannerImageViewContentMode;
 
 /** 占位图，用于网络未加载到图片时 */
-@property (nonatomic, strong) UIImage *placeholderImage;
+@property(nonatomic, strong) UIImage *placeholderImage;
 
 /** 是否显示分页控件 */
-@property (nonatomic, assign) BOOL showPageControl;
+@property(nonatomic, assign) BOOL showPageControl;
 
 /** 是否在只有一张图时隐藏pagecontrol，默认为YES */
 @property(nonatomic) BOOL hidesForSinglePage;
 
 /** 只展示文字轮播 */
-@property (nonatomic, assign) BOOL onlyDisplayText;
+@property(nonatomic, assign) BOOL onlyDisplayText;
 
 /** pagecontrol 样式，默认为动画样式 */
-@property (nonatomic, assign) SDCycleScrollViewPageContolStyle pageControlStyle;
+@property(nonatomic, assign) SDCycleScrollViewPageContolStyle pageControlStyle;
 
 /** 分页控件位置 */
-@property (nonatomic, assign) SDCycleScrollViewPageContolAliment pageControlAliment;
+@property(nonatomic, assign) SDCycleScrollViewPageContolAliment pageControlAliment;
 
 /** 分页控件距离轮播图的底部间距（在默认间距基础上）的偏移量 */
-@property (nonatomic, assign) CGFloat pageControlBottomOffset;
+@property(nonatomic, assign) CGFloat pageControlBottomOffset;
 
 /** 分页控件距离轮播图的右边间距（在默认间距基础上）的偏移量 */
-@property (nonatomic, assign) CGFloat pageControlRightOffset;
+@property(nonatomic, assign) CGFloat pageControlRightOffset;
 
 /** 分页控件小圆标大小 */
-@property (nonatomic, assign) CGSize pageControlDotSize;
+@property(nonatomic, assign) CGSize pageControlDotSize;
 
 /** 当前分页控件小圆标颜色 */
-@property (nonatomic, strong) UIColor *currentPageDotColor;
+@property(nonatomic, strong) UIColor *currentPageDotColor;
 
 /** 其他分页控件小圆标颜色 */
-@property (nonatomic, strong) UIColor *pageDotColor;
+@property(nonatomic, strong) UIColor *pageDotColor;
 
 /** 当前分页控件小圆标图片 */
-@property (nonatomic, strong) UIImage *currentPageDotImage;
+@property(nonatomic, strong) UIImage *currentPageDotImage;
 
 /** 其他分页控件小圆标图片 */
-@property (nonatomic, strong) UIImage *pageDotImage;
+@property(nonatomic, strong) UIImage *pageDotImage;
 
 /** 轮播文字label字体颜色 */
-@property (nonatomic, strong) UIColor *titleLabelTextColor;
+@property(nonatomic, strong) UIColor *titleLabelTextColor;
 
 /** 轮播文字label字体大小 */
-@property (nonatomic, strong) UIFont  *titleLabelTextFont;
+@property(nonatomic, strong) UIFont *titleLabelTextFont;
 
 /** 轮播文字label背景颜色 */
-@property (nonatomic, strong) UIColor *titleLabelBackgroundColor;
+@property(nonatomic, strong) UIColor *titleLabelBackgroundColor;
 
 /** 轮播文字label高度 */
-@property (nonatomic, assign) CGFloat titleLabelHeight;
+@property(nonatomic, assign) CGFloat titleLabelHeight;
 
 
 

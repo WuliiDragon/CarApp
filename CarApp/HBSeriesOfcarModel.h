@@ -9,10 +9,10 @@
 #import "HBModel.h"
 
 @interface HBSeriesOfcarModel : HBModel
-@property (nonatomic ,copy)NSString<Optional> *mid;
-@property (nonatomic ,copy)NSString<Optional> *mname;
-@property (nonatomic ,copy)NSString<Optional> *gprice;
-@property (nonatomic ,copy)NSString<Optional> *guidegprice;
-@property (nonatomic ,copy)NSString<Optional> *mtitle;
-@property (nonatomic ,copy)NSString<Optional> *mshowImage;
+@property(nonatomic, copy) NSString <Optional> *mid;
+@property(nonatomic, copy) NSString <Optional> *mname;
+@property(nonatomic, copy) NSString <Optional> *gprice;
+@property(nonatomic, copy) NSString <Optional> *guidegprice;
+@property(nonatomic, copy) NSString <Optional> *mtitle;
+@property(nonatomic, copy) NSString <Optional> *mshowImage;
 @end

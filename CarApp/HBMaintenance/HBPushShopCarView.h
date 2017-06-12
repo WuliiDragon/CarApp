@@ -10,12 +10,13 @@
 
 @interface HBPushShopCarView : UIView
 
-@property (strong, nonatomic)  UIView *bgView;
-@property(nonatomic,strong) UITableView *tableViewShopCar;
-@property(nonatomic,strong) NSMutableArray *ShopCarData;
+@property(strong, nonatomic) UIView *bgView;
+@property(nonatomic, strong) UITableView *tableViewShopCar;
+@property(nonatomic, strong) NSMutableArray *ShopCarData;
 
 
--(void)removeView;
--(float)updateFrame ;
+- (void)removeView;
+
+- (float)updateFrame;
 
 @end

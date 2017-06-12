@@ -9,9 +9,9 @@
 #import "HBModel.h"
 
 @interface HBSelectCarModel : HBModel
-@property (nonatomic, copy) NSString <Optional>*logo;
-@property (nonatomic, copy) NSString <Optional>*ID;
-@property (nonatomic, copy) NSString <Optional>*name;
-@property (nonatomic, copy) NSString <Optional> *initial;
+@property(nonatomic, copy) NSString <Optional> *logo;
+@property(nonatomic, copy) NSString <Optional> *ID;
+@property(nonatomic, copy) NSString <Optional> *name;
+@property(nonatomic, copy) NSString <Optional> *initial;
 
 @end

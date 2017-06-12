@@ -11,7 +11,7 @@
 @implementation HBCleanCellModel
 
 
--(void)initVar{
+- (void)initVar {
     _count = @"0";
     _reduceStatus = @"0";
     _countLabStatus = @"0";

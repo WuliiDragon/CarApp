@@ -14,6 +14,7 @@
 
 
 #import "APayAuthInfo.h"
+
 typedef enum {
     ALIPAY_TIDFACTOR_IMEI,
     ALIPAY_TIDFACTOR_IMSI,
@@ -40,7 +41,7 @@ typedef void(^CompletionBlock)(NSDictionary *resultDic);
 /**
  *  用于设置SDK使用的window，如果没有自行创建window无需设置此接口
  */
-@property (nonatomic, weak) UIWindow *targetWindow;
+@property(nonatomic, weak) UIWindow *targetWindow;
 
 /**
  *  支付接口
@@ -61,7 +62,6 @@ typedef void(^CompletionBlock)(NSDictionary *resultDic);
  */
 - (void)processOrderWithPaymentResult:(NSURL *)resultUrl
                       standbyCallback:(CompletionBlock)completionBlock;
-
 
 
 /**
@@ -90,7 +90,7 @@ typedef void(^CompletionBlock)(NSDictionary *resultDic);
  *
  *  @return tid相关信息
  */
-- (NSString*)queryTidFactor:(AlipayTidFactor)factor;
+- (NSString *)queryTidFactor:(AlipayTidFactor)factor;
 
 /**
  *  測試所用，realse包无效
@@ -111,7 +111,7 @@ typedef void(^CompletionBlock)(NSDictionary *resultDic);
  *
  *  @return 获取到的url order info
  */
-- (NSString*)fetchOrderInfoFromH5PayUrl:(NSString*)urlStr;
+- (NSString *)fetchOrderInfoFromH5PayUrl:(NSString *)urlStr;
 
 
 /**
@@ -137,7 +137,7 @@ typedef void(^CompletionBlock)(NSDictionary *resultDic);
                             需要调用方在appDelegate中调用processAuthResult:standbyCallback:方法获取授权结果
  */
 - (void)authWithInfo:(APayAuthInfo *)authInfo
-             callback:(CompletionBlock)completionBlock;
+            callback:(CompletionBlock)completionBlock;
 
 
 /**

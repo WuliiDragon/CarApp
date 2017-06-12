@@ -56,7 +56,6 @@
 		2F1EEDC81DEEAEDB0049DF9C /* HBStoreCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1EEDC71DEEAEDB0049DF9C /* HBStoreCarModel.m */; };
 		2F20E5DB1EAB3A560095719E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F20E5DA1EAB3A560095719E /* Launch Screen.storyboard */; };
 		2F20E5DF1EAB5C220095719E /* HBPayresult.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F20E5DD1EAB5C220095719E /* HBPayresult.m */; };
-		2F20E5E01EAB5C220095719E /* HBPayresult.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F20E5DE1EAB5C220095719E /* HBPayresult.xib */; };
 		2F275F331DF053CE0051262A /* HBSelectCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F275F321DF053CE0051262A /* HBSelectCarModel.m */; };
 		2F2CEAF91EE5566000E870F9 /* HBGoodInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2CEAF71EE5566000E870F9 /* HBGoodInfoCell.m */; };
 		2F2CEAFA1EE5566000E870F9 /* HBGoodInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F2CEAF81EE5566000E870F9 /* HBGoodInfoCell.xib */; };
@@ -238,7 +237,6 @@
 		2F20E5DA1EAB3A560095719E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		2F20E5DC1EAB5C220095719E /* HBPayresult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBPayresult.h; sourceTree = "<group>"; };
 		2F20E5DD1EAB5C220095719E /* HBPayresult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBPayresult.m; sourceTree = "<group>"; };
-		2F20E5DE1EAB5C220095719E /* HBPayresult.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBPayresult.xib; sourceTree = "<group>"; };
 		2F275F311DF053CE0051262A /* HBSelectCarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBSelectCarModel.h; sourceTree = "<group>"; };
 		2F275F321DF053CE0051262A /* HBSelectCarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBSelectCarModel.m; sourceTree = "<group>"; };
 		2F2CEAF61EE5566000E870F9 /* HBGoodInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBGoodInfoCell.h; sourceTree = "<group>"; };
@@ -569,7 +567,6 @@
 				2FCE62181EA4D2C300D95B64 /* HBCouponsViewController.m */,
 				2F20E5DC1EAB5C220095719E /* HBPayresult.h */,
 				2F20E5DD1EAB5C220095719E /* HBPayresult.m */,
-				2F20E5DE1EAB5C220095719E /* HBPayresult.xib */,
 				2F2CEB0A1EE59C2A00E870F9 /* HBPushShopCarView.h */,
 				2F2CEB0B1EE59C2A00E870F9 /* HBPushShopCarView.m */,
 			);
@@ -1049,7 +1046,6 @@
 				2F022D761E893D9E006AFF50 /* HBLoginViewController.xib in Resources */,
 				2F66EFA11E0E4A8000B15EA9 /* HBConfigurationOfCar.xib in Resources */,
 				2FDECD911EADB3380006D45A /* HBInfoSetTableViewController.xib in Resources */,
-				2F20E5E01EAB5C220095719E /* HBPayresult.xib in Resources */,
 				2FC719031DE57FF800B4E381 /* HBCarStoreCell.xib in Resources */,
 				2F6969D91E8FCBBA008BC777 /* HBFoundPassword.xib in Resources */,
 				2F4A6CC91DEAB83B00DDE9AF /* HBAskLowPriceViewController.xib in Resources */,
@@ -1336,7 +1332,7 @@
 				GCC_PREFIX_HEADER = CarApp/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = ./include;
 				INFOPLIST_FILE = CarApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1373,7 +1369,7 @@
 				GCC_PREFIX_HEADER = CarApp/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = ./include;
 				INFOPLIST_FILE = CarApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

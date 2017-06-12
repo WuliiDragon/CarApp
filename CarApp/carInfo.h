@@ -10,11 +10,11 @@
 
 @interface carInfo : NSObject
 
-@property (strong, nonatomic) NSString *glastimage;
-@property (strong, nonatomic) NSString *gid;
-@property (strong, nonatomic) NSString *gname;
-@property (strong, nonatomic) NSString *model;
-@property (strong, nonatomic) NSString *guidegprice;
-@property (strong, nonatomic) NSString *gprice;
-@property (strong, nonatomic) NSString *title;
+@property(strong, nonatomic) NSString *glastimage;
+@property(strong, nonatomic) NSString *gid;
+@property(strong, nonatomic) NSString *gname;
+@property(strong, nonatomic) NSString *model;
+@property(strong, nonatomic) NSString *guidegprice;
+@property(strong, nonatomic) NSString *gprice;
+@property(strong, nonatomic) NSString *title;
 @end

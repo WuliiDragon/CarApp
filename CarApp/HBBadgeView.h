@@ -9,13 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface HBBadgeView : UIView
--(instancetype)initWithFrame:(CGRect)frame withString:(NSString *)string;
+- (instancetype)initWithFrame:(CGRect)frame withString:(NSString *)string;
 
--(instancetype)initWithFrame:(CGRect)frame withString:(NSString *)string withTextColor:(UIColor *)textColor;
+- (instancetype)initWithFrame:(CGRect)frame withString:(NSString *)string withTextColor:(UIColor *)textColor;
 
-@property (nonatomic,strong) NSString *badgeValue;
+@property(nonatomic, strong) NSString *badgeValue;
 
-@property (nonatomic,strong) UIColor *textColor;
-@property (nonatomic,strong) UILabel *textLabel;
+@property(nonatomic, strong) UIColor *textColor;
+@property(nonatomic, strong) UILabel *textLabel;
 
 @end
