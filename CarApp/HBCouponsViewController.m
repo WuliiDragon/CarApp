@@ -41,15 +41,8 @@
     [super viewDidLoad];
     [self loadTableView];
     
-    if(_modelArr ==nil){
-    
+    if(_modelArr ==nil)
         [self.navigationController popViewControllerAnimated:YES];
-
-    }
-    
-    
-    
-    
     if ([_modelArr count]==0) {
          [self loadData];
     }

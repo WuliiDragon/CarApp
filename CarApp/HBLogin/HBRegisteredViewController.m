@@ -239,6 +239,12 @@
 
 }
 
+//点击界面
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
+
+
 - (void)hiddenKeyboardForTap {
     [_phoneInput resignFirstResponder];
     [_passwordInput resignFirstResponder];

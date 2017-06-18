@@ -66,7 +66,6 @@
 
     _hud = [[MBProgressHUD alloc] init];
     [self.navigationController.view addSubview:_hud];
-
     //初始化位置信息
     _hud.labelText = @"正在加载位置";
     [_hud show:YES];

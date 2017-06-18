@@ -38,6 +38,11 @@
 #define PAYMENT                 @"https://www.singpa.com/carshop/ycorder/payment.action"
 
 
+
+#define GETCATALOG              @"https://www.singpa.com/carshop/new/getCatalog.action"
+#define GETALL                  @"https://www.singpa.com/carshop/new/getAll.action"
+#define GETNEWS                 @"https://www.singpa.com/carshop/new/get.action"
+
 #define DEFAULTS                  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS

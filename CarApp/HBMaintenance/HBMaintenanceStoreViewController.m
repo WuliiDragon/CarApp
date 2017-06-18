@@ -539,7 +539,6 @@
 #pragma mark 购物车功能
 
 - (void)tableView:(UITableView *)tableView changeStatus:(NSDictionary *)status didSelectIndexPath:(NSIndexPath *)indexPath {//在三个tableview上任意服务点击加减的代理方法
-  
     
     if (tableView == _tableViewClean) {
         HBCleanCellModel *model = _cleanArr[indexPath.row];
@@ -591,19 +590,14 @@
 }
 
 - (IBAction)toPay:(UIButton *)sender {//点击去结算
-    
-    
     if (![[NSUserDefaults standardUserDefaults] objectForKey:@"token"]) {//登录检测
-
         [HBAuxiliary alertWithTitle:@"您还未登录" message:@"是否登录？" button:@[@"登录", @"暂不登录"] done:^{
             AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
             BaseNavigationController *NA = [[BaseNavigationController alloc] initWithRootViewController:[HBLoginViewController new]];
             appDelegate.window.rootViewController = NA;
         }                    cancel:^{
             return ;
-
         }];
-        
         return ;
 
     }
@@ -662,8 +656,6 @@
 }
 
 - (void)changeData:(NSNotification *)Notification {
-   
-    
     
     NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:Notification.userInfo];
     HBCleanCellModel *model = [dic objectForKey:@"model"];

@@ -17,11 +17,9 @@
 #import <Toast/UIView+Toast.h>
 #import "HBAuxiliary.h"
 
-@interface HBLoginViewController () <UITextFieldDelegate> {
-    BOOL allOK;
-    BOOL accountOK;
-    BOOL passwordOk;
-}
+@interface HBLoginViewController () <UITextFieldDelegate>
+  
+
 @property(strong, nonatomic) IBOutlet UITextField *accountInput;
 @property(strong, nonatomic) IBOutlet UITextField *passwordInput;
 @property(strong, nonatomic) IBOutlet UIButton *loginBtu;
@@ -33,27 +31,45 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    allOK = accountOK = passwordOk = NO;
-
+    
+    
+    
     UIImageView *title = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 160, 20)];
     title.image = [UIImage imageNamed:@"loginTitle"];
     self.navigationItem.titleView = title;
 
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(backMainController)];
 
-    [self.accountInput addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
-    [self.passwordInput addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+    
+    
+    _passwordInput.returnKeyType = UIReturnKeyDone;
+    _passwordInput.delegate = self;//设置代理
+
 
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    return [textField resignFirstResponder];
+}
+
+//点击界面
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
+
 - (void)backMainController {
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    AppDelegate *appDelegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
     appDelegate.window.rootViewController = [MainViewController new];
 }
 
 
 - (IBAction)loginAction:(id)sender {
-    if (allOK) {
+
+    
+    NSLog(@"HBLog:%lu",_accountInput.text.length);
+    NSLog(@"HBLog:%lu",_passwordInput.text.length);
+    
+    if (_accountInput.text.length > 1 && _passwordInput.text.length > 1) {
         _hud = [[MBProgressHUD alloc] init];
         _hud.labelText = @"正在登录...";
         [self.navigationController.view addSubview:_hud];
@@ -82,17 +98,14 @@
 //                          } fail:^(NSError *error) {
 //                              
 //                          }];
-
-
-
-
-
-                          AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+                          AppDelegate *appDelegate =(AppDelegate*) [[UIApplication sharedApplication] delegate];
                           appDelegate.window.rootViewController = [MainViewController new];
                       }
                   } fail:^(NSError *error) {
                     [_hud hide:YES];
                 }];
+    }else{
+        [self.view makeToast:@"手机号码或者密码长度不对" duration:1.0 position:CSToastPositionCenter];
     }
 
 }
@@ -105,32 +118,7 @@
 }
 
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [self hiddenKeyboardForTap];
-}
 
-#pragma mark Textfiled相关
-
-- (void)textFieldDidChange:(UITextField *)textField {
-    if (textField == _accountInput) {
-        accountOK = NO;
-        if (textField.text.length > 1) accountOK = YES;
-    }
-    if (textField == _passwordInput) {
-        if (textField.text.length >= 6 && textField.text.length <= 20)passwordOk = YES;
-        else passwordOk = NO;
-        if (textField.text.length >= 20) {
-            textField.text = [textField.text substringToIndex:20];
-        }
-    }
-    if (accountOK && passwordOk) {
-        _loginBtu.enabled = YES;
-        allOK = YES;
-    } else {
-        _loginBtu.enabled = NO;
-        allOK = NO;
-    }
-}
 
 - (IBAction)forgetPassword:(id)sender {
     HBFoundPassword *vc = [[HBFoundPassword alloc] init];
@@ -141,4 +129,12 @@
     [_accountInput resignFirstResponder];
     [_passwordInput resignFirstResponder];
 }
+
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:YES];
+    [self hiddenKeyboardForTap];
+}
+
+
 @end
