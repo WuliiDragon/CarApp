@@ -12,11 +12,18 @@
 @property(nonatomic, assign) long uid;
 @property(nonatomic, assign) long status;
 
-@property(nonatomic, copy) NSString <Optional> *ucreate;
-@property(nonatomic, strong) NSString <Optional> *phone;
+@property(nonatomic, strong) NSString <Optional> *ucreate;
+@property(nonatomic, strong) NSString <Optional> *uphone;
 @property(nonatomic, strong) NSString <Optional> *ulogin;
 @property(nonatomic, strong) NSString <Optional> *token;
+
+@property(nonatomic, strong) NSString <Optional> *uimage;
+@property(nonatomic, strong) NSString <Optional> *mname;
+@property(nonatomic, strong) NSString <Optional> *gname;
+@property(nonatomic, strong) NSString <Optional> *uemail;
+
 @property(nonatomic, strong) NSString <Optional> *uname;
+@property(nonatomic, strong) NSString <Optional> *uaddress;
 
 
 + (void)saveUser:(HBUserItem *)user;

@@ -71,8 +71,10 @@
     _longitude = [defaults objectForKey:@"longitude"];
     if (!refresh)[self.hud show:YES];
 
-    [HBNetRequest Get:MAINTENANCECARHOME para:@{@"longitude": _longitude,
-                    @"latitude": _latitude}
+    [HBNetRequest Get:MAINTENANCECARHOME para:@{
+                                                @"longitude": _longitude,
+                                                @"latitude": _latitude
+                                                }
 
              complete:^(id data) {
 

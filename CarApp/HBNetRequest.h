@@ -27,4 +27,5 @@ typedef void (^FailureCallBack)(NSError *error);//
 //     failure  请求出错的回调
 //返回值：无
 + (void)Post:(NSString *)urlString para:(id)paras complete:(ComoleteCallBack)complete fail:(FailureCallBack)failure;
++ (void)postWithImage:(UIImage *)Image Url:(NSString *)url params:(NSDictionary *)params successBlock:(void(^)(id responseObject))completion Failure:(FailureCallBack)failureBlock;
 @end

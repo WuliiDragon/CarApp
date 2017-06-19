@@ -94,15 +94,17 @@
 
 
 -(void)loadTableDataWithNewsModel :(HBNewsModel *)model  withIndex:(NSInteger )index{
-    [self.hud show:YES];
-    _hud.labelText = @"加载中";
-    
     
     id temp =  _tableViewsdata[index];
     if (![temp isKindOfClass:[NSString class]]) {
         return;
     }
     
+    
+    [self.view addSubview:self.hud];
+    
+    [self.hud show:YES];
+    _hud.labelText = @"加载中";
     
     
     [HBNetRequest Get:GETALL
@@ -151,7 +153,6 @@
 }
 
 -(UIView*)pageView:(JXPageView *)pageView viewAtIndex:(NSInteger)index{
-    NSLog(@"HBLog:%ld",(long)index);
     
     UITableView *tableView=  [[UITableView alloc] init];
     tableView.delegate = self;

@@ -19,5 +19,5 @@
 - (void)loadWithModel:(HBCouponsModel *)model;
 
 - (void)changeBG;
-
+- (void)setUseHidden;
 @end

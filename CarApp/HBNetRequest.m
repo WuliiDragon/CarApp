@@ -59,5 +59,30 @@
 
 
 }
++ (void)postWithImage:(UIImage *)Image Url:(NSString *)url params:(NSDictionary *)params successBlock:(void(^)(id responseObject))completion Failure:(FailureCallBack)failureBlock{
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
 
+    manager.requestSerializer.timeoutInterval = 8;
+    NSString *urlString = [NSString stringWithFormat:@"%@",url];//服务器的url
+    [manager POST:urlString
+       parameters:params
+constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    
+        [formData appendPartWithFileData:UIImageJPEGRepresentation(Image, 0.1) name:@"file" fileName:@"image.jpeg" mimeType:@"image/jpeg"]; //这儿如果是需要保证图片的质量，那么就用UIImagePNGRepresentation(Image) 但是这样的时间可能要慢一些 对图片的要求不高就用UIImageJPEGRepresentation(Image, 0.1) 0.1 表示压缩的程度
+    } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //成功block
+        if (completion) {
+            completion(responseObject);
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        //失败block
+        if (failureBlock) {
+            failureBlock(error);
+        }
+    }];
+}
 @end

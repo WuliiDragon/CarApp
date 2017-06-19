@@ -56,40 +56,91 @@
 
 - (void)updateChannels:(NSArray*)array{
     
+    
     NSMutableArray *widthMutableArray = [NSMutableArray array];
     NSInteger totalW = 0;
-    for (int i = 0; i < array.count; i++) {
+    NSInteger totalWs = 0;
+    
+    for (int i = 0; i < array.count; i++) {//先算一遍字的总宽
         
         NSString *string = [array objectAtIndex:i];
-        CGFloat buttonW = [string boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, 20) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.textFont} context:nil].size.width + 20;//btu的宽
+        CGFloat buttonW = [string boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, 20) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.textFont} context:nil].size.width + 20;
         
-        
-        [widthMutableArray addObject:@(buttonW)];
-        
-        
-        
-        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(totalW, 0, buttonW, self.bounds.size.height)];
-        button.tag = 1000 + i;
-        [button.titleLabel setFont:self.textFont];
-        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
-        [button setTitle:string forState:UIControlStateNormal];//title
-        [button addTarget:self action:@selector(clickSegmentButton:) forControlEvents:UIControlEventTouchUpInside];//每个按钮添加点击事件
-        [self.scrollView addSubview:button];
-        totalW += buttonW;
-
-        
-        if (i == 0) {
-            [button setSelected:YES];
-            _divideView.frame = CGRectMake(0, _scrollView.bounds.size.height-2, buttonW, 2);
-            _selectedIndex = 0;
+        totalWs +=buttonW;
+    }
+    
+    if (totalWs < self.bounds.size.width) {
+        totalW = 0;
+        for (int i = 0; i < array.count; i++) {
+            
+            NSString *string = [array objectAtIndex:i];
+            CGFloat buttonW = [string boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, 20) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.textFont} context:nil].size.width + 20;
+            
+            buttonW = (buttonW/totalWs)*self.bounds.size.width;
+            
+            
+            
+            [widthMutableArray addObject:@(buttonW)];
+            UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(totalW, 0, buttonW, self.bounds.size.height)];
+            button.tag = 1000 + i;
+            [button.titleLabel setFont:self.textFont];
+            [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [button setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+            [button setTitle:string forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(clickSegmentButton:) forControlEvents:UIControlEventTouchUpInside];
+            [self.scrollView addSubview:button];
+            totalW += buttonW;
+            
+            if (i == 0) {
+                [button setSelected:YES];
+                _divideView.frame = CGRectMake(0, _scrollView.bounds.size.height-2, buttonW, 2);
+                _selectedIndex = 0;
+            }
+            
         }
         
+        _allButtonW = totalW;
+        _scrollView.contentSize = CGSizeMake(totalW,0);
+        widthArray = [widthMutableArray copy];
+        _divideLineView.frame = CGRectMake(0, _scrollView.frame.size.height-2, totalW, 2);
+
+    }else{
+        
+        
+        totalW = 0;
+        
+        for (int i = 0; i < array.count; i++) {
+            
+            NSString *string = [array objectAtIndex:i];
+            CGFloat buttonW = [string boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, 20) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.textFont} context:nil].size.width + 20;
+            [widthMutableArray addObject:@(buttonW)];
+            UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(totalW, 0, buttonW, self.bounds.size.height)];
+            button.tag = 1000 + i;
+            [button.titleLabel setFont:self.textFont];
+            [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [button setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+            [button setTitle:string forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(clickSegmentButton:) forControlEvents:UIControlEventTouchUpInside];
+            [self.scrollView addSubview:button];
+            totalW += buttonW;
+            
+            if (i == 0) {
+                [button setSelected:YES];
+                _divideView.frame = CGRectMake(0, _scrollView.bounds.size.height-2, buttonW, 2);
+                _selectedIndex = 0;
+            }
+            
+        }
+        
+        _allButtonW = totalW;
+        _scrollView.contentSize = CGSizeMake(totalW,0);
+        widthArray = [widthMutableArray copy];
+        _divideLineView.frame = CGRectMake(0, _scrollView.frame.size.height-2, totalW, 2);
+        
+        
     }
-    _allButtonW = totalW;
-    _scrollView.contentSize = CGSizeMake(totalW,0);
-    widthArray = [widthMutableArray copy];
-    _divideLineView.frame = CGRectMake(0, _scrollView.frame.size.height-2, totalW, 2);
+    
+    
 }
 
 - (void)clickSegmentButton:(UIButton*)selectedButton{

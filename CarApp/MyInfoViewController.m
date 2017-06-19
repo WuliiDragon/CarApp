@@ -9,7 +9,9 @@
 #import "MyInfoViewController.h"
 #import "HBMenuItem.h"
 #import "HBInfoSetTableViewController.h"
-
+#import "HBBussnisWebViewController.h"
+#import "HBUserRollViewController.h"
+#import "HBUserOrderViewController.h"
 
 #define Width   [UIScreen mainScreen].bounds.size.width*308.f/1000.f
 #define inser   [UIScreen mainScreen].bounds.size.width*5.f/1000.f
@@ -26,9 +28,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    
 
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    _menuItem = [NSArray arrayWithObjects:@"我的订单", @"购物车", @"优惠券", @"收藏夹", @"邀请好友", @"每日签到", @"兑换专区", @"联系我们", @"设置", nil];
+    _menuItem = [NSArray arrayWithObjects:@"我的订单", @"商家登录", @"优惠券", @"收藏夹", @"邀请好友", @"每日签到", @"兑换专区", @"联系我们", @"设置", nil];
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
 
     layout.itemSize = CGSizeMake(Width, Width);
@@ -49,8 +52,13 @@
 
 
     UIImageView *userimg = [[UIImageView alloc] init];
-    userimg.image = [UIImage imageNamed:@"userimg"];
+    //userimg.image = [UIImage imageNamed:@"userimg"];
     [_Header addSubview:userimg];
+    userimg.backgroundColor = [UIColor redColor];
+    userimg.layer.masksToBounds = YES;
+    userimg.layer.cornerRadius = 35;
+    
+
     [userimg makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.offset(0);
         make.centerY.offset(0);
@@ -80,10 +88,33 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
     switch (indexPath.row) {
+            
+            
+            
+        case 0: {
+            HBUserOrderViewController *vc = [[HBUserOrderViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            
+        } break;
+            
+            
+        case 2: {
+            HBUserRollViewController *vc = [[HBUserRollViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            
+        } break;
+            
+            
+        case 1: {
+            HBBussnisWebViewController *vc = [[HBBussnisWebViewController alloc] init];
+            
+            
+            [self.navigationController pushViewController:vc animated:YES];
+        } break;
+            
+            
         case 8: {
             HBInfoSetTableViewController *vc = [[HBInfoSetTableViewController alloc] init];
-
-
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;

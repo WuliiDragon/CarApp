@@ -26,7 +26,7 @@
 #define MAINTENANCECARHOME      @"https://www.singpa.com/carshop/ycstore/home.action"
 #define MAINTENANCECARSTORE     @"https://www.singpa.com/carshop/ycstore/get.action"
 
-
+#define USERUPLOAD              @"https://www.singpa.com/carshop/user/upload.action"
 #define REGISTFRIST             @"https://www.singpa.com/carshop/user/registfrist.action"
 #define REGISTlast              @"https://www.singpa.com/carshop/user/registlast.action"
 #define LOGIN                   @"https://www.singpa.com/carshop/user/login.action"
@@ -42,10 +42,18 @@
 #define GETCATALOG              @"https://www.singpa.com/carshop/new/getCatalog.action"
 #define GETALL                  @"https://www.singpa.com/carshop/new/getAll.action"
 #define GETNEWS                 @"https://www.singpa.com/carshop/new/get.action"
+#define BUSSNISOWER             @"https://www.singpa.com/carshop"
+
+#define GETALLROLL              @"https://www.singpa.com/carshop/roll/getall.action"
+#define MYORDER                 @"https://www.singpa.com/carshop/order/myOrder.action"
+
+
+
 
 #define DEFAULTS                  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
+
 
 #import "Masonry.h"
 #import "UIScrollView+EmptyDataSet.h"

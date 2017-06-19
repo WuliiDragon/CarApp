@@ -8,6 +8,7 @@
 
 #import "HBNewsViewController.h"
 #import "HBNetRequest.h"
+
 @interface HBNewsViewController () <UIWebViewDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *dateLab;
 @property (strong, nonatomic) IBOutlet UILabel *ntitleLab;

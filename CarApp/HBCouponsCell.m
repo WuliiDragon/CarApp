@@ -103,7 +103,12 @@
     _viewBG.backgroundColor = [UIColor colorWithRed:0.53 green:0.53 blue:0.53 alpha:1.00];
     _use.backgroundColor = [UIColor colorWithRed:0.53 green:0.53 blue:0.53 alpha:1.00];
     _use.enabled = NO;
+    
+    
 
 }
+- (void)setUseHidden{
+    [_use setHidden:YES];
 
+}
 @end

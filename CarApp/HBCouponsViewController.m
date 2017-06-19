@@ -59,7 +59,8 @@
     [_hud show:YES];
 
     [HBNetRequest Post:ROLLGET para:@{@"token":[[NSUserDefaults standardUserDefaults] objectForKey:@"token"],
-                                       @"type":_types
+                                       @"type":_types,
+                                       @"uid":[[NSUserDefaults standardUserDefaults] objectForKey:@"uid"]
                                       } complete:^(id data) {
         NSUInteger status = [data[@"status"] integerValue];
         if (status == 1) {
@@ -107,10 +108,6 @@
                 [cell changeBG];
         }
     }
-    
-    
-    
-    
     cell.btnBlock = ^() {
         if (self.block) {
             [_modelArr removeObject:model];
@@ -118,9 +115,6 @@
             [self.navigationController popViewControllerAnimated:YES];
         }
     };
-    
-    
-    
     return cell;
 }
 

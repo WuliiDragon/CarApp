@@ -37,7 +37,10 @@
     _ntitle.text = model.ntitle;
     _descriptions.text = model.descriptions;
     _linkNum.text = [NSString stringWithFormat:@"点赞：%@",model.linkNum];
-    _date.text = model.date;
+    
+    
+    
+    _date.text = [model.date substringToIndex:10];
     
     
     NSString *str = mainUrl;
