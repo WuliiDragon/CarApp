@@ -251,7 +251,6 @@
 
 
 - (void)clickonlineOrdingCar {
-
     HBSeriesOfcarModel *seriesOfCarModel = _seriesOfCarModel;
     HBOrderingCarViewController *VC = [[HBOrderingCarViewController alloc] init];
     VC.seriesOfCarModel = seriesOfCarModel;
@@ -266,6 +265,7 @@
     VC.bid = _bid;
     VC.mid = _mid;
     VC.carinfo = _name;
+    VC.distanceStr = _distance;
     [self.navigationController pushViewController:VC animated:YES];
 }
 
@@ -275,10 +275,9 @@
     _hud.labelText = @"正在加载...";
     [self.navigationController.view addSubview:_hud];
     [_hud show:YES];
-    NSString *urlStr = [NSString stringWithFormat:@"%@%@", SOMECAR, _mid];
-    [HBNetRequest Get:urlStr para:nil complete:^(id data) {
+    [HBNetRequest Get:SOMECAR para:@{@"mid":_mid}
+             complete:^(id data) {
         NSDictionary *car = data[@"car"];
-
         _configure = [car objectForKey:@"configure"];
         _allKeys = [_configure allKeys].copy;
         [self sortForKey];

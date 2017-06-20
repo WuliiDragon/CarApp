@@ -12,7 +12,7 @@
 #import "HBStoreCarModel.h"
 #import "HBSeriesOfcarModel.h"
 
-@interface HBAskLowPriceViewController : HBRootViewController
+@interface HBAskLowPriceViewController : UIViewController
 @property(nonatomic, strong) HBStoreCarModel *storeCarModel;
 @property(nonatomic, strong) HBSeriesOfcarModel *seriesOfCarModel;
 @property(strong, nonatomic) HBCarStoreDetailModel *carStoreDetailModel;

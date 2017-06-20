@@ -17,6 +17,8 @@
     UIButton *lastClick;
 
 }
+
+@property(strong, nonatomic) NSMutableArray *carColordata;
 @property(strong, nonatomic) UICollectionView *carColorView;
 @property(nonatomic, strong) AddressPickerView *pickerView;
 
@@ -51,10 +53,8 @@
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         //每个cell的大小
         layout.itemSize = CGSizeMake(80, 27);
-
         //collectionView 中所有的cell的视图矩形对 collectionView上下左右距离
         layout.sectionInset = UIEdgeInsetsMake(3, 3, 3, 3);
-
         //设定collectionView的frame 以及collectionViewLayout
         _carColorView = [[UICollectionView alloc] initWithFrame:CGRectMake(mainScreenWidth * 5.f / 100.f, 30, mainScreenWidth * 90.f / 100.f, 40) collectionViewLayout:layout];
 
@@ -98,6 +98,7 @@
     _gname.text = _carStoreDetailModel.gname;
     _mname.text = _seriesOfCarModel.mname;
     _mtitle.text = _seriesOfCarModel.mtitle;
+    _carColordata = [[NSMutableArray alloc] init];
 }
 
 #pragma mark collectionView的操作------------
@@ -114,12 +115,12 @@
 
 //每个section中cell的数目
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.dataSource.count;
+    return _carColordata.count;
 }
 
 //加载cell
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    HBColorSelectModel *model = self.dataSource[indexPath.row];
+    HBColorSelectModel *model =_carColordata[indexPath.row];
     HBColorSelectCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"NIBCELL" forIndexPath:indexPath];
     [cell loadmodel:model];
     return cell;
@@ -222,17 +223,27 @@
 }
 
 - (void)Getdata {
-    [self request:@"GET" url:ONLINEORDINGCAR para:nil];
+    [HBNetRequest Get:ONLINEORDINGCAR para:@{@"mid":_seriesOfCarModel.mid} complete:^(id data) {
+        
+        
+        NSArray *colors = data[@"colors"];
+        for (NSDictionary *dict in colors) {
+            HBColorSelectModel *model = [[HBColorSelectModel alloc] initWithDictionary:dict error:nil];
+            [_carColordata addObject:model];
+        }
+        [_carColorView reloadData];
+        
+    } fail:^(NSError *error) {
+        
+    }];
+    
+    
+    
+    
+    
 }
 
-- (void)parserData:(id)data {
-    NSArray *colors = data[@"colors"];
-    for (NSDictionary *dict in colors) {
-        HBColorSelectModel *model = [[HBColorSelectModel alloc] initWithDictionary:dict error:nil];
-        [self.dataSource addObject:model];
-    }
-    [_carColorView reloadData];
-}
+
 
 - (AddressPickerView *)pickerView {
     if (!_pickerView) {

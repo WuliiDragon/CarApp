@@ -66,9 +66,6 @@
 - (IBAction)loginAction:(id)sender {
 
     
-    NSLog(@"HBLog:%lu",_accountInput.text.length);
-    NSLog(@"HBLog:%lu",_passwordInput.text.length);
-    
     if (_accountInput.text.length > 1 && _passwordInput.text.length > 1) {
         _hud = [[MBProgressHUD alloc] init];
         _hud.labelText = @"正在登录...";

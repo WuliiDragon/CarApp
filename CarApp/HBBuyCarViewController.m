@@ -422,6 +422,8 @@
 }
 
 
+
+
 - (void)startLocation {
     if ([CLLocationManager locationServicesEnabled]) {
         self.locationManager = [[CLLocationManager alloc] init];

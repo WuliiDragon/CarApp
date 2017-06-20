@@ -10,6 +10,9 @@
 #import <SDWebImage/SDImageCache.h>
 #import "HBAuxiliary.h"
 #import "HBUserInfoSetViewController.h"
+#import "MainViewController.h"
+#import "AppDelegate.h"
+#import "HBResetPwdViewController.h"
 @interface HBInfoSetTableViewController ()
 
 
@@ -23,12 +26,55 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
     _titlelab = [[NSArray alloc] initWithObjects:@"个人信息", @"应用评分", @"清除缓存", @"修改密码", nil];
     DEFAULTS
     [_infolab addObject:[defaults objectForKey:@"sex"]];
+    
+    
+    
+    UIButton *btu = [[UIButton alloc] init];
+    [btu setTitle:@"退出账号" forState:UIControlStateNormal];
+    [btu addActionWithblocks:^{
+        UIAlertController* alert=   [UIAlertController alertControllerWithTitle:@"提示"
+                                                                        message:@"确定要退出当前账号吗？"
+                                                                 preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"取消" style: UIAlertActionStyleCancel handler:nil];
+        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"确定" style: UIAlertActionStyleDefault
+                                                   handler:^(UIAlertAction* action) {//移除所有信息
+                                                       
+                                                       NSUserDefaults *defatluts = [NSUserDefaults standardUserDefaults];
+                                                       NSDictionary *dictionary = [defatluts dictionaryRepresentation];
+                                                       for(NSString *key in [dictionary allKeys]){
+                                                           [defatluts removeObjectForKey:key];
+                                                           [defatluts synchronize];
+                                                       }
+                                                       AppDelegate *appDelegate =(AppDelegate*) [[UIApplication sharedApplication] delegate];
+                                                       appDelegate.window.rootViewController = [MainViewController new];
+
+                                                       
+                                                   }];
+        [alert addAction: cancel];
+        [alert addAction: ok];
+        [self presentViewController: alert animated: YES completion: nil];
+
+        
+    }];
+    [btu setBackgroundColor:[UIColor redColor]];
+    btu.layer.masksToBounds = YES;
+    btu.layer.cornerRadius = 10;
+
+    [self.view addSubview:btu];
+    
+    [btu makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view).offset(0);
+        make.top.offset(400);
+        make.size.equalTo(CGSizeMake(300,50));
+        
+    }];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,8 +83,6 @@
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-
     return 4;
 }
 
@@ -66,21 +110,15 @@
                                                                           }];
         
     }
-
-    
     if (indexPath.row==0) {
-        
         HBUserInfoSetViewController *vc = [[HBUserInfoSetViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
-        
     }
-
-
-
-
-
-
-
+    
+    if (indexPath.row==3) {
+        HBResetPwdViewController *vc = [[HBResetPwdViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 @end

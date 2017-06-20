@@ -12,6 +12,7 @@
 #import "UIImageView+WebCache.h"
 
 @interface HBAskLowPriceViewController () <UITextFieldDelegate>
+@property(nonatomic, strong) MBProgressHUD *hud;
 
 @property(strong, nonatomic) IBOutlet UITextField *inputname;
 @property(strong, nonatomic) IBOutlet UITextField *inputphone;
@@ -39,36 +40,35 @@
     [titlestoreView addSubview:titlestoreImg];
     self.navigationItem.titleView = titlestoreView;
 
-
     _inputphone.keyboardType = UIKeyboardTypePhonePad;
     _inputname.returnKeyType = UIKeyboardTypeNamePhonePad;
     _inputname.delegate = self;
     _inputphone.delegate = self;
 
-
-    NSString *str = mainUrl;
-    NSString *urlStr = [str stringByAppendingFormat:@"%@", _storeCarModel.bshowImage];
-    [_bimage sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:[UIImage imageNamed:@"xx"] options:SDWebImageRefreshCached];
-
-
-    _carinfolab.text = _seriesOfCarModel.mname;
 }
 
 - (void)GetData {
-    [self request:@"GET" url:[NSString stringWithFormat:@"%@%@", ASKLOWPIR, _bid] para:nil];
-}
-
-
-- (void)parserData:(id)data {
-    NSDictionary *business = data[@"business"];
-    _carinfolab.text = _carinfo;
-    _bname.text = [business objectForKey:@"bname"];
-    _baddress.text = [business objectForKey:@"baddress"];
-    _majorbusiness.text = [business objectForKey:@"majorbusiness"];
-    _title1.text = [business objectForKey:@"title1"];
-    _title2.text = [business objectForKey:@"title2"];
-    //_distance.text = [business objectForKey:@"baddress"];
-    _bphone.text = [business objectForKey:@"bphone"];
+    _hud = [[MBProgressHUD alloc] init];
+    _hud.labelText = @"正在登录...";
+    [self.view addSubview:_hud];
+    
+    [HBNetRequest Get:ASKLOWPIR para:@{@"bid":_bid}
+             complete:^(id data) {
+        NSDictionary *business = data[@"business"];
+        _carinfolab.text = _carinfo;
+        _bname.text = [business objectForKey:@"bname"];
+        _baddress.text = [business objectForKey:@"baddress"];
+        _majorbusiness.text = [business objectForKey:@"majorbusiness"];
+        _title1.text = [business objectForKey:@"title1"];
+        _title2.text = [business objectForKey:@"title2"];
+        _bphone.text = [business objectForKey:@"bphone"];
+                 [_hud hide:YES];
+        NSString *str = mainUrl;
+        NSString *urlStr = [str stringByAppendingFormat:@"%@", business[@"bshowImage"]];
+        [_bimage sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:[UIImage imageNamed:@"xx"] options:SDWebImageRefreshCached];
+    } fail:^(NSError *error) {
+        [_hud hide:YES];
+    }];
 }
 
 
@@ -77,18 +77,15 @@
     NSString *statuStr = [NSString stringWithFormat:@"%@", status];
     if ([statuStr isEqualToString:@"1"]) {
         [self.view makeToast:@"提交成功" duration:3.0 position:nil];
-        [self showHub:NO];
         [self.navigationController popViewControllerAnimated:YES];
     }
     if ([statuStr isEqualToString:@"0"] || [statuStr isEqualToString:@"-1"]) {
         [self.view makeToast:@"提交失败" duration:1.0 position:nil];
-        [self showHub:NO];
     }
 }
 
 
 - (void)postfailure {
-    [self showHub:NO];
     [self.view makeToast:@"提交失败" duration:1.0 position:nil];
 }
 
@@ -111,10 +108,21 @@
     [parameter setValue:_inputphone.text forKey:@"phone"];
     [parameter setValue:_mid forKey:@"mid"];
 
-    [self showHub:YES];
-    NSString *str = ASKLOWCOMMIT;
-    NSString *url = [NSString stringWithFormat:@"%@?mid=%@&uname=%@&phone=%@", str, _mid, _inputname.text, _inputphone.text];
-    [self request:@"POST" url:url para:nil];
+    
+    [HBNetRequest Get:ASKLOWCOMMIT para:@{@"mid":_mid,
+                                          @"uname": _inputname.text,
+                                          @"phone":_inputphone.text} complete:^(id data) {
+                                              NSUInteger status = [data[@"status"] integerValue];
+                                              if (status == 1) {
+                                                  [self.navigationController.view makeToast:@"我们已收到，会及时联系你" duration:1.0 position:CSToastPositionCenter];
+                                                  [self.navigationController popViewControllerAnimated:YES];
+                                              }
+    } fail:^(NSError *error) {
+        
+        
+        
+    }];
+    
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -33,7 +34,7 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EtR-FS-Gpg">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u9W-Cd-sba">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u9W-Cd-sba">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="114" id="fxB-4i-7GB"/>
@@ -170,7 +171,7 @@
                                             <rect key="frame" x="26" y="44" width="312" height="35"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWA-7t-9Ar">
-                                                    <rect key="frame" x="0.0" y="0.0" width="71" height="35"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="70.5" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="72" id="JAq-3V-NdX"/>
                                                         <constraint firstAttribute="height" constant="35" id="Vhj-OP-zVS"/>
@@ -181,7 +182,7 @@
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEQ-SR-CK4">
-                                                    <rect key="frame" x="81" y="0.0" width="70" height="35"/>
+                                                    <rect key="frame" x="80.5" y="0.0" width="70.5" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="Irg-pu-BjO"/>
                                                         <constraint firstAttribute="height" constant="35" id="iAu-gj-QnA"/>
@@ -192,7 +193,7 @@
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NP5-vJ-5lC">
-                                                    <rect key="frame" x="161" y="0.0" width="71" height="35"/>
+                                                    <rect key="frame" x="161" y="0.0" width="70.5" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="64" id="SMS-wa-MDj"/>
                                                         <constraint firstAttribute="height" constant="35" id="of6-to-wQE"/>
@@ -203,7 +204,7 @@
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dO-w7-VWu">
-                                                    <rect key="frame" x="242" y="0.0" width="70" height="35"/>
+                                                    <rect key="frame" x="241.5" y="0.0" width="70.5" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="76" id="meA-Ky-G7w"/>
                                                         <constraint firstAttribute="height" constant="35" id="vDh-7j-GIa"/>
@@ -442,9 +443,6 @@
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="97" id="q59-UY-MWD"/>
                             </constraints>
                             <state key="normal" image="ordingCar"/>
-                            <connections>
-                                <action selector="upLoadImg:" destination="-1" eventType="touchUpInside" id="Oxc-oG-b9t"/>
-                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.80298364162445068" green="0.80981475114822388" blue="0.83559805154800415" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

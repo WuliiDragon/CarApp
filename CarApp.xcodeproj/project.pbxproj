@@ -78,6 +78,10 @@
 		2F2EF6D11DFF8A8C001EA088 /* Province.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2EF6CD1DFF8A8C001EA088 /* Province.m */; };
 		2F36D7961DF44DF000014798 /* MUDoubleThumbSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F36D7951DF44DF000014798 /* MUDoubleThumbSlider.m */; };
 		2F36D7981DF5001100014798 /* SelectCarModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F36D7971DF5001100014798 /* SelectCarModel.plist */; };
+		2F477A8A1EF8F77F00E51EF6 /* HBUserImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F477A881EF8F77F00E51EF6 /* HBUserImageCell.m */; };
+		2F477A8B1EF8F77F00E51EF6 /* HBUserImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F477A891EF8F77F00E51EF6 /* HBUserImageCell.xib */; };
+		2F477A991EF910DB00E51EF6 /* HBResetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F477A971EF910DB00E51EF6 /* HBResetPwdViewController.m */; };
+		2F477A9A1EF910DB00E51EF6 /* HBResetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F477A981EF910DB00E51EF6 /* HBResetPwdViewController.xib */; };
 		2F4A6CC81DEAB83B00DDE9AF /* HBAskLowPriceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A6CC61DEAB83B00DDE9AF /* HBAskLowPriceViewController.m */; };
 		2F4A6CC91DEAB83B00DDE9AF /* HBAskLowPriceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F4A6CC71DEAB83B00DDE9AF /* HBAskLowPriceViewController.xib */; };
 		2F4ADDA31E94F15F00A2E095 /* HBPayInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4ADDA11E94F15F00A2E095 /* HBPayInfoCell.m */; };
@@ -296,6 +300,12 @@
 		2F36D7941DF44DF000014798 /* MUDoubleThumbSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUDoubleThumbSlider.h; sourceTree = "<group>"; };
 		2F36D7951DF44DF000014798 /* MUDoubleThumbSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUDoubleThumbSlider.m; sourceTree = "<group>"; };
 		2F36D7971DF5001100014798 /* SelectCarModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SelectCarModel.plist; path = ../SelectCarModel.plist; sourceTree = "<group>"; };
+		2F477A871EF8F77F00E51EF6 /* HBUserImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBUserImageCell.h; path = HBMyInfo/Controller/HBUserImageCell.h; sourceTree = "<group>"; };
+		2F477A881EF8F77F00E51EF6 /* HBUserImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBUserImageCell.m; path = HBMyInfo/Controller/HBUserImageCell.m; sourceTree = "<group>"; };
+		2F477A891EF8F77F00E51EF6 /* HBUserImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HBUserImageCell.xib; path = HBMyInfo/Controller/HBUserImageCell.xib; sourceTree = "<group>"; };
+		2F477A961EF910DB00E51EF6 /* HBResetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBResetPwdViewController.h; path = HBMyInfo/Controller/HBResetPwdViewController.h; sourceTree = "<group>"; };
+		2F477A971EF910DB00E51EF6 /* HBResetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBResetPwdViewController.m; path = HBMyInfo/Controller/HBResetPwdViewController.m; sourceTree = "<group>"; };
+		2F477A981EF910DB00E51EF6 /* HBResetPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HBResetPwdViewController.xib; path = HBMyInfo/Controller/HBResetPwdViewController.xib; sourceTree = "<group>"; };
 		2F4A6CC51DEAB83B00DDE9AF /* HBAskLowPriceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBAskLowPriceViewController.h; sourceTree = "<group>"; };
 		2F4A6CC61DEAB83B00DDE9AF /* HBAskLowPriceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBAskLowPriceViewController.m; sourceTree = "<group>"; };
 		2F4A6CC71DEAB83B00DDE9AF /* HBAskLowPriceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBAskLowPriceViewController.xib; sourceTree = "<group>"; };
@@ -822,6 +832,12 @@
 				2FBE55F71EF7AF31009EB0DA /* HBUserInfoSetViewController.h */,
 				2FBE55F81EF7AF31009EB0DA /* HBUserInfoSetViewController.m */,
 				2FBE55F91EF7AF31009EB0DA /* HBUserInfoSetViewController.xib */,
+				2F477A871EF8F77F00E51EF6 /* HBUserImageCell.h */,
+				2F477A881EF8F77F00E51EF6 /* HBUserImageCell.m */,
+				2F477A891EF8F77F00E51EF6 /* HBUserImageCell.xib */,
+				2F477A961EF910DB00E51EF6 /* HBResetPwdViewController.h */,
+				2F477A971EF910DB00E51EF6 /* HBResetPwdViewController.m */,
+				2F477A981EF910DB00E51EF6 /* HBResetPwdViewController.xib */,
 			);
 			name = HBFoundPassword;
 			sourceTree = "<group>";
@@ -1209,12 +1225,14 @@
 				2FA94FC11EF76C5B00F70CA7 /* HBBuyOrderCell.xib in Resources */,
 				2F6969D91E8FCBBA008BC777 /* HBFoundPassword.xib in Resources */,
 				2F4A6CC91DEAB83B00DDE9AF /* HBAskLowPriceViewController.xib in Resources */,
+				2F477A9A1EF910DB00E51EF6 /* HBResetPwdViewController.xib in Resources */,
 				2F2CEAFA1EE5566000E870F9 /* HBGoodInfoCell.xib in Resources */,
 				2F030D921DE96C1F004F4BA3 /* HBCarInfoCell.xib in Resources */,
 				2F9B68991DF3F5FF006DF573 /* HBSearchConditioncell.xib in Resources */,
 				2F2CEAFC1EE5610800E870F9 /* ShopCarBar.xib in Resources */,
 				2FA94FB81EF6839B00F70CA7 /* HBBussnisWebViewController.xib in Resources */,
 				2F298A6B1EF5593C00B7F520 /* View.xib in Resources */,
+				2F477A8B1EF8F77F00E51EF6 /* HBUserImageCell.xib in Resources */,
 				2FBB79491E17869000E9BCA2 /* FSActionSheet_cancel@2x.png in Resources */,
 				2F0F223D1EA8786D0013577E /* libs in Resources */,
 				2F4ADDA41E94F15F00A2E095 /* HBPayInfoCell.xib in Resources */,
@@ -1362,6 +1380,7 @@
 				2F9B689D1DF3F765006DF573 /* HBSearchConditionModel.m in Sources */,
 				2FBB78FD1E17842B00E9BCA2 /* HBMenuItem.m in Sources */,
 				2F030D7A1DE801EA004F4BA3 /* UIView+SDExtension.m in Sources */,
+				2F477A991EF910DB00E51EF6 /* HBResetPwdViewController.m in Sources */,
 				2F108BA51DEDAC260060AD9D /* HBNetRequest.m in Sources */,
 				2F6969D81E8FCBBA008BC777 /* HBFoundPassword.m in Sources */,
 				2F275F331DF053CE0051262A /* HBSelectCarModel.m in Sources */,
@@ -1377,6 +1396,7 @@
 				2FA2B0981EE4046A00D65FA1 /* Animaition.m in Sources */,
 				2F9B68981DF3F5FF006DF573 /* HBSearchConditioncell.m in Sources */,
 				2FBB79431E17869000E9BCA2 /* UIImage+XLExtension.m in Sources */,
+				2F477A8A1EF8F77F00E51EF6 /* HBUserImageCell.m in Sources */,
 				2F030D791DE801EA004F4BA3 /* SDCycleScrollView.m in Sources */,
 				2FBB79471E17869000E9BCA2 /* FSActionSheetConfig.m in Sources */,
 				2F030D911DE96C1F004F4BA3 /* HBCarInfoCell.m in Sources */,

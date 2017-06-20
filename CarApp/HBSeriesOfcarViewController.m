@@ -228,7 +228,7 @@
 
     [cell.askLowPrice addTarget:self action:@selector(clickAskLowPrice:) forControlEvents:UIControlEventTouchUpInside];
     cell.askLowPrice.tag = indexPath.row;
-    [cell.onlinePolicy addTarget:self action:@selector(clickOnlinePolicy:) forControlEvents:UIControlEventTouchUpInside];
+    //[cell.onlinePolicy addTarget:self action:@selector(clickOnlinePolicy:) forControlEvents:UIControlEventTouchUpInside];
     [cell.installment addTarget:self action:@selector(clickInstallment:) forControlEvents:UIControlEventTouchUpInside];
     cell.installment.tag = indexPath.row;
     return cell;
@@ -238,6 +238,7 @@
     HBSeriesOfcarModel *model = _dataArr[indexPath.row];
     HBCarDetailViewController *VC = [[HBCarDetailViewController alloc] init];
     VC.mid = model.mid;
+    VC.distance = _distance;
     [self.navigationController pushViewController:VC animated:YES];
 }
 
@@ -249,18 +250,19 @@
     VC.bid = _bid;
     VC.carinfo = seriesOfCarModel.mname;
     VC.mid = seriesOfCarModel.mid;
-
+    //VC.storeCarModel =
+    
     [self.navigationController pushViewController:VC animated:YES];
 
 }
 
-- (void)clickOnlinePolicy:(id)sender {
-    UIButton *btu = sender;
-    HBSeriesOfcarModel *seriesOfCarModel = _dataArr[btu.tag];
-    HBOrderingCarViewController *VC = [[HBOrderingCarViewController alloc] init];
-    VC.seriesOfCarModel = seriesOfCarModel;
-    [self.navigationController pushViewController:VC animated:YES];
-}
+//- (void)clickOnlinePolicy:(id)sender {
+//    UIButton *btu = sender;
+//    HBSeriesOfcarModel *seriesOfCarModel = _dataArr[btu.tag];
+//    HBOrderingCarViewController *VC = [[HBOrderingCarViewController alloc] init];
+//    VC.seriesOfCarModel = seriesOfCarModel;
+//    [self.navigationController pushViewController:VC animated:YES];
+//}
 
 - (void)clickInstallment:(id)sender {
     HBInstallmentViewController *VC = [[HBInstallmentViewController alloc] init];

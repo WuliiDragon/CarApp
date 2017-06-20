@@ -14,38 +14,51 @@
 #define mainKeyWindow      [UIApplication sharedApplication].keyWindow
 
 //https://www.singpa.com
+#define BUSSNISOWER             @"https://www.singpa.com/carshop"//养车店登录
 #define mainUrl                 @"https://www.singpa.com"
-#define HOMEPAGE                @"https://www.singpa.com/carshop/home.action"
-#define CARDETAIL               @"https://www.singpa.com/carshop/store/getall.action"
-#define ASKLOWPIR               @"https://www.singpa.com/carshop/store/get.action?bid="
-#define SERIESOFCAR             @"https://www.singpa.com/carshop/car/getModels.action"
-#define SOMECAR                 @"https://www.singpa.com/carshop/car/models/get.action?mid="
-#define ONLINEORDINGCAR         @"https://www.singpa.com/carshop/car/models/getColor.action?mid=1"
-#define SEARCHCONDITION         @"https://www.singpa.com/carshop/home/car.action"
-#define ASKLOWCOMMIT            @"https://www.singpa.com/carshop/consult/add.action"
-#define MAINTENANCECARHOME      @"https://www.singpa.com/carshop/ycstore/home.action"
-#define MAINTENANCECARSTORE     @"https://www.singpa.com/carshop/ycstore/get.action"
 
-#define USERUPLOAD              @"https://www.singpa.com/carshop/user/upload.action"
-#define REGISTFRIST             @"https://www.singpa.com/carshop/user/registfrist.action"
+/**************************购车**************************/
+#define HOMEPAGE                @"https://www.singpa.com/carshop/home.action"//首页
+#define CARDETAIL               @"https://www.singpa.com/carshop/store/getall.action"//获取车系
+#define SERIESOFCAR             @"https://www.singpa.com/carshop/car/getModels.action"//获取某车系车辆
+#define SOMECAR                 @"https://www.singpa.com/carshop/car/models/get.action"//点击某辆车
+
+#define ASKLOWPIR               @"https://www.singpa.com/carshop/store/get.action"//询底价
+#define ONLINEORDINGCAR         @"https://www.singpa.com/carshop/car/models/getColor.action"//在线订车
+#define ASKLOWCOMMIT            @"https://www.singpa.com/carshop/consult/add.action"//提交
+#define SEARCHCONDITION         @"https://www.singpa.com/carshop/home/car.action"//条件查询
+
+
+/**************************养车**************************/
+#define MAINTENANCECARHOME      @"https://www.singpa.com/carshop/ycstore/home.action"//养车首页
+#define MAINTENANCECARSTORE     @"https://www.singpa.com/carshop/ycstore/get.action"//某养车点信息
+#define ROLLGET                 @"https://www.singpa.com/carshop/roll/get.action"//获取某用户优惠券
+#define ADDORDER                @"https://www.singpa.com/carshop/ycorder/add.action"//生成订单
+#define PAYMENT                 @"https://www.singpa.com/carshop/ycorder/payment.action"//支付
+
+
+/**************************发现**************************/
+#define GETCATALOG              @"https://www.singpa.com/carshop/new/getCatalog.action"//获取所有文章标题
+#define GETALL                  @"https://www.singpa.com/carshop/new/getAll.action"//获取某标题所有文章
+#define GETNEWS                 @"https://www.singpa.com/carshop/new/get.action"//获取某文章的html字符串
+
+
+/**************************我的**************************/
+#define USERUPLOAD              @"https://www.singpa.com/carshop/user/upload.action"//用户上传头像
+#define REGISTFRIST             @"https://www.singpa.com/carshop/user/registfrist.action"//注册
 #define REGISTlast              @"https://www.singpa.com/carshop/user/registlast.action"
-#define LOGIN                   @"https://www.singpa.com/carshop/user/login.action"
-#define DEMO                    @"https://www.singpa.com/carshop/user/demo.action"
-#define FINDPWD                 @"https://www.singpa.com/carshop/user/findpwd.action"
-#define SETPWD                  @"https://www.singpa.com/carshop/user/setpwd.action"
-#define ROLLGET                 @"https://www.singpa.com/carshop/roll/get.action"
-#define ADDORDER                @"https://www.singpa.com/carshop/ycorder/add.action"
-#define PAYMENT                 @"https://www.singpa.com/carshop/ycorder/payment.action"
+#define LOGIN                   @"https://www.singpa.com/carshop/user/login.action"//登录
+#define DEMO                    @"https://www.singpa.com/carshop/user/demo.action"//测试登录
+#define FINDPWD                 @"https://www.singpa.com/carshop/user/findpwd.action"//找回密码
+#define SETPWD                  @"https://www.singpa.com/carshop/user/setpwd.action"//找回密码后设置密码
+#define UPDATEUSERINFO          @"https://www.singpa.com/carshop/user/updateInfo.action"//更新用户信息
+#define UPDATEUSERPWD           @"https://www.singpa.com/carshop/user/updatePwd.action"//修改密码
 
 
 
-#define GETCATALOG              @"https://www.singpa.com/carshop/new/getCatalog.action"
-#define GETALL                  @"https://www.singpa.com/carshop/new/getAll.action"
-#define GETNEWS                 @"https://www.singpa.com/carshop/new/get.action"
-#define BUSSNISOWER             @"https://www.singpa.com/carshop"
 
-#define GETALLROLL              @"https://www.singpa.com/carshop/roll/getall.action"
-#define MYORDER                 @"https://www.singpa.com/carshop/order/myOrder.action"
+#define GETALLROLL              @"https://www.singpa.com/carshop/roll/getall.action"//获取用户所有的优惠券
+#define MYORDER                 @"https://www.singpa.com/carshop/order/myOrder.action"//获取用户所有订单
 
 
 
@@ -53,17 +66,14 @@
 #define DEFAULTS                  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 #define MAS_SHORTHAND
 #define MAS_SHORTHAND_GLOBALS
-
-
 #import "Masonry.h"
-#import "UIScrollView+EmptyDataSet.h"
+#import <Toast/UIView+Toast.h>
 
+
+#import "UIScrollView+EmptyDataSet.h"
 #import "MJRefresh.h"
 #import "MBProgressHUD.h"
-
-
 #define kDocumentPath     [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
-
 #import "UIView+Extension.h"
 
 #endif /* PrefixHeader_pch */

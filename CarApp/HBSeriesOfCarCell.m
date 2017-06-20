@@ -19,8 +19,9 @@
 
 - (void)loadmodel:(HBSeriesOfcarModel *)model {
     _mname.text = model.mname;
-    _gprice.text = [[HBAuxiliary makeprice:model.gprice] stringByAppendingString:@"万"];
-    _guidegprice.text = [[HBAuxiliary makeprice:model.guidegprice] stringByAppendingString:@"万"];
+    
+    _gprice.text = [NSString stringWithFormat:@"参考价：%@万",[HBAuxiliary makeprice:model.gprice]];
+    _guidegprice.text =[NSString stringWithFormat:@"指导价：%@万",[HBAuxiliary makeprice:model.guidegprice] ] ;
     _activity.text = model.mtitle;
 
 

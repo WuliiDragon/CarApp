@@ -19,4 +19,5 @@
 
 @property(nonatomic) BOOL *isRecommend;
 @property(nonatomic) NSString *mid;
+@property(nonatomic) NSString *distance;
 @end
