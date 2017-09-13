@@ -14,22 +14,27 @@
 #import "HBSeriesOfcarViewController.h"
 #import "MJRefresh.h"
 #import "HBNetRequest.h"
-
+#import "HBSearchConditionCarViewController.h"
 
 @interface HBSearchResultViewController () <SDCycleScrollViewDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
-@property(nonatomic, strong) UIView *topView;
-@property(nonatomic, strong) SDCycleScrollView *loopView;
-@property(strong, nonatomic) UITableView *tableView;
+
 @property(nonatomic, strong) NSMutableArray *bimageArr;
 @property(nonatomic, strong) NSMutableArray *dataArr;
 @property(nonatomic, strong) NSDictionary *params;
 @property(nonatomic, strong) NSMutableArray *homeImageObjArr;
 
+@property(nonatomic, strong) UIView *topView;
+@property(nonatomic, strong) SDCycleScrollView *loopView;
+@property(nonatomic,strong)  UIView *selectCarXib;
 @property(nonatomic, strong) UISearchBar *search;
 @property(nonatomic, strong) UILabel *condition;
+@property(strong, nonatomic) UITableView *tableView;
+
 
 @property(nonatomic, strong) MBProgressHUD *hud;
+
+
 @property(nonatomic, assign) NSUInteger pageNO;
 @property(nonatomic, assign) NSUInteger pageSize;
 
@@ -68,12 +73,35 @@
         // NSArray *arr = [self.bimageArr copy];
         // [XLPhotoBrowser showPhotoBrowserWithImages:arr currentImageIndex:index];
     };
-
-    _condition = [[UILabel alloc] initWithFrame:CGRectMake(mainScreenWidth / 10.f, _loopView.frame.size.height + _search.frame.size.height + 3, mainScreenWidth * 8 / 10.f, 40)];
-    _condition.text = _seleteItem;
-    [_topView addSubview:_search];
-    [_topView addSubview:_condition];
     [_topView addSubview:_loopView];
+
+    
+    _selectCarXib = [[[NSBundle mainBundle] loadNibNamed:@"HBSelectView" owner:self options:nil] lastObject];
+    [_topView addSubview:_selectCarXib];
+    [_selectCarXib makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_loopView.bottom).offset(5);
+        make.right.left.offset(0);
+        make.size.mas_equalTo(CGSizeMake(mainScreenWidth , 30));
+    }];
+    
+    [_selectCarXib setUserInteractionEnabled:YES];
+    HBSearchResultViewController *__weak weakSelf = self;//防止循环引用
+    [_selectCarXib addActionWithblocks:^{
+        HBSearchConditionCarViewController *s = [[HBSearchConditionCarViewController alloc] init];
+        [weakSelf.navigationController pushViewController:s animated:YES];
+    }];
+    
+    
+    
+    
+    
+    
+    
+//    _condition = [[UILabel alloc] initWithFrame:CGRectMake(mainScreenWidth / 10.f, _loopView.frame.size.height + _search.frame.size.height + 3, mainScreenWidth * 8 / 10.f, 40)];
+//    _condition.text = _seleteItem;
+    
+    [_topView addSubview:_search];
+    //[_topView addSubview:_condition];
 
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, mainScreenWidth, mainScreenHeight - 64)];
     _tableView.tableHeaderView = _topView;
@@ -91,7 +119,7 @@
 
 
     [_hud show:YES];
-    [HBNetRequest Post:SEARCHCONDITION para:nil complete:^(id data) {
+    [HBNetRequest Post:SEARCHCONDITION2 para:nil complete:^(id data) {
         _params = data[@"params"];
         _pageSize = [_params[@"pageSize"] integerValue];
         _pageNO = [_params[@"pageNo"] integerValue];
@@ -177,7 +205,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     HBCarStoreDetailModel *model = _dataArr[indexPath.row];
     HBSeriesOfcarViewController *VC = [[HBSeriesOfcarViewController alloc] init];
-    VC.gid = model.gid;
+    VC.CarStoreDetailModel = model;
     [self.navigationController pushViewController:VC animated:YES];
 }
 

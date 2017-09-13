@@ -20,6 +20,14 @@ NSString const *BlockKey = @"BlockKey";
     self.frame = frame;
 }
 
+- (CGFloat)maxX {
+    return self.frame.origin.x + self.frame.size.width;
+}
+- (void)setMaxX:(CGFloat)right {
+    CGRect frame = self.frame;
+    frame.origin.x = right - frame.size.width;
+    self.frame = frame;
+}
 - (void)setY:(CGFloat)y {
     
     CGRect frame = self.frame;
@@ -113,10 +121,8 @@ NSString const *BlockKey = @"BlockKey";
 
 
 
-- (void)addActionWithblocks:(TouchCallBackBlock)block
-{
+- (void)addActionWithblocks:(TouchCallBackBlock)block{
     self.touchCallBackBlock = block;
-    
     self.userInteractionEnabled = YES;
     
     /**

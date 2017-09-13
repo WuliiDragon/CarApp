@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUi-jm-98v">
+                    <rect key="frame" x="335" y="4" width="35" height="22"/>
+                    <color key="backgroundColor" red="0.79607843137254897" green="0.0" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="mwk-Gg-32j"/>
+                        <constraint firstAttribute="width" constant="35" id="pvU-AK-5b5"/>
+                    </constraints>
+                    <state key="normal" title="选车">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectCar1" translatesAutoresizingMaskIntoConstraints="NO" id="t52-O4-uza">
+                    <rect key="frame" x="322" y="15" width="12" height="6"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="12" id="4kq-DJ-EIR"/>
+                        <constraint firstAttribute="height" constant="6" id="BO1-eh-gJ6"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWO-BQ-8fl">
+                    <rect key="frame" x="8" y="24" width="324" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="2dt-ca-8xW"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择您的车辆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMI-LC-vd3">
+                    <rect key="frame" x="15" y="3" width="304" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="UOE-Wp-VnR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="t52-O4-uza" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="AvT-E6-8fO"/>
+                <constraint firstAttribute="bottom" secondItem="xUi-jm-98v" secondAttribute="bottom" constant="4" id="HSn-TF-Woa"/>
+                <constraint firstAttribute="trailing" secondItem="xUi-jm-98v" secondAttribute="trailing" constant="5" id="IHd-nf-nwb"/>
+                <constraint firstAttribute="bottom" secondItem="ZWO-BQ-8fl" secondAttribute="bottom" constant="5" id="NPI-5W-oYJ"/>
+                <constraint firstItem="t52-O4-uza" firstAttribute="leading" secondItem="gMI-LC-vd3" secondAttribute="trailing" constant="3" id="Teg-pk-mtq"/>
+                <constraint firstAttribute="trailing" secondItem="ZWO-BQ-8fl" secondAttribute="trailing" constant="43" id="UuZ-vg-9JA"/>
+                <constraint firstItem="xUi-jm-98v" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="UxT-ae-h47"/>
+                <constraint firstItem="ZWO-BQ-8fl" firstAttribute="top" secondItem="t52-O4-uza" secondAttribute="bottom" constant="3" id="Z1W-QP-IjV"/>
+                <constraint firstItem="gMI-LC-vd3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="a6O-3C-wpY"/>
+                <constraint firstItem="ZWO-BQ-8fl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="apU-2u-Z6W"/>
+                <constraint firstItem="xUi-jm-98v" firstAttribute="leading" secondItem="t52-O4-uza" secondAttribute="trailing" constant="1" id="fHo-fX-H06"/>
+                <constraint firstItem="ZWO-BQ-8fl" firstAttribute="top" secondItem="gMI-LC-vd3" secondAttribute="bottom" id="wVD-6i-Chh"/>
+                <constraint firstItem="gMI-LC-vd3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="3" id="yb2-3f-fbf"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-108.5" y="51"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="selectCar1" width="200" height="100"/>
+    </resources>
+</document>

@@ -105,11 +105,11 @@
 
     _payPrice = [[UILabel alloc] init];
     [_scrollView addSubview:_payPrice];
+    _payPrice.textAlignment = NSTextAlignmentCenter;
     [_payPrice mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_payPriceTitle.mas_bottom).offset(3);
-        make.right.offset(0);
-        make.left.offset(0);
-        make.size.mas_equalTo(CGSizeMake(mainScreenWidth, 30));
+        make.centerX.offset(0);
+        make.size.mas_equalTo(CGSizeMake(500, 30));
     }];
     NSString *result = [NSString stringWithFormat:@"%.1f元", [_gprice floatValue] * 10000 * (1 + [_stage12 floatValue]) / 12];
     _payPrice.text = result;
@@ -121,10 +121,13 @@
     [_applyForLoanBtu setBackgroundColor:mainColor];
     [_applyForLoanBtu addTarget:self action:@selector(clickApplyForLoanBtu) forControlEvents:UIControlEventTouchUpInside];
 
-    [_scrollView addSubview:_applyForLoanBtu];
+    [self.view addSubview:_applyForLoanBtu];
+    _applyForLoanBtu.layer.cornerRadius = 12;
+    _applyForLoanBtu.layer.masksToBounds  = YES;
     [_applyForLoanBtu mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_payPrice.mas_bottom).offset(3);
-        make.size.mas_equalTo(CGSizeMake(mainScreenWidth * 8.f / 10.f, 30));
+        make.bottom.offset(-20);
+        make.centerX.offset(0);
+        make.size.mas_equalTo(CGSizeMake(mainScreenWidth * 8.f / 10.f, 50));
     }];
 
 
@@ -160,6 +163,12 @@
 }
 
 - (void)clickApplyForLoanBtu {
+    
+    
+    
+    
+    
+    
 }
 
 

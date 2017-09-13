@@ -18,6 +18,7 @@ typedef void(^TouchCallBackBlock)(void);
 @property (assign, nonatomic) CGFloat height;
 @property (assign, nonatomic) CGSize  size;
 @property (assign, nonatomic) CGPoint origin;
+@property (assign, nonatomic) CGFloat maxX;
 
 @property (nonatomic, copy) TouchCallBackBlock touchCallBackBlock;
 - (void)addActionWithblocks:(TouchCallBackBlock)block;

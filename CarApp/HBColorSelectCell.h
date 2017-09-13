@@ -10,5 +10,6 @@
 #import "HBColorSelectModel.h"
 
 @interface HBColorSelectCell : UICollectionViewCell
-- (void)loadmodel:(HBColorSelectModel *)model;
+@property (strong, nonatomic) IBOutlet UILabel *coloeLab;
+//- (void)loadmodel:(HBColorSelectModel *)model;
 @end

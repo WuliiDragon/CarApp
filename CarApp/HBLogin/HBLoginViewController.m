@@ -38,7 +38,9 @@
     title.image = [UIImage imageNamed:@"loginTitle"];
     self.navigationItem.titleView = title;
 
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(backMainController)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(backMainController)];
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"注册" style:UIBarButtonItemStylePlain target:self action:@selector(registViewController)];
 
     
     
@@ -62,6 +64,10 @@
     appDelegate.window.rootViewController = [MainViewController new];
 }
 
+- (void)registViewController{
+    HBRegisteredViewController *registeredVC = [[HBRegisteredViewController alloc] init];
+    [self.navigationController pushViewController:registeredVC animated:YES];
+}
 
 - (IBAction)loginAction:(id)sender {
 
@@ -106,15 +112,6 @@
     }
 
 }
-
-
-- (IBAction)registered:(id)sender {
-    HBRegisteredViewController *registeredVC = [[HBRegisteredViewController alloc] init];
-    [self.navigationController pushViewController:registeredVC animated:YES];
-
-}
-
-
 
 
 - (IBAction)forgetPassword:(id)sender {

@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HBCarStoreDetailModel.h"
+#import "HBStoreCarModel.h"
 
 @interface HBSeriesOfcarViewController : UIViewController
-@property(nonatomic, strong) NSString *distance;
-@property(nonatomic, strong) NSString *gid;
-
+@property(nonatomic, strong) HBCarStoreDetailModel *CarStoreDetailModel;
+@property(nonatomic, strong) HBStoreCarModel *StoreCarModel;
+@property(nonatomic, strong) NSString *bid;
 @end

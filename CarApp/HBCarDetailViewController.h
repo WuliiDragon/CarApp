@@ -13,11 +13,10 @@
 #import "HBRecommendModel.h"
 
 @interface HBCarDetailViewController : UIViewController
-@property(strong, nonatomic) HBCarStoreDetailModel *carStoreDetailModel;
-@property(nonatomic, strong) HBStoreCarModel *carstoreModel;
-@property(strong, nonatomic) HBSeriesOfcarModel *seriesOfCarModel;
+@property(nonatomic, strong) HBCarStoreDetailModel *CarStoreDetailModel;
+@property(nonatomic, strong) HBStoreCarModel *StoreCarModel;
+@property(nonatomic, strong) HBSeriesOfcarModel *SeriesOfcarModel;
+@property(nonatomic, strong) NSString  *bid;
 
 @property(nonatomic) BOOL *isRecommend;
-@property(nonatomic) NSString *mid;
-@property(nonatomic) NSString *distance;
 @end

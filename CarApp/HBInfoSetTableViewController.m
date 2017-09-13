@@ -34,6 +34,7 @@
     
     UIButton *btu = [[UIButton alloc] init];
     [btu setTitle:@"退出账号" forState:UIControlStateNormal];
+    
     [btu addActionWithblocks:^{
         UIAlertController* alert=   [UIAlertController alertControllerWithTitle:@"提示"
                                                                         message:@"确定要退出当前账号吗？"

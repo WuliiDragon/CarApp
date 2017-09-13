@@ -14,8 +14,10 @@
                 <outlet property="dateLab" destination="coM-hv-Ohr" id="WSK-D5-Nip"/>
                 <outlet property="likeImgBtu" destination="Kta-WD-Veq" id="glM-wL-9c1"/>
                 <outlet property="ntitleLab" destination="RTw-5I-2Be" id="CF3-Sf-e0h"/>
+                <outlet property="titleView" destination="NDJ-ev-yzC" id="Jjf-0T-ECg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="webView" destination="OdV-YL-oP0" id="F2x-fo-dIm"/>
+                <outlet property="zanBtn" destination="Kta-WD-Veq" id="HHi-gg-4bw"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -71,9 +73,10 @@
                     <rect key="frame" x="0.0" y="687" width="414" height="49"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kta-WD-Veq">
-                            <rect key="frame" x="156" y="11" width="30" height="30"/>
+                            <rect key="frame" x="165" y="15" width="22" height="22"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button" image="nolike"/>
+                            <state key="normal" image="nolike"/>
+                            <state key="selected" image="like"/>
                             <connections>
                                 <action selector="likeClick:" destination="-1" eventType="touchUpInside" id="0gN-xt-XcO"/>
                             </connections>
@@ -112,6 +115,7 @@
         </view>
     </objects>
     <resources>
+        <image name="like" width="42" height="42"/>
         <image name="nolike" width="42" height="42"/>
     </resources>
 </document>

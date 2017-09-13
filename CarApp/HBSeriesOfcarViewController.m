@@ -43,7 +43,8 @@
 @property(nonatomic, strong) NSString *stage12;
 @property(nonatomic, strong) NSString *stage24;
 @property(nonatomic, strong) NSString *stage36;
-@property(nonatomic, strong) NSString *bid;
+
+
 @property(nonatomic, strong) NSString *bphone;
 @property(nonatomic, strong) NSString *gname;
 @property(nonatomic, strong) NSString *maxprice;
@@ -163,7 +164,7 @@
     if (!refresh)[self.hud show:YES];
 
     [HBNetRequest Get:SERIESOFCAR
-                 para:@{@"gid": _gid}
+                 para:@{@"gid": _CarStoreDetailModel.gid}
              complete:^(id data) {
 
                  if (refresh) {
@@ -237,8 +238,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     HBSeriesOfcarModel *model = _dataArr[indexPath.row];
     HBCarDetailViewController *VC = [[HBCarDetailViewController alloc] init];
-    VC.mid = model.mid;
-    VC.distance = _distance;
+    VC.CarStoreDetailModel = _CarStoreDetailModel;
+    VC.StoreCarModel = _StoreCarModel;
+    VC.SeriesOfcarModel = model;
+    VC.bid = _bid;
     [self.navigationController pushViewController:VC animated:YES];
 }
 
@@ -246,23 +249,15 @@
 - (void)clickAskLowPrice:(UIButton *)btu {
     HBAskLowPriceViewController *VC = [[HBAskLowPriceViewController alloc] init];
     HBSeriesOfcarModel *seriesOfCarModel = _dataArr[btu.tag];
-    VC.distanceStr = _distance;
+    VC.StoreCarModel  = _StoreCarModel;
+    VC.CarStoreDetailModel = _CarStoreDetailModel;
+    VC.SeriesOfcarModel = seriesOfCarModel;
     VC.bid = _bid;
-    VC.carinfo = seriesOfCarModel.mname;
-    VC.mid = seriesOfCarModel.mid;
-    //VC.storeCarModel =
-    
     [self.navigationController pushViewController:VC animated:YES];
 
 }
 
-//- (void)clickOnlinePolicy:(id)sender {
-//    UIButton *btu = sender;
-//    HBSeriesOfcarModel *seriesOfCarModel = _dataArr[btu.tag];
-//    HBOrderingCarViewController *VC = [[HBOrderingCarViewController alloc] init];
-//    VC.seriesOfCarModel = seriesOfCarModel;
-//    [self.navigationController pushViewController:VC animated:YES];
-//}
+
 
 - (void)clickInstallment:(id)sender {
     HBInstallmentViewController *VC = [[HBInstallmentViewController alloc] init];

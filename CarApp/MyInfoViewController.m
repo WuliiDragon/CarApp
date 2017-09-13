@@ -107,8 +107,7 @@
             
         case 1: {
             HBBussnisWebViewController *vc = [[HBBussnisWebViewController alloc] init];
-            
-            
+            vc.url = BUSSNISOWER;
             [self.navigationController pushViewController:vc animated:YES];
         } break;
             

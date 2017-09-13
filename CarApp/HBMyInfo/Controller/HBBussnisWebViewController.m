@@ -27,7 +27,7 @@
     _hud.labelText = @"加载中";
     [self.hud show:YES];
     
-    NSURL* url = [NSURL URLWithString:BUSSNISOWER];//创建URL
+    NSURL* url = [NSURL URLWithString:_url];//创建URL
     NSURLRequest* request = [NSURLRequest requestWithURL:url];//创建NSURLRequest
     [_webView loadRequest:request];//加载
 }

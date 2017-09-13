@@ -62,7 +62,6 @@
 		2F298A631EF54A6F00B7F520 /* HBFoundNewsCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F298A611EF54A6F00B7F520 /* HBFoundNewsCellTableViewCell.m */; };
 		2F298A641EF54A6F00B7F520 /* HBFoundNewsCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F298A621EF54A6F00B7F520 /* HBFoundNewsCellTableViewCell.xib */; };
 		2F298A671EF554FD00B7F520 /* HBNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F298A661EF554FD00B7F520 /* HBNewsModel.m */; };
-		2F298A6B1EF5593C00B7F520 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F298A6A1EF5593C00B7F520 /* View.xib */; };
 		2F2CEAF91EE5566000E870F9 /* HBGoodInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2CEAF71EE5566000E870F9 /* HBGoodInfoCell.m */; };
 		2F2CEAFA1EE5566000E870F9 /* HBGoodInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F2CEAF81EE5566000E870F9 /* HBGoodInfoCell.xib */; };
 		2F2CEAFC1EE5610800E870F9 /* ShopCarBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F2CEAFB1EE5610800E870F9 /* ShopCarBar.xib */; };
@@ -105,6 +104,7 @@
 		2F6969D91E8FCBBA008BC777 /* HBFoundPassword.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F6969D71E8FCBBA008BC777 /* HBFoundPassword.xib */; };
 		2F6969DD1E8FCBDA008BC777 /* HBResetPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6969DB1E8FCBDA008BC777 /* HBResetPassword.m */; };
 		2F6969DE1E8FCBDA008BC777 /* HBResetPassword.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F6969DC1E8FCBDA008BC777 /* HBResetPassword.xib */; };
+		2F80269F1EFCF80C0033AB29 /* HBWebViewPreferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F80269E1EFCF80C0033AB29 /* HBWebViewPreferences.xib */; };
 		2F8278121EF563E2007CC0ED /* HBNewsCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8278111EF563E2007CC0ED /* HBNewsCellModel.m */; };
 		2F8278171EF66A32007CC0ED /* HBNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8278151EF66A32007CC0ED /* HBNewsViewController.m */; };
 		2F8278181EF66A32007CC0ED /* HBNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F8278161EF66A32007CC0ED /* HBNewsViewController.xib */; };
@@ -119,7 +119,9 @@
 		2F827F261DE4161B00AC9117 /* MyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F827F251DE4161B00AC9117 /* MyInfoViewController.m */; };
 		2F827F591DE465DC00AC9117 /* carStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F827F581DE465DC00AC9117 /* carStore.m */; };
 		2F827F621DE5535500AC9117 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F827F611DE5535500AC9117 /* UIView+Extension.m */; };
+		2F82F3AE1F09F44500681CD3 /* HBSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F82F3AD1F09F44500681CD3 /* HBSelectView.xib */; };
 		2F83C0101E8009630099E6BC /* HBCleanCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F83C00F1E8009630099E6BC /* HBCleanCellModel.m */; };
+		2F86CBE41F00B51C0061BB07 /* HBNearServiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F86CBE31F00B51C0061BB07 /* HBNearServiceView.xib */; };
 		2F8706261DFAB8A300DB9215 /* HBSearchResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8706251DFAB8A300DB9215 /* HBSearchResultModel.m */; };
 		2F996F231DFAB10200F79FA4 /* HBCarDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F996F221DFAB10200F79FA4 /* HBCarDetailViewController.m */; };
 		2F996F291DFAB49800F79FA4 /* HBSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F996F281DFAB49800F79FA4 /* HBSearchResultViewController.m */; };
@@ -175,6 +177,13 @@
 		2FDBC3341DF7E095004D78D4 /* HBOrderingCarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FDBC3321DF7E095004D78D4 /* HBOrderingCarViewController.xib */; };
 		2FDECD901EADB3380006D45A /* HBInfoSetTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FDECD8E1EADB3380006D45A /* HBInfoSetTableViewController.m */; };
 		2FDECD911EADB3380006D45A /* HBInfoSetTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FDECD8F1EADB3380006D45A /* HBInfoSetTableViewController.xib */; };
+		2FEF748E1F0BBABF002969BB /* HBDealerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF748D1F0BBABF002969BB /* HBDealerViewController.m */; };
+		2FEF74941F0C8285002969BB /* YZCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF74911F0C8285002969BB /* YZCover.m */; };
+		2FEF74951F0C8285002969BB /* YZPullDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF74931F0C8285002969BB /* YZPullDownMenu.m */; };
+		2FEF74981F0C86C0002969BB /* YZMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF74971F0C86C0002969BB /* YZMenuButton.m */; };
+		2FEF749B1F0CA96E002969BB /* YZSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF749A1F0CA96E002969BB /* YZSortViewController.m */; };
+		2FEF749F1F0CA991002969BB /* YZSortCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF749D1F0CA991002969BB /* YZSortCell.m */; };
+		2FEF74A01F0CA991002969BB /* YZSortCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FEF749E1F0CA991002969BB /* YZSortCell.xib */; };
 		2FF28DC51DEE71B3000A45B3 /* HBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF28DC41DEE71B3000A45B3 /* HBModel.m */; };
 		2FF28DE21DEE8D36000A45B3 /* HBCarStoreDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FF28DE11DEE8D36000A45B3 /* HBCarStoreDetailModel.m */; };
 		D8D82FAA1E224882006AF2CF /* HBInstallmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D82FA81E224882006AF2CF /* HBInstallmentViewController.m */; };
@@ -273,7 +282,6 @@
 		2F298A621EF54A6F00B7F520 /* HBFoundNewsCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HBFoundNewsCellTableViewCell.xib; path = HBFound/View/HBFoundNewsCellTableViewCell.xib; sourceTree = "<group>"; };
 		2F298A651EF554FD00B7F520 /* HBNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBNewsModel.h; path = HBFound/model/HBNewsModel.h; sourceTree = "<group>"; };
 		2F298A661EF554FD00B7F520 /* HBNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBNewsModel.m; path = HBFound/model/HBNewsModel.m; sourceTree = "<group>"; };
-		2F298A6A1EF5593C00B7F520 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		2F2CEAF61EE5566000E870F9 /* HBGoodInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBGoodInfoCell.h; sourceTree = "<group>"; };
 		2F2CEAF71EE5566000E870F9 /* HBGoodInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBGoodInfoCell.m; sourceTree = "<group>"; };
 		2F2CEAF81EE5566000E870F9 /* HBGoodInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBGoodInfoCell.xib; sourceTree = "<group>"; };
@@ -344,6 +352,7 @@
 		2F6969DA1E8FCBDA008BC777 /* HBResetPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBResetPassword.h; path = HBLogin/HBResetPassword.h; sourceTree = "<group>"; };
 		2F6969DB1E8FCBDA008BC777 /* HBResetPassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBResetPassword.m; path = HBLogin/HBResetPassword.m; sourceTree = "<group>"; };
 		2F6969DC1E8FCBDA008BC777 /* HBResetPassword.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HBResetPassword.xib; path = HBLogin/HBResetPassword.xib; sourceTree = "<group>"; };
+		2F80269E1EFCF80C0033AB29 /* HBWebViewPreferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HBWebViewPreferences.xib; path = HBFound/View/HBWebViewPreferences.xib; sourceTree = "<group>"; };
 		2F8278101EF563E2007CC0ED /* HBNewsCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBNewsCellModel.h; path = HBFound/model/HBNewsCellModel.h; sourceTree = "<group>"; };
 		2F8278111EF563E2007CC0ED /* HBNewsCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HBNewsCellModel.m; path = HBFound/model/HBNewsCellModel.m; sourceTree = "<group>"; };
 		2F8278141EF66A32007CC0ED /* HBNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HBNewsViewController.h; path = HBFound/Controller/HBNewsViewController.h; sourceTree = "<group>"; };
@@ -372,8 +381,10 @@
 		2F827F5F1DE5521500AC9117 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		2F827F601DE5535500AC9117 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Extension.h"; path = "../UIView+Extension.h"; sourceTree = "<group>"; };
 		2F827F611DE5535500AC9117 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Extension.m"; path = "../UIView+Extension.m"; sourceTree = "<group>"; };
+		2F82F3AD1F09F44500681CD3 /* HBSelectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBSelectView.xib; sourceTree = "<group>"; };
 		2F83C00E1E8009630099E6BC /* HBCleanCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCleanCellModel.h; sourceTree = "<group>"; };
 		2F83C00F1E8009630099E6BC /* HBCleanCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBCleanCellModel.m; sourceTree = "<group>"; };
+		2F86CBE31F00B51C0061BB07 /* HBNearServiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBNearServiceView.xib; sourceTree = "<group>"; };
 		2F8706241DFAB8A300DB9215 /* HBSearchResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBSearchResultModel.h; sourceTree = "<group>"; };
 		2F8706251DFAB8A300DB9215 /* HBSearchResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBSearchResultModel.m; sourceTree = "<group>"; };
 		2F996F211DFAB10200F79FA4 /* HBCarDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCarDetailViewController.h; sourceTree = "<group>"; };
@@ -469,6 +480,19 @@
 		2FDECD8D1EADB3380006D45A /* HBInfoSetTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBInfoSetTableViewController.h; sourceTree = "<group>"; };
 		2FDECD8E1EADB3380006D45A /* HBInfoSetTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBInfoSetTableViewController.m; sourceTree = "<group>"; };
 		2FDECD8F1EADB3380006D45A /* HBInfoSetTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HBInfoSetTableViewController.xib; sourceTree = "<group>"; };
+		2FEF748C1F0BBABF002969BB /* HBDealerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBDealerViewController.h; sourceTree = "<group>"; };
+		2FEF748D1F0BBABF002969BB /* HBDealerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBDealerViewController.m; sourceTree = "<group>"; };
+		2FEF74901F0C8285002969BB /* YZCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZCover.h; sourceTree = "<group>"; };
+		2FEF74911F0C8285002969BB /* YZCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZCover.m; sourceTree = "<group>"; };
+		2FEF74921F0C8285002969BB /* YZPullDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZPullDownMenu.h; sourceTree = "<group>"; };
+		2FEF74931F0C8285002969BB /* YZPullDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZPullDownMenu.m; sourceTree = "<group>"; };
+		2FEF74961F0C86C0002969BB /* YZMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZMenuButton.h; sourceTree = "<group>"; };
+		2FEF74971F0C86C0002969BB /* YZMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZMenuButton.m; sourceTree = "<group>"; };
+		2FEF74991F0CA96E002969BB /* YZSortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZSortViewController.h; sourceTree = "<group>"; };
+		2FEF749A1F0CA96E002969BB /* YZSortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZSortViewController.m; sourceTree = "<group>"; };
+		2FEF749C1F0CA991002969BB /* YZSortCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZSortCell.h; sourceTree = "<group>"; };
+		2FEF749D1F0CA991002969BB /* YZSortCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZSortCell.m; sourceTree = "<group>"; };
+		2FEF749E1F0CA991002969BB /* YZSortCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YZSortCell.xib; sourceTree = "<group>"; };
 		2FF28DC31DEE71B3000A45B3 /* HBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBModel.h; sourceTree = "<group>"; };
 		2FF28DC41DEE71B3000A45B3 /* HBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBModel.m; sourceTree = "<group>"; };
 		2FF28DE01DEE8D36000A45B3 /* HBCarStoreDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBCarStoreDetailModel.h; sourceTree = "<group>"; };
@@ -694,11 +718,19 @@
 				2F9B689A1DF3F691006DF573 /* HBSearchConditionCarView */,
 				2FA566C41DEF047F0046CF99 /* HBSelectCarControllerViewController.h */,
 				2FA566C51DEF047F0046CF99 /* HBSelectCarControllerViewController.m */,
+				2FEF748C1F0BBABF002969BB /* HBDealerViewController.h */,
+				2FEF748D1F0BBABF002969BB /* HBDealerViewController.m */,
+				2FEF74991F0CA96E002969BB /* YZSortViewController.h */,
+				2FEF749A1F0CA96E002969BB /* YZSortViewController.m */,
+				2FEF749C1F0CA991002969BB /* YZSortCell.h */,
+				2FEF749D1F0CA991002969BB /* YZSortCell.m */,
+				2FEF749E1F0CA991002969BB /* YZSortCell.xib */,
 				2F4A6CC51DEAB83B00DDE9AF /* HBAskLowPriceViewController.h */,
 				2F4A6CC61DEAB83B00DDE9AF /* HBAskLowPriceViewController.m */,
 				2F4A6CC71DEAB83B00DDE9AF /* HBAskLowPriceViewController.xib */,
 				D8D82FA71E224882006AF2CF /* HBInstallmentViewController.h */,
 				D8D82FA81E224882006AF2CF /* HBInstallmentViewController.m */,
+				2F82F3AD1F09F44500681CD3 /* HBSelectView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -751,7 +783,8 @@
 				2F298A601EF54A6F00B7F520 /* HBFoundNewsCellTableViewCell.h */,
 				2F298A611EF54A6F00B7F520 /* HBFoundNewsCellTableViewCell.m */,
 				2F298A621EF54A6F00B7F520 /* HBFoundNewsCellTableViewCell.xib */,
-				2F298A6A1EF5593C00B7F520 /* View.xib */,
+				2F80269E1EFCF80C0033AB29 /* HBWebViewPreferences.xib */,
+				2F86CBE31F00B51C0061BB07 /* HBNearServiceView.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -896,6 +929,7 @@
 		2F827F5A1DE4692800AC9117 /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				2FEF748F1F0C8259002969BB /* PulldownMenu */,
 				2F2103381EF4041A00170010 /* JXPage */,
 				2FBB78FF1E17869000E9BCA2 /* XLPhotoBrowser */,
 				2F36D7941DF44DF000014798 /* MUDoubleThumbSlider.h */,
@@ -1096,6 +1130,19 @@
 			path = FSActionSheetResources;
 			sourceTree = "<group>";
 		};
+		2FEF748F1F0C8259002969BB /* PulldownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				2FEF74901F0C8285002969BB /* YZCover.h */,
+				2FEF74911F0C8285002969BB /* YZCover.m */,
+				2FEF74921F0C8285002969BB /* YZPullDownMenu.h */,
+				2FEF74931F0C8285002969BB /* YZPullDownMenu.m */,
+				2FEF74961F0C86C0002969BB /* YZMenuButton.h */,
+				2FEF74971F0C86C0002969BB /* YZMenuButton.m */,
+			);
+			name = PulldownMenu;
+			sourceTree = "<group>";
+		};
 		AAAFEC7E381B8A3FC29FCBD2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1223,18 +1270,21 @@
 				2FC719031DE57FF800B4E381 /* HBCarStoreCell.xib in Resources */,
 				2FBE55FB1EF7AF31009EB0DA /* HBUserInfoSetViewController.xib in Resources */,
 				2FA94FC11EF76C5B00F70CA7 /* HBBuyOrderCell.xib in Resources */,
+				2F86CBE41F00B51C0061BB07 /* HBNearServiceView.xib in Resources */,
 				2F6969D91E8FCBBA008BC777 /* HBFoundPassword.xib in Resources */,
 				2F4A6CC91DEAB83B00DDE9AF /* HBAskLowPriceViewController.xib in Resources */,
 				2F477A9A1EF910DB00E51EF6 /* HBResetPwdViewController.xib in Resources */,
+				2FEF74A01F0CA991002969BB /* YZSortCell.xib in Resources */,
+				2F82F3AE1F09F44500681CD3 /* HBSelectView.xib in Resources */,
 				2F2CEAFA1EE5566000E870F9 /* HBGoodInfoCell.xib in Resources */,
 				2F030D921DE96C1F004F4BA3 /* HBCarInfoCell.xib in Resources */,
 				2F9B68991DF3F5FF006DF573 /* HBSearchConditioncell.xib in Resources */,
 				2F2CEAFC1EE5610800E870F9 /* ShopCarBar.xib in Resources */,
 				2FA94FB81EF6839B00F70CA7 /* HBBussnisWebViewController.xib in Resources */,
-				2F298A6B1EF5593C00B7F520 /* View.xib in Resources */,
 				2F477A8B1EF8F77F00E51EF6 /* HBUserImageCell.xib in Resources */,
 				2FBB79491E17869000E9BCA2 /* FSActionSheet_cancel@2x.png in Resources */,
 				2F0F223D1EA8786D0013577E /* libs in Resources */,
+				2F80269F1EFCF80C0033AB29 /* HBWebViewPreferences.xib in Resources */,
 				2F4ADDA41E94F15F00A2E095 /* HBPayInfoCell.xib in Resources */,
 				2F5B46821E01073300860AF7 /* HBColorSelectCell.xib in Resources */,
 				2FBB78FE1E17842B00E9BCA2 /* HBMenuItem.xib in Resources */,
@@ -1313,8 +1363,10 @@
 				2F2CEB0C1EE59C2A00E870F9 /* HBPushShopCarView.m in Sources */,
 				2F20E5DF1EAB5C220095719E /* HBPayresult.m in Sources */,
 				2F827F141DE4105400AC9117 /* MainViewController.m in Sources */,
+				2FEF749B1F0CA96E002969BB /* YZSortViewController.m in Sources */,
 				2FC719021DE57FF800B4E381 /* HBCarStoreCell.m in Sources */,
 				2FF28DC51DEE71B3000A45B3 /* HBModel.m in Sources */,
+				2FEF748E1F0BBABF002969BB /* HBDealerViewController.m in Sources */,
 				D8D82FAA1E224882006AF2CF /* HBInstallmentViewController.m in Sources */,
 				2F66EFA01E0E4A8000B15EA9 /* HBConfigurationOfCar.m in Sources */,
 				2F68729B1E7D31C900BF453E /* HBCleanCell.m in Sources */,
@@ -1371,6 +1423,7 @@
 				2FBB79611E17869000E9BCA2 /* XLZoomingScrollView.m in Sources */,
 				2F8706261DFAB8A300DB9215 /* HBSearchResultModel.m in Sources */,
 				2FDBC3331DF7E095004D78D4 /* HBOrderingCarViewController.m in Sources */,
+				2FEF74941F0C8285002969BB /* YZCover.m in Sources */,
 				2FCC70AC1E07B9F800E096B4 /* UIView+MJAlertView.m in Sources */,
 				2F4A6CC81DEAB83B00DDE9AF /* HBAskLowPriceViewController.m in Sources */,
 				2F6969D31E8F97D4008BC777 /* HBUserItem.m in Sources */,
@@ -1389,6 +1442,7 @@
 				2F022D7A1E8A8607006AFF50 /* HBRegisteredViewController.m in Sources */,
 				2FBB795F1E17869000E9BCA2 /* XLPhotoBrowser.m in Sources */,
 				2FBB79451E17869000E9BCA2 /* FSActionSheet.m in Sources */,
+				2FEF74981F0C86C0002969BB /* YZMenuButton.m in Sources */,
 				2FA94FC91EF77B5D00F70CA7 /* HBMianCell.m in Sources */,
 				2F1EEDC81DEEAEDB0049DF9C /* HBStoreCarModel.m in Sources */,
 				2F298A671EF554FD00B7F520 /* HBNewsModel.m in Sources */,
@@ -1400,6 +1454,7 @@
 				2F030D791DE801EA004F4BA3 /* SDCycleScrollView.m in Sources */,
 				2FBB79471E17869000E9BCA2 /* FSActionSheetConfig.m in Sources */,
 				2F030D911DE96C1F004F4BA3 /* HBCarInfoCell.m in Sources */,
+				2FEF749F1F0CA991002969BB /* YZSortCell.m in Sources */,
 				2FBD86B11E078829002F18F3 /* HBrecommendViewCell.m in Sources */,
 				2F1CCFC11E7BDB7F00B2C0CE /* HBMaintenanceStoreViewController.m in Sources */,
 				2F83C0101E8009630099E6BC /* HBCleanCellModel.m in Sources */,
@@ -1411,6 +1466,7 @@
 				2F030D8A1DE84ACC004F4BA3 /* homeActive.m in Sources */,
 				2F9B68941DF3F57C006DF573 /* HBSearchConditionCarViewController.m in Sources */,
 				2FCE62191EA4D2C300D95B64 /* HBCouponsViewController.m in Sources */,
+				2FEF74951F0C8285002969BB /* YZPullDownMenu.m in Sources */,
 				2FBB79601E17869000E9BCA2 /* XLProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

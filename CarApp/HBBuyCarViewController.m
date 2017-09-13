@@ -12,6 +12,7 @@
 
 #import "HBBuyCarViewController.h"
 #import "HBSearchConditionCarViewController.h"
+#import "HBDealerViewController.h"
 #import "HBCarStoreDetailViewController.h"
 #import "HBCarStoreCell.h"
 #import "HBSearchResultViewController.h"
@@ -52,6 +53,9 @@
 @property(strong, nonatomic) SDCycleScrollView *hangbartopTitle;
 @property(strong, nonatomic) UIView *topView;
 @property(strong, nonatomic) UIView *selectCar;
+//@property (strong, nonatomic) IBOutlet UIView *selectCarXib;
+@property(nonatomic,strong) UIView *selectCarXib;
+
 @property(nonatomic, strong) UIView *hangbarView;
 @property(nonatomic, strong) UIView *dealaerandcarView;
 
@@ -96,7 +100,6 @@
     _tableView.estimatedRowHeight = 110;
     _tableView.rowHeight = UITableViewAutomaticDimension;
 
-
     _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     //下拉刷新
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
@@ -114,7 +117,6 @@
     //注册nib以及重用资源符
     UINib *Nib = [UINib nibWithNibName:@"HBCarStoreCell" bundle:nil];
     [_tableView registerNib:Nib forCellReuseIdentifier:@"MYCELL"];
-
     [self.view addSubview:_tableView];
 
 }
@@ -181,32 +183,52 @@
         make.left.equalTo(hangbartop.right).offset(5);
     }];
 
-    _selectCar = [[UIView alloc] init];
-    [_topView addSubview:_selectCar];
-    [_selectCar makeConstraints:^(MASConstraintMaker *make) {
-        make.size.equalTo(CGSizeMake(mainScreenWidth, 30));
+    
+    
+    
+    
+    _selectCarXib = [[[NSBundle mainBundle] loadNibNamed:@"HBSelectView" owner:self options:nil] lastObject];
+    [_topView addSubview:_selectCarXib];
+    [_selectCarXib makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_hangbarView.bottom).offset(0);
+        make.right.left.offset(0);
+        make.size.mas_equalTo(CGSizeMake(mainScreenWidth, 30));
+    }];
+    
+    [_selectCarXib setUserInteractionEnabled:YES];
+    [_selectCarXib addActionWithblocks:^{
+        HBSearchConditionCarViewController *s = [[HBSearchConditionCarViewController alloc] init];
+        [weakSelf.navigationController pushViewController:s animated:YES];
     }];
 
-    //添加按钮
-    UIButton *selectCarBtu = [[UIButton alloc] initWithFrame:CGRectMake(mainScreenWidth - 40, 0, 35, 22)];
-    [selectCarBtu setImage:[UIImage imageNamed:@"selectCar"] forState:UIControlStateNormal];
-    [selectCarBtu addTarget:self action:@selector(clickselectCarbtu:) forControlEvents:UIControlEventTouchUpInside];
-    [_selectCar addSubview:selectCarBtu];
-    [selectCarBtu makeConstraints:^(MASConstraintMaker *make) {
-        make.size.equalTo(CGSizeMake(35, 22));
-        make.right.offset(-20);
-        make.centerY.equalTo(_selectCar).offset(0);
-    }];
-    //图片
-    UIImageView *selectCarImg2 = [[UIImageView alloc] initWithFrame:CGRectMake(mainScreenWidth - selectCarBtu.frame.size.width - 20, selectCarBtu.frame.size.height / 3.f, 12, 6)];
-    selectCarImg2.image = [UIImage imageNamed:@"selectCar1"];
-    [_selectCar addSubview:selectCarImg2];
-    [selectCarImg2 makeConstraints:^(MASConstraintMaker *make) {
-        make.size.equalTo(CGSizeMake(12, 6));
-        make.right.equalTo(selectCarBtu.left).offset(-8);
-        make.centerY.equalTo(_selectCar).offset(0);
-    }];
+    
+//    _selectCar = [[UIView alloc] init];
+//    [_topView addSubview:_selectCar];
+//    [_selectCar makeConstraints:^(MASConstraintMaker *make) {
+//        make.size.equalTo(CGSizeMake(mainScreenWidth, 30));
+//        make.top.equalTo(_hangbarView.bottom).offset(0);
+//    }];
+//
+//    
+//    //添加按钮
+//    UIButton *selectCarBtu = [[UIButton alloc] initWithFrame:CGRectMake(mainScreenWidth - 40, 0, 35, 22)];
+//    [selectCarBtu setImage:[UIImage imageNamed:@"selectCar"] forState:UIControlStateNormal];
+//    [selectCarBtu addTarget:self action:@selector(clickselectCarbtu:) forControlEvents:UIControlEventTouchUpInside];
+//    [_selectCar addSubview:selectCarBtu];
+//    [selectCarBtu makeConstraints:^(MASConstraintMaker *make) {
+//        make.size.equalTo(CGSizeMake(35, 22));
+//        make.right.offset(-20);
+//        make.centerY.equalTo(_selectCar).offset(0);
+//    }];
+//    //图片
+//    UIImageView *selectCarImg2 = [[UIImageView alloc] initWithFrame:CGRectMake(mainScreenWidth - selectCarBtu.frame.size.width - 20, selectCarBtu.frame.size.height / 3.f, 12, 6)];
+//    selectCarImg2.image = [UIImage imageNamed:@"selectCar1"];
+//    [_selectCar addSubview:selectCarImg2];
+//    [selectCarImg2 makeConstraints:^(MASConstraintMaker *make) {
+//        make.size.equalTo(CGSizeMake(12, 6));
+//        make.right.equalTo(selectCarBtu.left).offset(-8);
+//        make.centerY.equalTo(_selectCar).offset(0);
+//    }];
 
 }
 
@@ -227,7 +249,11 @@
         make.size.equalTo(CGSizeMake(mainScreenWidth, 70));
         make.top.equalTo(_loopView.bottom).offset(padding);
     }];
-
+    HBBuyCarViewController *__weak weakSelf = self;//防止循环引用
+    [_dealaerandcarView addActionWithblocks:^{
+        HBDealerViewController *DealerVC = [[HBDealerViewController alloc] init];
+        [weakSelf.navigationController pushViewController:DealerVC animated:YES];
+    }];
 
     UIImageView *leftimg = [[UIImageView alloc] init];
     leftimg.image = [HBAuxiliary saImageWithSingleColor:[UIColor colorWithRed:95 / 255.0f green:177 / 255.0f blue:192 / 255.0f alpha:1.f]];
@@ -247,6 +273,7 @@
         make.size.equalTo(CGSizeMake(90, 30));
         make.top.offset(10);
     }];
+   
     UILabel *dealerlab = [[UILabel alloc] init];
     dealerlab.font = [UIFont systemFontOfSize:13.f];
     dealerlab.textColor = [UIColor whiteColor];
@@ -306,11 +333,6 @@
     [self.navigationController pushViewController:VC animated:YES];
 }
 
-- (void)clickselectCarbtu:(id)sender {
-    HBSearchConditionCarViewController *s = [[HBSearchConditionCarViewController alloc] init];
-    [self.navigationController pushViewController:s animated:YES];
-
-}
 
 
 #pragma mark  加载数据
@@ -416,8 +438,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     HBStoreCarModel *model = _CarStoreArr[indexPath.row];
     HBCarStoreDetailViewController *VC = [[HBCarStoreDetailViewController alloc] init];
-    VC.bid = model.bid;
-    VC.distance = model.distance;
+    VC.StoreCarModel = model;
     [self.navigationController pushViewController:VC animated:YES];
 }
 
@@ -440,7 +461,6 @@
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
     if ([error code] == kCLErrorDenied) {
-
     }
     if ([error code] == kCLErrorLocationUnknown) {
 

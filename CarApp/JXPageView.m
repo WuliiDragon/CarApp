@@ -72,7 +72,7 @@
     
     if (_datasource != nil && [_datasource respondsToSelector:@selector(pageView:viewAtIndex:)]) {
         UIView *view = [_datasource pageView:self viewAtIndex:index];
-        view.frame = CGRectMake(self.bounds.size.width*index, 0, self.bounds.size.width, self.bounds.size.height-64);
+        view.frame = CGRectMake(self.bounds.size.width*index, 0, self.bounds.size.width, view.frame.size.height);
         [_scrollview addSubview:view];
         [self.itemsArray replaceObjectAtIndex:index withObject:view];
     }

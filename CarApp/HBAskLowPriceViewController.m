@@ -32,8 +32,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self GetData];
-    _distance.text = [HBAuxiliary distance:_distanceStr];
+    
+    
     UIView *titlestoreView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 80, 20)];
     UIImageView *titlestoreImg = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 80, 20)];
     titlestoreImg.image = [UIImage imageNamed:@"asklowtitle"];
@@ -44,50 +44,57 @@
     _inputname.returnKeyType = UIKeyboardTypeNamePhonePad;
     _inputname.delegate = self;
     _inputphone.delegate = self;
-
-}
-
-- (void)GetData {
-    _hud = [[MBProgressHUD alloc] init];
-    _hud.labelText = @"正在登录...";
-    [self.view addSubview:_hud];
     
-    [HBNetRequest Get:ASKLOWPIR para:@{@"bid":_bid}
+    
+    _distance.text = [HBAuxiliary distance:_StoreCarModel.distance];
+    _carinfolab.text = _SeriesOfcarModel.mname;
+    _bname.text = _StoreCarModel.bname;
+    _baddress.text = _StoreCarModel.baddress;
+    _majorbusiness.text = _StoreCarModel.majorbusiness;
+    _title1.text = _StoreCarModel.title1;
+    _title2.text = _StoreCarModel.title2;
+    _bphone.text = _StoreCarModel.bphone;
+    
+    
+    
+    [HBNetRequest Get:ASKLOWPIR para: @{@"bid":_bid}
              complete:^(id data) {
-        NSDictionary *business = data[@"business"];
-        _carinfolab.text = _carinfo;
-        _bname.text = [business objectForKey:@"bname"];
-        _baddress.text = [business objectForKey:@"baddress"];
-        _majorbusiness.text = [business objectForKey:@"majorbusiness"];
-        _title1.text = [business objectForKey:@"title1"];
-        _title2.text = [business objectForKey:@"title2"];
-        _bphone.text = [business objectForKey:@"bphone"];
-                 [_hud hide:YES];
-        NSString *str = mainUrl;
-        NSString *urlStr = [str stringByAppendingFormat:@"%@", business[@"bshowImage"]];
-        [_bimage sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:[UIImage imageNamed:@"xx"] options:SDWebImageRefreshCached];
+                 NSDictionary *business = data[@"business"];
+                 //_carinfolab.text = _carinfo;
+                 _bname.text = [business objectForKey:@"bname"];
+                 _baddress.text = [business objectForKey:@"baddress"];
+                 _majorbusiness.text = [business objectForKey:@"majorbusiness"];
+                 _title1.text = [business objectForKey:@"title1"];
+                 _title2.text = [business objectForKey:@"title2"];
+                 _bphone.text = [business objectForKey:@"bphone"];
+                 
+                 NSString *str = mainUrl;
+                 NSString *urlStr = [str stringByAppendingFormat:@"%@", [business objectForKey:@"bshowImage"]];
+                 [_bimage sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:[UIImage imageNamed:@"xx"] options:SDWebImageRefreshCached];
+
     } fail:^(NSError *error) {
-        [_hud hide:YES];
+        
     }];
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 
-- (void)postparse:(id)data {
-    NSNumber *status = data[@"status"];
-    NSString *statuStr = [NSString stringWithFormat:@"%@", status];
-    if ([statuStr isEqualToString:@"1"]) {
-        [self.view makeToast:@"提交成功" duration:3.0 position:nil];
-        [self.navigationController popViewControllerAnimated:YES];
-    }
-    if ([statuStr isEqualToString:@"0"] || [statuStr isEqualToString:@"-1"]) {
-        [self.view makeToast:@"提交失败" duration:1.0 position:nil];
-    }
-}
 
 
-- (void)postfailure {
-    [self.view makeToast:@"提交失败" duration:1.0 position:nil];
-}
 
 //点击了提交按钮
 - (IBAction)commit:(id)sender {
@@ -103,13 +110,8 @@
         return;
     }
 
-    NSMutableDictionary *parameter = [[NSMutableDictionary alloc] init];
-    [parameter setValue:_inputname.text forKey:@"uname"];
-    [parameter setValue:_inputphone.text forKey:@"phone"];
-    [parameter setValue:_mid forKey:@"mid"];
 
-    
-    [HBNetRequest Get:ASKLOWCOMMIT para:@{@"mid":_mid,
+    [HBNetRequest Get:ASKLOWCOMMIT para:@{@"mid":_SeriesOfcarModel.mid ,
                                           @"uname": _inputname.text,
                                           @"phone":_inputphone.text} complete:^(id data) {
                                               NSUInteger status = [data[@"status"] integerValue];

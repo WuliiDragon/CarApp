@@ -20,12 +20,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //打印沙河路径
     NSLog(@"%@", [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]);
-    
-    
-    
+    DEFAULTS
+    if (![defaults valueForKey:@"time"]) {
+        [defaults setValue:@"sd" forKey:@"time"];
+        [defaults setBool:NO forKey:@"isNight"];
+        [defaults setInteger:100 forKey:@"webViewFontSize"];
+        [defaults synchronize];
+    }
+
 #if TARGET_IPHONE_SIMULATOR //模拟器就给设个虚拟地址不然会会闪退
     
-    DEFAULTS
     [defaults setObject:@"34.219128" forKey :@"latitude"];
     [defaults setObject:@"108.904305" forKey :@"longitude"];
     [defaults synchronize];

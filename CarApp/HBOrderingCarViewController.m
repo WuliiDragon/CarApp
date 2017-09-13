@@ -95,9 +95,9 @@
 }
 
 - (void)initdata {
-    _gname.text = _carStoreDetailModel.gname;
-    _mname.text = _seriesOfCarModel.mname;
-    _mtitle.text = _seriesOfCarModel.mtitle;
+    _gname.text = _CarStoreDetailModel.gname;
+    _mname.text = _SeriesOfcarModel.mname;
+    _mtitle.text = _SeriesOfcarModel.mtitle;
     _carColordata = [[NSMutableArray alloc] init];
 }
 
@@ -120,11 +120,55 @@
 
 //加载cell
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    HBColorSelectModel *model =_carColordata[indexPath.row];
     HBColorSelectCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"NIBCELL" forIndexPath:indexPath];
-    [cell loadmodel:model];
+    cell.coloeLab.text =_carColordata[indexPath.row];
+    if (cell.selected) {
+        [cell setSelected:YES];
+        [cell setBackgroundColor:mainColor];
+    }else{
+        [cell setSelected:NO];
+        [cell setBackgroundColor:[UIColor whiteColor]];
+    }
     return cell;
 }
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    [cell setSelected:YES];
+    [cell setBackgroundColor:mainColor];
+
+    NSInteger numSections = [collectionView numberOfSections];
+    for(NSInteger section = 0; section < numSections; section++)  {
+        NSInteger numItems = [collectionView numberOfItemsInSection:section];
+        for(NSInteger item = 0; item < numItems; item++){
+            NSIndexPath *indexPaths = [NSIndexPath indexPathForItem:item inSection:section];
+            UICollectionViewCell *cells = [collectionView cellForItemAtIndexPath:indexPaths];
+            if (cell!=cells) {
+                [cells setSelected:NO];
+                [cells setBackgroundColor:[UIColor whiteColor]];
+            }
+        }
+    }
+}
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
+    UICollectionViewCell *cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    [cell setSelected:YES];
+    [cell setBackgroundColor:mainColor];
+    
+    NSInteger numSections = [collectionView numberOfSections];
+    for(NSInteger section = 0; section < numSections; section++)  {
+        NSInteger numItems = [collectionView numberOfItemsInSection:section];
+        for(NSInteger item = 0; item < numItems; item++){
+            NSIndexPath *indexPaths = [NSIndexPath indexPathForItem:item inSection:section];
+            UICollectionViewCell *cells = [collectionView cellForItemAtIndexPath:indexPaths];
+            if (cell!=cells) {
+                [cells setSelected:NO];
+                [cells setBackgroundColor:[UIColor whiteColor]];
+            }
+        }
+    }
+}
+
 
 
 #pragma mark 购车方式和预计购车方式的选择
@@ -223,15 +267,18 @@
 }
 
 - (void)Getdata {
-    [HBNetRequest Get:ONLINEORDINGCAR para:@{@"mid":_seriesOfCarModel.mid} complete:^(id data) {
+    [HBNetRequest Get:ONLINEORDINGCAR para:@{@"mid":_SeriesOfcarModel.mid} complete:^(id data) {
+        NSInteger status = [data[@"status"] integerValue];
+        if(status==1){
         
-        
-        NSArray *colors = data[@"colors"];
-        for (NSDictionary *dict in colors) {
-            HBColorSelectModel *model = [[HBColorSelectModel alloc] initWithDictionary:dict error:nil];
-            [_carColordata addObject:model];
+            NSArray *colors = data[@"colors"];
+            for (NSString *color in colors) {
+                //HBColorSelectModel *model = [[HBColorSelectModel alloc] initWithDictionary:dict error:nil];
+                [_carColordata addObject:color];
+            }
+            [_carColorView reloadData];
         }
-        [_carColorView reloadData];
+        
         
     } fail:^(NSError *error) {
         

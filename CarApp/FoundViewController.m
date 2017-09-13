@@ -14,7 +14,9 @@
 #import "HBFoundNewsCellTableViewCell.h"
 #import "HBNewsCellModel.h"
 #import "HBNewsViewController.h"
+#import "HBBussnisWebViewController.h"
 
+#import <MapKit/MapKit.h>
 @interface FoundViewController ()<JXSegmentDelegate,JXPageViewDataSource,JXPageViewDelegate,UITableViewDelegate,UITableViewDataSource>{
     JXPageView *pageView;
     JXSegment *segment;
@@ -43,13 +45,24 @@
 }
 -(void)loadTheView{
     
-    segment = [[JXSegment alloc] initWithFrame:CGRectMake(0, 0, mainScreenWidth, 40)];
+    //http://www.cheshouye.com/api/weizhang/?t=5064e6
+    UIView *_preferencesView = [[[NSBundle mainBundle] loadNibNamed:@"HBNearServiceView" owner:self options:nil] lastObject];
+    [self.view addSubview:_preferencesView];
+    [_preferencesView makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.view.mas_top).offset(0);
+        make.right.left.offset(0);
+        make.size.mas_equalTo(CGSizeMake(mainScreenWidth, 163));
+    }];
+    
+    
+    
+    segment = [[JXSegment alloc] initWithFrame:CGRectMake(0, 163, mainScreenWidth, 40)];
     [segment updateChannels:_titleArr];//给title
     segment.delegate = self;
     [segment.scrollView setShowsVerticalScrollIndicator:YES];
     [self.view addSubview:segment];
     
-    pageView =[[JXPageView alloc] initWithFrame:CGRectMake(0, 40, mainScreenWidth, self.view.bounds.size.height)];
+    pageView =[[JXPageView alloc] initWithFrame:CGRectMake(0, 204, mainScreenWidth, self.view.bounds.size.height)];
     pageView.datasource = self;
     pageView.delegate = self;
     [pageView reloadData];
@@ -153,15 +166,11 @@
 }
 
 -(UIView*)pageView:(JXPageView *)pageView viewAtIndex:(NSInteger)index{
-    
-    UITableView *tableView=  [[UITableView alloc] init];
+    UITableView *tableView=  [[UITableView alloc] initWithFrame:CGRectMake(0, 0, mainScreenWidth, mainScreenHeight-64-204)];
     tableView.delegate = self;
     tableView.dataSource = self;
     tableView.estimatedRowHeight = 10;
     [tableView registerNib:[UINib nibWithNibName:@"HBFoundNewsCellTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
-
-
-    
     [_tableViews addObject:tableView];
     return tableView;
 }
@@ -215,5 +224,96 @@
 
 
 }
+- (IBAction)queryViolation:(UIButton *)sender {
+    HBBussnisWebViewController *vc = [[HBBussnisWebViewController alloc] init];
+    vc.url = ILLEGAL;
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    
+    
+}
+- (IBAction)NearRefueling:(id)sender {
+    
+    
+    DEFAULTS
+    
+    NSString * curLatitude = [defaults objectForKey:@"latitude"];
+    NSString * curLongitude = [defaults objectForKey:@"longitude"];
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"iosamap://"]]) {//手写用高德
+//    iosamap://arroundpoi?sourceApplication=行吧&keywords=加油站&lat=%@&lon=%@&dev=0
 
+        NSString *urlString = [[NSString stringWithFormat:@"iosamap://arroundpoi?sourceApplication=行吧&keywords=加油站&lat=%@&lon=%@&dev=0",
+                                curLatitude,
+                                curLongitude
+                                ] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        
+        if ([[UIDevice currentDevice].systemVersion integerValue] >= 10) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]
+                                               options:@{}
+                                     completionHandler:^(BOOL success) {
+                                         
+                                     }];
+        } else {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+            
+        }
+         //"baidumap://map/place/search?query=%@&location=%@,%@&radius=5000&region=西安&src=webapp.poi.com.dragonChina.CarApp"
+    } else if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"baidumap://"]]) {//百度
+        NSString *urlString = [[NSString stringWithFormat:@"baidumap://map/place/search?query=%@&location=%@,%@&radius=5000&region=西安&src=webapp.poi.com.dragonChina.CarApp",
+                                @"加油站",
+                                curLatitude,
+                                curLongitude
+                                ] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+    } else {//自带
+        
+        CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(33.33, 113.33);
+//
+//        //创建一个位置信息对象，第一个参数为经纬度，第二个为纬度检索范围，单位为米，第三个为经度检索范围，单位为米
+//        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(tocoor, 5000, 5000);
+//        //初始化一个检索请求对象
+//        MKLocalSearchRequest * req = [[MKLocalSearchRequest alloc]init];
+//        //设置检索参数
+//        req.region=region;
+//        //兴趣点关键字
+//        req.naturalLanguageQuery=@"hotal";
+//        //初始化检索
+//        MKLocalSearch * ser = [[MKLocalSearch alloc]initWithRequest:req];
+//        //开始检索，结果返回在block中
+//        [ser startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error) {
+//            //兴趣点节点数组
+//            NSArray * array = [NSArray arrayWithArray:response.mapItems];
+//            for (int i=0; i<array.count; i++) {
+//                MKMapItem * item=array[i];
+//                MKPointAnnotation * point = [[MKPointAnnotation alloc]init];
+//                point.title=item.name;
+//                point.subtitle=item.phoneNumber;
+//                point.coordinate=item.placemark.coordinate;
+//                [mapView addAnnotation:point];
+//            }
+//        }];
+        
+//        MKLocalSearch
+        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coordinate,100, 100);
+        MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc]init];
+        request.region = region;
+        request.naturalLanguageQuery = @"加油站";
+        MKLocalSearch *localSearch = [[MKLocalSearch alloc]initWithRequest:request];
+        [localSearch startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error){
+            if (!error) {
+                [MKMapItem openMapsWithItems:response.mapItems
+                               launchOptions:@{MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeKey,
+                                               MKLaunchOptionsShowsTrafficKey: [NSNumber numberWithBool:YES]}];
+                //do something.
+            }else{
+                //do something.
+            }
+        }];
+        
+        
+    }
+    
+    
+    
+}
 @end

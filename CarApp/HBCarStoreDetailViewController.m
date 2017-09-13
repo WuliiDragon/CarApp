@@ -221,7 +221,7 @@
 
 
     if (!refresh)[self.hud show:YES];
-    [HBNetRequest Get:CARDETAIL para:@{@"bid": _bid} complete:^(id data) {
+    [HBNetRequest Get:CARDETAIL para:@{@"bid": _StoreCarModel.bid} complete:^(id data) {
         if (refresh) {
             [_bimageArr removeAllObjects];
             [_dataArr removeAllObjects];
@@ -234,14 +234,14 @@
 
         if (childs.count > 0) {
             _baddress = [business objectForKey:@"baddress"];
-            _bid = [business objectForKey:@"bid"];
+             _bid = [business objectForKey:@"bid"];
             _bname = [business objectForKey:@"bname"];
             _bphone = [business objectForKey:@"bphone"];
             _majorbusiness = [NSString stringWithFormat:@"主营车型: %@", [business objectForKey:@"majorbusiness"]];
             _stages = [business objectForKey:@"stages"];
 
 
-            _distancelab.text = [HBAuxiliary distance:_distance];
+            _distancelab.text = [HBAuxiliary distance:_StoreCarModel.distance];
             _phonelab.text = _bphone;
             _baddresslab.text = _baddress;
             _bnamelab.text = _bname;
@@ -309,8 +309,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     HBCarStoreDetailModel *model = _dataArr[indexPath.row];
     HBSeriesOfcarViewController *VC = [[HBSeriesOfcarViewController alloc] init];
-    VC.gid = model.gid;
-    VC.distance = _distance;
+    VC.CarStoreDetailModel = model;
+    VC.StoreCarModel = _StoreCarModel;
+    VC.bid = _bid;
     [self.navigationController pushViewController:VC animated:YES];
 }
 

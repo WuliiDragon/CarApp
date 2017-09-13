@@ -44,7 +44,6 @@
 @property(nonatomic, strong) UILabel *distanceLab;
 
 @property(nonatomic, strong) NSString *name;
-@property(nonatomic, strong) NSString *bid;
 @property(nonatomic, strong) NSString *bphone;
 @property(nonatomic, strong) NSString *guidegprice;
 @property(nonatomic, strong) NSString *mtitle;
@@ -251,10 +250,11 @@
 
 
 - (void)clickonlineOrdingCar {
-    HBSeriesOfcarModel *seriesOfCarModel = _seriesOfCarModel;
     HBOrderingCarViewController *VC = [[HBOrderingCarViewController alloc] init];
-    VC.seriesOfCarModel = seriesOfCarModel;
-    VC.carStoreDetailModel = _carStoreDetailModel;
+    VC.SeriesOfcarModel = _SeriesOfcarModel;
+    VC.CarStoreDetailModel = _CarStoreDetailModel;
+    VC.StoreCarModel = _StoreCarModel;
+    
     [self.navigationController pushViewController:VC animated:YES];
 
 }
@@ -262,10 +262,10 @@
 
 - (void)clickAsklowPrice:(id)s {
     HBAskLowPriceViewController *VC = [[HBAskLowPriceViewController alloc] init];
+    VC.SeriesOfcarModel = _SeriesOfcarModel;
+    VC.CarStoreDetailModel = _CarStoreDetailModel;
+    VC.StoreCarModel = _StoreCarModel;
     VC.bid = _bid;
-    VC.mid = _mid;
-    VC.carinfo = _name;
-    VC.distanceStr = _distance;
     [self.navigationController pushViewController:VC animated:YES];
 }
 
@@ -275,7 +275,7 @@
     _hud.labelText = @"正在加载...";
     [self.navigationController.view addSubview:_hud];
     [_hud show:YES];
-    [HBNetRequest Get:SOMECAR para:@{@"mid":_mid}
+    [HBNetRequest Get:SOMECAR para:@{@"mid":_SeriesOfcarModel.mid}
              complete:^(id data) {
         NSDictionary *car = data[@"car"];
         _configure = [car objectForKey:@"configure"];
@@ -381,7 +381,10 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     HBRecommendModel *model = _recommend[indexPath.row];
     HBCarDetailViewController *VC = [[HBCarDetailViewController alloc] init];
-    VC.mid = model.mid;
+    VC.SeriesOfcarModel = _SeriesOfcarModel;
+    VC.CarStoreDetailModel = _CarStoreDetailModel;
+    VC.StoreCarModel = _StoreCarModel;
+
     [self.navigationController pushViewController:VC animated:YES];
 }
 

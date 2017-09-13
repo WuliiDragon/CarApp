@@ -383,10 +383,7 @@
     button.layer.masksToBounds = YES;
     [_bgScroll addSubview:button];
 
-//    [button makeConstraints:^(MASConstraintMaker *make) {
-//        make.bottom.mas_equalTo(_ShopCarbar.top).offset(2);
-//        make.right.offset(2);
-//    }];
+
 
 
 }
@@ -411,10 +408,6 @@
     [button.layer setCornerRadius:25];
     button.layer.masksToBounds = YES;
     [_bgScroll addSubview:button];
-//    [button makeConstraints:^(MASConstraintMaker *make) {
-//        make.bottom.mas_equalTo(_ShopCarbar.top).offset(2);
-//        make.right.offset(2);
-//    }];
 
 
 
@@ -592,7 +585,7 @@
 - (IBAction)toPay:(UIButton *)sender {//点击去结算
     if (![[NSUserDefaults standardUserDefaults] objectForKey:@"token"]) {//登录检测
         [HBAuxiliary alertWithTitle:@"您还未登录" message:@"是否登录？" button:@[@"登录", @"暂不登录"] done:^{
-            AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+            AppDelegate *appDelegate =[[UIApplication sharedApplication] delegate];
             BaseNavigationController *NA = [[BaseNavigationController alloc] initWithRootViewController:[HBLoginViewController new]];
             appDelegate.window.rootViewController = NA;
         }                    cancel:^{
@@ -601,7 +594,6 @@
         return ;
 
     }
-    
     
     
     HBMainPayViewController *VC = [[HBMainPayViewController alloc] initWithOrderArr:_selectGoods totalPrice:_price payName:@"购物车自由组合套餐" maintanaceInfo:_miantenanceModel];

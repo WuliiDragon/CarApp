@@ -14,11 +14,15 @@
 #define mainKeyWindow      [UIApplication sharedApplication].keyWindow
 
 //https://www.singpa.com
+#define ILLEGAL                 @"http://www.cheshouye.com/api/weizhang/?t=5064e6"//违章查询
 #define BUSSNISOWER             @"https://www.singpa.com/carshop"//养车店登录
 #define mainUrl                 @"https://www.singpa.com"
 
 /**************************购车**************************/
 #define HOMEPAGE                @"https://www.singpa.com/carshop/home.action"//首页
+#define JINXIAOSHANG            @"https://www.singpa.com/carshop/car/goods/query.action"//获取某关键字的
+#define GETALLGOODS             @"https://www.singpa.com/carshop/car/goods/getAll.action"//获取所有车系名
+
 #define CARDETAIL               @"https://www.singpa.com/carshop/store/getall.action"//获取车系
 #define SERIESOFCAR             @"https://www.singpa.com/carshop/car/getModels.action"//获取某车系车辆
 #define SOMECAR                 @"https://www.singpa.com/carshop/car/models/get.action"//点击某辆车
@@ -27,6 +31,7 @@
 #define ONLINEORDINGCAR         @"https://www.singpa.com/carshop/car/models/getColor.action"//在线订车
 #define ASKLOWCOMMIT            @"https://www.singpa.com/carshop/consult/add.action"//提交
 #define SEARCHCONDITION         @"https://www.singpa.com/carshop/home/car.action"//条件查询
+#define SEARCHCONDITION2        @"https://www.singpa.com/carshop/home/car/.action"//条件查询
 
 
 /**************************养车**************************/
@@ -41,6 +46,7 @@
 #define GETCATALOG              @"https://www.singpa.com/carshop/new/getCatalog.action"//获取所有文章标题
 #define GETALL                  @"https://www.singpa.com/carshop/new/getAll.action"//获取某标题所有文章
 #define GETNEWS                 @"https://www.singpa.com/carshop/new/get.action"//获取某文章的html字符串
+#define ZANNEWS                 @"https://www.singpa.com/carshop/new/zanAdd.action"//赞某篇文章
 
 
 /**************************我的**************************/

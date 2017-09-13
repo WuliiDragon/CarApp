@@ -158,6 +158,7 @@ typedef NS_ENUM(NSInteger, PAYWAY) {
     NSString *uid = [defaults objectForKey:@"uid"];
     _orderArr = [[NSMutableArray alloc] init];
     
+    NSLog(@"HBLog:%@", _CouponsArr);
     _types = [[NSString alloc] init];//用于统计三种服务类型 1,2,3
     [_orderList enumerateObjectsUsingBlock:^(id _Nonnull obj, NSUInteger idx, BOOL *_Nonnull stop) {
         HBCleanCellModel *model = (HBCleanCellModel *) obj;
@@ -186,7 +187,7 @@ typedef NS_ENUM(NSInteger, PAYWAY) {
 
     if (![defaults objectForKey:@"token"]) {//是否登录
         [HBAuxiliary alertWithTitle:@"您还未登录" message:@"是否登录？" button:@[@"登录", @"暂不登录"] done:^{
-            AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+            AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
             BaseNavigationController *NA = [[BaseNavigationController alloc] initWithRootViewController:[HBLoginViewController new]];
             appDelegate.window.rootViewController = NA;
         }                    cancel:^{
