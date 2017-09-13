@@ -1,0 +1,4 @@
+osx_image: xcode8.3.3
+language: objective-c
+xcode_project: CarApp.xcodeproj
+script: xcodebuild -project CarApp.xcodeproj -scheme "CarApp" -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=latest'
